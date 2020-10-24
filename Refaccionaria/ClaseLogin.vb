@@ -3,6 +3,7 @@
 Public Class ClaseLogin
     'hola clase prueba
     'El pepe
+    'cambio comentario prueba
     Private usuario As String
     Private contrasena As String
 
