@@ -28,3 +28,18 @@ D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.exe
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.xml
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.pdb
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.exe.config
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.exe
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.pdb
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.xml
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbprojAssemblyReference.cache
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Autenticación_de_usuarios.resources
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Form1.resources
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Resources.resources
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.GenerateResource.cache
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.CoreCompileInputs.cache
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.CopyComplete
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.exe
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.xml
+C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.pdb
