@@ -21,4 +21,8 @@
         End If
 
     End Sub
+
+    Private Sub TxtContraseña_TextChanged(sender As Object, e As EventArgs) Handles txtContraseña.TextChanged
+
+    End Sub
 End Class
