@@ -4,21 +4,11 @@ Imports Oracle.ManagedDataAccess.Client
 Module Globales
     Public cnx As OracleConnection
     Public UsuarioConectado As String
-
-    Public nombreUsuarioConectado As String
-    Public id_pais As String
-    Public pais As String = "pais"
-    Public id_estado As String
-    Public estado As String
-    Public id_ciudad As String
-    Public ciudad As String
-    Public id_direccion As String
-    Public direccion As String
-    Public calle As String
-    Public CP As String
-    Public id_puesto As String
-    Public puesto As String
     Public dir As String
+    Public puestoUsuario As String
+    Public nombreUsuarioConectado As String
+
+
     Public dir2 As String
     Public dir3 As String
     Public dir4 As String
@@ -31,7 +21,7 @@ Module Globales
     Public destinatario As String
     Public id_estadopaq As String
     Public id_motivo As String
-    Public puestoUsuario As String
+
 
 
     Dim dt As Date = Today
