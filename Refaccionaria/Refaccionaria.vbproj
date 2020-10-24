@@ -117,6 +117,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Oracle.vb" />
+    <Compile Include="Registro de usuarios.Designer.vb">
+      <DependentUpon>Registro de usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registro de usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Autenticación de usuarios.resx">
@@ -127,6 +133,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro de usuarios.resx">
+      <DependentUpon>Registro de usuarios.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
