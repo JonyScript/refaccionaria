@@ -124,6 +124,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Oracle.vb" />
+    <Compile Include="porfavordetentegitestoysufriendo.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Autenticación de usuarios.resx">
