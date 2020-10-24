@@ -20,7 +20,6 @@ D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\bin\Debug\
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbprojAssemblyReference.cache
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Autenticación_de_usuarios.resources
-D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Form1.resources
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Resources.resources
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.GenerateResource.cache
 D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.CoreCompileInputs.cache
@@ -43,3 +42,4 @@ C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Ref
 C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.exe
 C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.xml
 C:\Users\lucer\Downloads\Ingeniería de software\Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.pdb
+D:\t\Ing de Software\Visual Refaccionaria\refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Registro_de_usuarios.resources
