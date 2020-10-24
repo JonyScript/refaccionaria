@@ -124,6 +124,7 @@
     <Compile Include="Registro de usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ultima prueba.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Autenticación de usuarios.resx">
