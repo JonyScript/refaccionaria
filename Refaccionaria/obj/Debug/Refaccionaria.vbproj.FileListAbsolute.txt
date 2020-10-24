@@ -1,0 +1,15 @@
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbprojAssemblyReference.cache
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Form1.resources
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Resources.resources
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.GenerateResource.cache
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.CoreCompileInputs.cache
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.exe.config
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.exe
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.pdb
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\bin\Debug\Refaccionaria.xml
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.exe
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.xml
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.pdb
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.Autenticación_de_usuarios.resources
+D:\Jonatan\Descargas\IWBTB\tec\ing de sw\Refaccionaria\Refaccionaria\Refaccionaria\obj\Debug\Refaccionaria.vbproj.CopyComplete
