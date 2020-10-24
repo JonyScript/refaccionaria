@@ -99,7 +99,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClaseLogin.vb" />
-    <Compile Include="Class1.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +124,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Oracle.vb" />
+    <Compile Include="Prueba.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Autenticación de usuarios.resx">
