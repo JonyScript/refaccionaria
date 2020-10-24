@@ -1,7 +1,7 @@
 ﻿Imports Oracle.ManagedDataAccess.Client
 
 Public Class ClaseLogin
-
+    'hola clase prueba
     Private usuario As String
     Private contrasena As String
 
