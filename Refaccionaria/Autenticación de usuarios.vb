@@ -10,19 +10,21 @@
             cnx.Close()
         ElseIf puestoUsuario = 1 Then
             cnx.Close()
-            MsgBox("administrador")
-            'menuadministrador.show()
-            'Me.Close()
+            menuAdministrador.Show()
+            Me.Hide()
         ElseIf puestoUsuario = 2 Then
             cnx.Close()
-            MsgBox("vendedor")
-            'menuvendedor.show()
-            'Me.Close()
+            menuVendedor.Show()
+            Me.Hide()
         End If
 
     End Sub
 
     Private Sub TxtContraseña_TextChanged(sender As Object, e As EventArgs) Handles txtContraseña.TextChanged
+
+    End Sub
+
+    Private Sub Autenticación_de_usuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
