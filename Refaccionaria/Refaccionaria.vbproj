@@ -100,12 +100,6 @@
     </Compile>
     <Compile Include="ClaseLogin.vb" />
     <Compile Include="ClaseRegistroDeUsuarios.vb" />
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Globales.vb" />
     <Compile Include="menuAdministrador.Designer.vb">
       <DependentUpon>menuAdministrador.vb</DependentUpon>
@@ -147,9 +141,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Autenticación de usuarios.resx">
       <DependentUpon>Autenticación de usuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuAdministrador.resx">
       <DependentUpon>menuAdministrador.vb</DependentUpon>
