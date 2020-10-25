@@ -106,6 +106,25 @@
         End If
     End Sub
 
+    Public Sub eliminarUsuario()
+        Dim strSql As String
+        Dim xCnx As New Oracle
+        'Validamos que ese alumno no esté Integrado en algún equipo
+
+        If codigoUsuario <> "" Then
+            If codigoRol = 1 Then
+                MsgBox("No puede eliminar a otro administrador")
+            Else
+                strSql = "DELETE FROM usuarios " &
+                         "WHERE codigoUsuario=" & Registro_de_usuarios.username_txt.Text
+
+                xCnx.objetoCommand(strSql)
+                MsgBox("Registro eliminado")
+            End If
+        Else
+            MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+        End If
+    End Sub
     Public Function consultaUnUsuario() As Boolean
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente
@@ -129,4 +148,28 @@
             consultaUnUsuario = True
         End If
     End Function
+    Public Function consultaTodosUsuarios() As Object
+        'Método para listar a todos los usuarios en el DGV
+        Dim strSQL As String
+        Dim xCnx As New Oracle
+        strSQL = "SELECT codigoUsuario as Codigo, descripcion as Rol, nombre as Nombre, paterno as Paterno, materno as Materno, contrasena as Clave" &
+                 "  From usuario, rol where usuario.codigorol = rol.codigorol " & " Order By rol"
+        consultaTodosUsuarios = xCnx.objetoDataAdapter(strSQL)
+    End Function
+    Public Sub PoblarDataGridRegistroDeUsuarios(ByVal DGVUsuarios As DataGridView)
+        'Llamamos al método que obtiene los registros de los usuarios
+        DGVUsuarios.DataSource = consultaTodosUsuarios()
+        DGVUsuarios.Refresh()
+        'Establecer ancho de cada columna del DataGridView, el 
+        'número de columnas del DGV debe ser igual al número
+        'de atributos recuperados en el query del método
+        'consultaTodosUsuarios
+        DGVUsuarios.Columns.Item(0).Width = 100
+        DGVUsuarios.Columns.Item(0).Width = 100
+        DGVUsuarios.Columns.Item(0).Width = 100
+        DGVUsuarios.Columns.Item(0).Width = 100
+        DGVUsuarios.Columns.Item(0).Width = 100
+        DGVUsuarios.Columns.Item(0).Width = 100
+
+    End Sub
 End Class
