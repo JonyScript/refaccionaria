@@ -7,7 +7,7 @@ Module Globales
     Public dir As String
     Public puestoUsuario As String
     Public nombreUsuarioConectado As String
-
+    Public codigoRol As String
 
     Public dir2 As String
     Public dir3 As String
@@ -26,7 +26,7 @@ Module Globales
 
     Dim dt As Date = Today
 
-    <Obsolete>
+
     Public Sub llenarCombo(ByRef combo As ComboBox, ByVal consulta As String, ByVal valor As String, ByVal display As String)
         Dim xCnx As New Oracle
         combo.DataSource = xCnx.objetoDataAdapter(consulta)

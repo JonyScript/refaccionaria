@@ -1,6 +1,7 @@
 ﻿Public Class Registro_de_usuarios
     Private Sub Registro_de_usuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llenarCombo(cbx_rol, "Select codigoRol, descripcion as Rol from rol", "codigoRol", "Descripcion")
+        llenarCombo(cbx_rol, "Select codigoRol, descripcion from rol", "codigoRol", "descripcion")
+        codigoRol = cbx_rol.SelectedValue
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
@@ -28,6 +29,7 @@
         Next x
     End Sub
 
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If username_txt.Text = vbNullString Then
             MessageBox.Show("Capturar el nombre de usuario")
@@ -44,17 +46,25 @@
         ElseIf cbx_rol.Text = vbNullString Then
             MessageBox.Show("Capturar rol de usuario")
         Else
-            Dim paq As New ClasePaquetes(txt_id_paq.Text)
-            paq.getSetPaquete = txt_id_paq.Text
+            If (pass_txt.Text = pass2_txt.Text) Then
+                Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
+                user.getSetUsuario = username_txt.Text
+                user.getSetrol = cbx_rol.Text
+                user.getSetnombre = nombre_txt.Text
+                user.getSetpaterno = ap_txt.Text
+                user.getSetmaterno = am_txt.Text
+                user.getSetcontrasena = pass_txt.Text
 
-            If paq.consultaUnPaquete() = False Then
-                'Si el usuario no está registrado, la inserta como una nuevo
-                paq.insertaPaquete()
+                If user.consultaUnUsuario() = False Then
+                    'Si el usuario no está registrado, la inserta como una nuevo
+                    user.insertarUsuario()
+                Else
+                    MessageBox.Show("El id del usuario ya existe")
+                End If
+                cnx.Close()
             Else
-                MessageBox.Show("El id del paquete ya existe !!")
+                MessageBox.Show("Las contraseñas no son iguales, verifique qliao")
             End If
-            paq.PoblarDataGridPaquetes(DGVPaquete)
-            cnx.Close()
         End If
     End Sub
 End Class

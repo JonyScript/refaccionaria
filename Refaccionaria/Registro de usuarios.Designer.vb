@@ -44,35 +44,35 @@ Partial Class Registro_de_usuarios
         '
         'username_txt
         '
-        Me.username_txt.Location = New System.Drawing.Point(130, 28)
+        Me.username_txt.Location = New System.Drawing.Point(132, 24)
         Me.username_txt.Name = "username_txt"
         Me.username_txt.Size = New System.Drawing.Size(126, 20)
         Me.username_txt.TabIndex = 0
         '
         'nombre_txt
         '
-        Me.nombre_txt.Location = New System.Drawing.Point(130, 63)
+        Me.nombre_txt.Location = New System.Drawing.Point(132, 77)
         Me.nombre_txt.Name = "nombre_txt"
         Me.nombre_txt.Size = New System.Drawing.Size(126, 20)
         Me.nombre_txt.TabIndex = 1
         '
         'ap_txt
         '
-        Me.ap_txt.Location = New System.Drawing.Point(130, 96)
+        Me.ap_txt.Location = New System.Drawing.Point(132, 110)
         Me.ap_txt.Name = "ap_txt"
         Me.ap_txt.Size = New System.Drawing.Size(126, 20)
         Me.ap_txt.TabIndex = 2
         '
         'am_txt
         '
-        Me.am_txt.Location = New System.Drawing.Point(130, 126)
+        Me.am_txt.Location = New System.Drawing.Point(132, 140)
         Me.am_txt.Name = "am_txt"
         Me.am_txt.Size = New System.Drawing.Size(126, 20)
         Me.am_txt.TabIndex = 3
         '
         'pass_txt
         '
-        Me.pass_txt.Location = New System.Drawing.Point(130, 158)
+        Me.pass_txt.Location = New System.Drawing.Point(132, 172)
         Me.pass_txt.Name = "pass_txt"
         Me.pass_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.pass_txt.Size = New System.Drawing.Size(126, 20)
@@ -80,7 +80,7 @@ Partial Class Registro_de_usuarios
         '
         'pass2_txt
         '
-        Me.pass2_txt.Location = New System.Drawing.Point(130, 191)
+        Me.pass2_txt.Location = New System.Drawing.Point(132, 205)
         Me.pass2_txt.Name = "pass2_txt"
         Me.pass2_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.pass2_txt.Size = New System.Drawing.Size(126, 20)
@@ -89,7 +89,7 @@ Partial Class Registro_de_usuarios
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 31)
+        Me.Label1.Location = New System.Drawing.Point(30, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 13)
         Me.Label1.TabIndex = 9
@@ -98,7 +98,7 @@ Partial Class Registro_de_usuarios
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(39, 126)
+        Me.Label2.Location = New System.Drawing.Point(41, 140)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 13)
         Me.Label2.TabIndex = 10
@@ -107,7 +107,7 @@ Partial Class Registro_de_usuarios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(69, 66)
+        Me.Label3.Location = New System.Drawing.Point(71, 80)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 11
@@ -116,7 +116,7 @@ Partial Class Registro_de_usuarios
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(41, 96)
+        Me.Label4.Location = New System.Drawing.Point(43, 110)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(83, 13)
         Me.Label4.TabIndex = 12
@@ -125,7 +125,7 @@ Partial Class Registro_de_usuarios
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(63, 161)
+        Me.Label5.Location = New System.Drawing.Point(65, 175)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(61, 13)
         Me.Label5.TabIndex = 13
@@ -134,7 +134,7 @@ Partial Class Registro_de_usuarios
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(17, 194)
+        Me.Label6.Location = New System.Drawing.Point(19, 208)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(107, 13)
         Me.Label6.TabIndex = 14
@@ -143,7 +143,7 @@ Partial Class Registro_de_usuarios
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(101, 226)
+        Me.Label7.Location = New System.Drawing.Point(103, 50)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(23, 13)
         Me.Label7.TabIndex = 15
@@ -152,14 +152,14 @@ Partial Class Registro_de_usuarios
         'cbx_rol
         '
         Me.cbx_rol.FormattingEnabled = True
-        Me.cbx_rol.Location = New System.Drawing.Point(130, 226)
+        Me.cbx_rol.Location = New System.Drawing.Point(132, 50)
         Me.cbx_rol.Name = "cbx_rol"
         Me.cbx_rol.Size = New System.Drawing.Size(126, 21)
         Me.cbx_rol.TabIndex = 16
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(305, 151)
+        Me.Button1.Location = New System.Drawing.Point(313, 165)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 17
