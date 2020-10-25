@@ -112,11 +112,11 @@
         'Validamos que ese alumno no esté Integrado en algún equipo
 
         If codigoUsuario <> "" Then
-            If codigoRol = 1 Then
+            If rol = 1 Then
                 MsgBox("No puede eliminar a otro administrador")
             Else
-                strSql = "DELETE FROM usuarios " &
-                         "WHERE codigoUsuario=" & Registro_de_usuarios.username_txt.Text
+                strSql = "DELETE FROM usuario " &
+                         "WHERE codigoUsuario= '" & codigoUsuario & "'"
 
                 xCnx.objetoCommand(strSql)
                 MsgBox("Registro eliminado")

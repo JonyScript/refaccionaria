@@ -100,7 +100,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
+            Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text, cbx_rol.SelectedValue)
             'Verificmos que el pais se encuentre registrado
             If user.consultaUnUsuario() = False Then
                 MsgBox("No se puede eliminar al usuario, verifique ...")
