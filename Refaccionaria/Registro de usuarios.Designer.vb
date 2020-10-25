@@ -42,6 +42,7 @@ Partial Class Registro_de_usuarios
         Me.DGVUsuarios = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -206,11 +207,22 @@ Partial Class Registro_de_usuarios
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'back
+        '
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.back.Location = New System.Drawing.Point(1, 0)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(27, 31)
+        Me.back.TabIndex = 22
+        Me.back.Text = "⮌"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'Registro_de_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(539, 450)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DGVUsuarios)
@@ -258,4 +270,5 @@ Partial Class Registro_de_usuarios
     Friend WithEvents DGVUsuarios As DataGridView
     Friend WithEvents Label8 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents back As Button
 End Class

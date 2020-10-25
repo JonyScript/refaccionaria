@@ -118,4 +118,10 @@
     Private Sub pass2_txt_TextChanged(sender As Object, e As EventArgs) Handles pass2_txt.TextChanged
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles back.Click
+        cnx.Close()
+        menuAdministrador.Show()
+        Me.Hide()
+    End Sub
 End Class
