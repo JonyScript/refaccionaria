@@ -39,35 +39,39 @@ Partial Class Registro_de_usuarios
         Me.cbx_rol = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DGVUsuarios = New System.Windows.Forms.DataGridView()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'username_txt
         '
         Me.username_txt.Location = New System.Drawing.Point(132, 24)
         Me.username_txt.Name = "username_txt"
-        Me.username_txt.Size = New System.Drawing.Size(126, 20)
+        Me.username_txt.Size = New System.Drawing.Size(175, 20)
         Me.username_txt.TabIndex = 0
         '
         'nombre_txt
         '
         Me.nombre_txt.Location = New System.Drawing.Point(132, 77)
         Me.nombre_txt.Name = "nombre_txt"
-        Me.nombre_txt.Size = New System.Drawing.Size(126, 20)
+        Me.nombre_txt.Size = New System.Drawing.Size(175, 20)
         Me.nombre_txt.TabIndex = 1
         '
         'ap_txt
         '
         Me.ap_txt.Location = New System.Drawing.Point(132, 110)
         Me.ap_txt.Name = "ap_txt"
-        Me.ap_txt.Size = New System.Drawing.Size(126, 20)
+        Me.ap_txt.Size = New System.Drawing.Size(175, 20)
         Me.ap_txt.TabIndex = 2
         '
         'am_txt
         '
         Me.am_txt.Location = New System.Drawing.Point(132, 140)
         Me.am_txt.Name = "am_txt"
-        Me.am_txt.Size = New System.Drawing.Size(126, 20)
+        Me.am_txt.Size = New System.Drawing.Size(175, 20)
         Me.am_txt.TabIndex = 3
         '
         'pass_txt
@@ -75,7 +79,7 @@ Partial Class Registro_de_usuarios
         Me.pass_txt.Location = New System.Drawing.Point(132, 172)
         Me.pass_txt.Name = "pass_txt"
         Me.pass_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.pass_txt.Size = New System.Drawing.Size(126, 20)
+        Me.pass_txt.Size = New System.Drawing.Size(175, 20)
         Me.pass_txt.TabIndex = 4
         '
         'pass2_txt
@@ -83,7 +87,7 @@ Partial Class Registro_de_usuarios
         Me.pass2_txt.Location = New System.Drawing.Point(132, 205)
         Me.pass2_txt.Name = "pass2_txt"
         Me.pass2_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.pass2_txt.Size = New System.Drawing.Size(126, 20)
+        Me.pass2_txt.Size = New System.Drawing.Size(175, 20)
         Me.pass2_txt.TabIndex = 5
         '
         'Label1
@@ -154,12 +158,12 @@ Partial Class Registro_de_usuarios
         Me.cbx_rol.FormattingEnabled = True
         Me.cbx_rol.Location = New System.Drawing.Point(132, 50)
         Me.cbx_rol.Name = "cbx_rol"
-        Me.cbx_rol.Size = New System.Drawing.Size(126, 21)
+        Me.cbx_rol.Size = New System.Drawing.Size(175, 21)
         Me.cbx_rol.TabIndex = 16
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(313, 165)
+        Me.Button1.Location = New System.Drawing.Point(341, 165)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 17
@@ -169,18 +173,47 @@ Partial Class Registro_de_usuarios
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(280, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(363, 24)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(131, 124)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
+        'DGVUsuarios
+        '
+        Me.DGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVUsuarios.Location = New System.Drawing.Point(12, 253)
+        Me.DGVUsuarios.Name = "DGVUsuarios"
+        Me.DGVUsuarios.Size = New System.Drawing.Size(515, 185)
+        Me.DGVUsuarios.TabIndex = 19
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(212, 237)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(102, 13)
+        Me.Label8.TabIndex = 20
+        Me.Label8.Text = "Usuarios registrados"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(433, 165)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 21
+        Me.Button2.Text = "Eliminar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Registro_de_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(434, 268)
+        Me.ClientSize = New System.Drawing.Size(539, 450)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.DGVUsuarios)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cbx_rol)
@@ -200,6 +233,7 @@ Partial Class Registro_de_usuarios
         Me.Name = "Registro_de_usuarios"
         Me.Text = "Registro de usuarios"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -221,4 +255,7 @@ Partial Class Registro_de_usuarios
     Friend WithEvents cbx_rol As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DGVUsuarios As DataGridView
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Button2 As Button
 End Class

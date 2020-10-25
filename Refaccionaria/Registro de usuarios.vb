@@ -1,7 +1,13 @@
 ﻿Public Class Registro_de_usuarios
     Private Sub Registro_de_usuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DGVUsuarios.ReadOnly = False
+
         llenarCombo(cbx_rol, "Select codigoRol, descripcion from rol", "codigoRol", "descripcion")
         codigoRol = cbx_rol.SelectedValue
+
+        Dim datagrid As New ClaseRegistroDeUsuarios()
+        datagrid.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
+        cnx.Close()
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
@@ -64,6 +70,47 @@
                 cnx.Close()
             Else
                 MessageBox.Show("Las contraseñas no son iguales, verifique qliao")
+            End If
+            Dim datagrid As New ClaseRegistroDeUsuarios()
+            datagrid.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
+            cnx.Close()
+        End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUsuarios.CellContentClick
+
+    End Sub
+
+    Private Sub DGVUsuarios_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUsuarios.CellClick
+        Dim renglon As Integer
+        'Al darle clic al renglón del DGV mostramos los datos en las cajas de texto
+        'el valor de cada celda es pasado a la caja de texto o combo correspondiente
+        renglon = DGVUsuarios.CurrentCellAddress.Y
+        username_txt.Text = DGVUsuarios.Rows(renglon).Cells(0).Value
+        cbx_rol.Text = DGVUsuarios.Rows(renglon).Cells(1).Value
+        nombre_txt.Text = DGVUsuarios.Rows(renglon).Cells(2).Value
+        ap_txt.Text = DGVUsuarios.Rows(renglon).Cells(3).Value
+        am_txt.Text = DGVUsuarios.Rows(renglon).Cells(4).Value
+        pass_txt.Text = DGVUsuarios.Rows(renglon).Cells(5).Value
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
+            'Verificmos que el pais se encuentre registrado
+            If user.consultaUnUsuario() = False Then
+                MsgBox("No se puede eliminar al usuario, verifique ...")
+            Else
+                'Llamamos al método que elimina el registro
+                user.eliminarUsuario()
+                'Llamamnos al método para poblar el DGV para que se vea la eliminación del registro
+                user.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
+                'Cerramos la conexión a la BD
+                cnx.Close()
             End If
         End If
     End Sub
