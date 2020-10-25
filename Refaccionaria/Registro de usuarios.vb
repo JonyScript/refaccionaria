@@ -67,4 +67,8 @@
             End If
         End If
     End Sub
+
+    Private Sub pass2_txt_TextChanged(sender As Object, e As EventArgs) Handles pass2_txt.TextChanged
+
+    End Sub
 End Class
