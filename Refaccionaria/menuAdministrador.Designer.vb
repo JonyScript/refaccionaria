@@ -34,54 +34,60 @@ Partial Class menuAdministrador
         '
         'btnVentas
         '
-        Me.btnVentas.Location = New System.Drawing.Point(141, 196)
+        Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentas.Location = New System.Drawing.Point(115, 141)
         Me.btnVentas.Name = "btnVentas"
-        Me.btnVentas.Size = New System.Drawing.Size(126, 23)
+        Me.btnVentas.Size = New System.Drawing.Size(126, 31)
         Me.btnVentas.TabIndex = 0
         Me.btnVentas.Text = "Ventas"
         Me.btnVentas.UseVisualStyleBackColor = True
         '
         'btnRegistroDeClientes
         '
-        Me.btnRegistroDeClientes.Location = New System.Drawing.Point(141, 235)
+        Me.btnRegistroDeClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistroDeClientes.Location = New System.Drawing.Point(98, 193)
         Me.btnRegistroDeClientes.Name = "btnRegistroDeClientes"
-        Me.btnRegistroDeClientes.Size = New System.Drawing.Size(126, 23)
+        Me.btnRegistroDeClientes.Size = New System.Drawing.Size(158, 34)
         Me.btnRegistroDeClientes.TabIndex = 1
         Me.btnRegistroDeClientes.Text = "Registro de clientes"
         Me.btnRegistroDeClientes.UseVisualStyleBackColor = True
         '
         'btnRegistroDeProductos
         '
-        Me.btnRegistroDeProductos.Location = New System.Drawing.Point(141, 275)
+        Me.btnRegistroDeProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistroDeProductos.Location = New System.Drawing.Point(92, 248)
         Me.btnRegistroDeProductos.Name = "btnRegistroDeProductos"
-        Me.btnRegistroDeProductos.Size = New System.Drawing.Size(126, 23)
+        Me.btnRegistroDeProductos.Size = New System.Drawing.Size(176, 32)
         Me.btnRegistroDeProductos.TabIndex = 2
         Me.btnRegistroDeProductos.Text = "Registro de productos"
         Me.btnRegistroDeProductos.UseVisualStyleBackColor = True
         '
         'btnRegistroDeUsuarios
         '
-        Me.btnRegistroDeUsuarios.Location = New System.Drawing.Point(141, 313)
+        Me.btnRegistroDeUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistroDeUsuarios.Location = New System.Drawing.Point(96, 301)
         Me.btnRegistroDeUsuarios.Name = "btnRegistroDeUsuarios"
-        Me.btnRegistroDeUsuarios.Size = New System.Drawing.Size(126, 23)
+        Me.btnRegistroDeUsuarios.Size = New System.Drawing.Size(168, 30)
         Me.btnRegistroDeUsuarios.TabIndex = 3
         Me.btnRegistroDeUsuarios.Text = "Registro de usuarios"
         Me.btnRegistroDeUsuarios.UseVisualStyleBackColor = True
         '
         'btnCompraDeProductos
         '
-        Me.btnCompraDeProductos.Location = New System.Drawing.Point(141, 352)
+        Me.btnCompraDeProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCompraDeProductos.Location = New System.Drawing.Point(92, 356)
         Me.btnCompraDeProductos.Name = "btnCompraDeProductos"
-        Me.btnCompraDeProductos.Size = New System.Drawing.Size(126, 23)
+        Me.btnCompraDeProductos.Size = New System.Drawing.Size(177, 33)
         Me.btnCompraDeProductos.TabIndex = 4
         Me.btnCompraDeProductos.Text = "Compra de productos"
         Me.btnCompraDeProductos.UseVisualStyleBackColor = True
         '
         'btnAnalisisDeVentas
         '
-        Me.btnAnalisisDeVentas.Location = New System.Drawing.Point(141, 391)
+        Me.btnAnalisisDeVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnalisisDeVentas.Location = New System.Drawing.Point(109, 412)
         Me.btnAnalisisDeVentas.Name = "btnAnalisisDeVentas"
-        Me.btnAnalisisDeVentas.Size = New System.Drawing.Size(126, 23)
+        Me.btnAnalisisDeVentas.Size = New System.Drawing.Size(146, 34)
         Me.btnAnalisisDeVentas.TabIndex = 5
         Me.btnAnalisisDeVentas.Text = "Análisis de ventas"
         Me.btnAnalisisDeVentas.UseVisualStyleBackColor = True
@@ -89,18 +95,20 @@ Partial Class menuAdministrador
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(152, 106)
+        Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(69, 72)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 13)
+        Me.Label2.Size = New System.Drawing.Size(237, 29)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "¿Que desea realizar?"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(173, 64)
+        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(110, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 13)
+        Me.Label1.Size = New System.Drawing.Size(151, 29)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "¡Bienvenido!"
         '
@@ -108,7 +116,7 @@ Partial Class menuAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(409, 450)
+        Me.ClientSize = New System.Drawing.Size(360, 474)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAnalisisDeVentas)

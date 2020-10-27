@@ -28,6 +28,7 @@ Partial Class Autenticación_de_usuarios
         Me.txtNombreDeUsuario = New System.Windows.Forms.TextBox()
         Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.btnIniciarSesion = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,31 +45,33 @@ Partial Class Autenticación_de_usuarios
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(240, 47)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 13)
+        Me.Label1.Size = New System.Drawing.Size(126, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nombre de usuario:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(240, 99)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(77, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Contraseña"
         '
         'txtNombreDeUsuario
         '
-        Me.txtNombreDeUsuario.Location = New System.Drawing.Point(243, 64)
+        Me.txtNombreDeUsuario.Location = New System.Drawing.Point(243, 67)
         Me.txtNombreDeUsuario.Name = "txtNombreDeUsuario"
         Me.txtNombreDeUsuario.Size = New System.Drawing.Size(150, 20)
         Me.txtNombreDeUsuario.TabIndex = 3
         '
         'txtContraseña
         '
-        Me.txtContraseña.Location = New System.Drawing.Point(243, 115)
+        Me.txtContraseña.Location = New System.Drawing.Point(243, 117)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraseña.Size = New System.Drawing.Size(150, 20)
@@ -76,18 +79,30 @@ Partial Class Autenticación_de_usuarios
         '
         'btnIniciarSesion
         '
+        Me.btnIniciarSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIniciarSesion.Location = New System.Drawing.Point(261, 158)
         Me.btnIniciarSesion.Name = "btnIniciarSesion"
-        Me.btnIniciarSesion.Size = New System.Drawing.Size(105, 23)
+        Me.btnIniciarSesion.Size = New System.Drawing.Size(105, 27)
         Me.btnIniciarSesion.TabIndex = 5
         Me.btnIniciarSesion.Text = "Iniciar sesión"
         Me.btnIniciarSesion.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(217, 9)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(163, 29)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "¡Bienvenido!"
         '
         'Autenticación_de_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(412, 232)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnIniciarSesion)
         Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.txtNombreDeUsuario)
@@ -108,4 +123,5 @@ Partial Class Autenticación_de_usuarios
     Friend WithEvents txtNombreDeUsuario As TextBox
     Friend WithEvents txtContraseña As TextBox
     Friend WithEvents btnIniciarSesion As Button
+    Friend WithEvents Label3 As Label
 End Class

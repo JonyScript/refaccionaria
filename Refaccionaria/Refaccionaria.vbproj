@@ -92,6 +92,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarProducto.Designer.vb">
+      <DependentUpon>AgregarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Autenticación de usuarios.Designer.vb">
       <DependentUpon>Autenticación de usuarios.vb</DependentUpon>
     </Compile>
@@ -111,6 +117,12 @@
       <DependentUpon>menuVendedor.vb</DependentUpon>
     </Compile>
     <Compile Include="menuVendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarProducto.Designer.vb">
+      <DependentUpon>ModificarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -136,9 +148,18 @@
     <Compile Include="Registro de usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="registroDeProductos.Designer.vb">
+      <DependentUpon>registroDeProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registroDeProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ultima prueba.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Autenticación de usuarios.resx">
       <DependentUpon>Autenticación de usuarios.vb</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +169,9 @@
     <EmbeddedResource Include="menuVendedor.resx">
       <DependentUpon>menuVendedor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -156,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro de usuarios.resx">
       <DependentUpon>Registro de usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registroDeProductos.resx">
+      <DependentUpon>registroDeProductos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

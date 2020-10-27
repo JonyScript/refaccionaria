@@ -13,8 +13,8 @@
 
     Private Sub btnRegistroDeProductos_Click(sender As Object, e As EventArgs) Handles btnRegistroDeProductos.Click
         cnx.Close()
-        'registroDeProductos.Show()
-        'Me.Close()
+        registroDeProductos.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnRegistroDeUsuarios_Click(sender As Object, e As EventArgs) Handles btnRegistroDeUsuarios.Click
