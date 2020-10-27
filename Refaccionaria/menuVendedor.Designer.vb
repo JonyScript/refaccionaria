@@ -33,9 +33,9 @@ Partial Class menuVendedor
         'btnAnalisisDeVentas2
         '
         Me.btnAnalisisDeVentas2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnalisisDeVentas2.Location = New System.Drawing.Point(127, 301)
+        Me.btnAnalisisDeVentas2.Location = New System.Drawing.Point(107, 298)
         Me.btnAnalisisDeVentas2.Name = "btnAnalisisDeVentas2"
-        Me.btnAnalisisDeVentas2.Size = New System.Drawing.Size(152, 36)
+        Me.btnAnalisisDeVentas2.Size = New System.Drawing.Size(172, 36)
         Me.btnAnalisisDeVentas2.TabIndex = 11
         Me.btnAnalisisDeVentas2.Text = "Análisis de ventas"
         Me.btnAnalisisDeVentas2.UseVisualStyleBackColor = True
@@ -45,7 +45,7 @@ Partial Class menuVendedor
         Me.btnCompraDeProductos2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCompraDeProductos2.Location = New System.Drawing.Point(107, 243)
         Me.btnCompraDeProductos2.Name = "btnCompraDeProductos2"
-        Me.btnCompraDeProductos2.Size = New System.Drawing.Size(192, 34)
+        Me.btnCompraDeProductos2.Size = New System.Drawing.Size(172, 34)
         Me.btnCompraDeProductos2.TabIndex = 10
         Me.btnCompraDeProductos2.Text = "Compra de productos"
         Me.btnCompraDeProductos2.UseVisualStyleBackColor = True
@@ -53,9 +53,9 @@ Partial Class menuVendedor
         'btnRegistroDeClientes2
         '
         Me.btnRegistroDeClientes2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistroDeClientes2.Location = New System.Drawing.Point(124, 187)
+        Me.btnRegistroDeClientes2.Location = New System.Drawing.Point(107, 184)
         Me.btnRegistroDeClientes2.Name = "btnRegistroDeClientes2"
-        Me.btnRegistroDeClientes2.Size = New System.Drawing.Size(160, 36)
+        Me.btnRegistroDeClientes2.Size = New System.Drawing.Size(172, 36)
         Me.btnRegistroDeClientes2.TabIndex = 7
         Me.btnRegistroDeClientes2.Text = "Registro de clientes"
         Me.btnRegistroDeClientes2.UseVisualStyleBackColor = True
@@ -63,9 +63,9 @@ Partial Class menuVendedor
         'btnVentas2
         '
         Me.btnVentas2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentas2.Location = New System.Drawing.Point(145, 129)
+        Me.btnVentas2.Location = New System.Drawing.Point(107, 129)
         Me.btnVentas2.Name = "btnVentas2"
-        Me.btnVentas2.Size = New System.Drawing.Size(114, 32)
+        Me.btnVentas2.Size = New System.Drawing.Size(172, 32)
         Me.btnVentas2.TabIndex = 6
         Me.btnVentas2.Text = "Ventas"
         Me.btnVentas2.UseVisualStyleBackColor = True
@@ -73,20 +73,20 @@ Partial Class menuVendedor
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(140, 9)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(110, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(151, 29)
+        Me.Label1.Size = New System.Drawing.Size(164, 31)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "¡Bienvenido!"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(101, 61)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(65, 72)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(237, 29)
+        Me.Label2.Size = New System.Drawing.Size(272, 31)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "¿Que desea realizar?"
         '
