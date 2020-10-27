@@ -148,6 +148,12 @@
     <Compile Include="Registro de usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegistroDeClientes.Designer.vb">
+      <DependentUpon>RegistroDeClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroDeClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="registroDeProductos.Designer.vb">
       <DependentUpon>registroDeProductos.vb</DependentUpon>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro de usuarios.resx">
       <DependentUpon>Registro de usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroDeClientes.resx">
+      <DependentUpon>RegistroDeClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registroDeProductos.resx">
       <DependentUpon>registroDeProductos.vb</DependentUpon>
