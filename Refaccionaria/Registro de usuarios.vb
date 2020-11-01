@@ -64,12 +64,18 @@
                 If user.consultaUnUsuario() = False Then
                     'Si el usuario no está registrado, la inserta como una nuevo
                     user.insertarUsuario()
+                    username_txt.Clear()
+                    nombre_txt.Clear()
+                    ap_txt.Clear()
+                    am_txt.Clear()
+                    pass_txt.Clear()
+                    pass2_txt.Clear()
                 Else
                     MessageBox.Show("El id del usuario ya existe")
                 End If
                 cnx.Close()
             Else
-                MessageBox.Show("Las contraseñas no son iguales, verifique qliao")
+                MessageBox.Show("Las contraseñas no son iguales")
             End If
             Dim datagrid As New ClaseRegistroDeUsuarios()
             datagrid.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
@@ -91,7 +97,6 @@
         nombre_txt.Text = DGVUsuarios.Rows(renglon).Cells(2).Value
         ap_txt.Text = DGVUsuarios.Rows(renglon).Cells(3).Value
         am_txt.Text = DGVUsuarios.Rows(renglon).Cells(4).Value
-        pass_txt.Text = DGVUsuarios.Rows(renglon).Cells(5).Value
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -111,6 +116,12 @@
                 user.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
                 'Cerramos la conexión a la BD
                 cnx.Close()
+                username_txt.Clear()
+                nombre_txt.Clear()
+                ap_txt.Clear()
+                am_txt.Clear()
+                pass_txt.Clear()
+                pass2_txt.Clear()
             End If
         End If
     End Sub
@@ -127,5 +138,14 @@
 
     Private Sub username_txt_TextChanged(sender As Object, e As EventArgs) Handles username_txt.TextChanged
 
+    End Sub
+
+    Private Sub btnlimpiar_Click(sender As Object, e As EventArgs) Handles btnlimpiar.Click
+        username_txt.Clear()
+        nombre_txt.Clear()
+        ap_txt.Clear()
+        am_txt.Clear()
+        pass_txt.Clear()
+        pass2_txt.Clear()
     End Sub
 End Class

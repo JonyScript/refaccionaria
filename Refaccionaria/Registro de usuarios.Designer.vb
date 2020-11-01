@@ -43,6 +43,7 @@ Partial Class Registro_de_usuarios
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
+        Me.btnlimpiar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,7 +57,7 @@ Partial Class Registro_de_usuarios
         '
         'nombre_txt
         '
-        Me.nombre_txt.Location = New System.Drawing.Point(132, 77)
+        Me.nombre_txt.Location = New System.Drawing.Point(132, 80)
         Me.nombre_txt.Name = "nombre_txt"
         Me.nombre_txt.Size = New System.Drawing.Size(175, 20)
         Me.nombre_txt.TabIndex = 1
@@ -164,7 +165,7 @@ Partial Class Registro_de_usuarios
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(341, 165)
+        Me.Button1.Location = New System.Drawing.Point(422, 165)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 17
@@ -200,7 +201,7 @@ Partial Class Registro_de_usuarios
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(433, 165)
+        Me.Button2.Location = New System.Drawing.Point(422, 202)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 21
@@ -217,11 +218,21 @@ Partial Class Registro_de_usuarios
         Me.back.Text = "⮌"
         Me.back.UseVisualStyleBackColor = True
         '
+        'btnlimpiar
+        '
+        Me.btnlimpiar.Location = New System.Drawing.Point(332, 165)
+        Me.btnlimpiar.Name = "btnlimpiar"
+        Me.btnlimpiar.Size = New System.Drawing.Size(75, 23)
+        Me.btnlimpiar.TabIndex = 23
+        Me.btnlimpiar.Text = "Limpiar"
+        Me.btnlimpiar.UseVisualStyleBackColor = True
+        '
         'Registro_de_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(539, 450)
+        Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label8)
@@ -271,4 +282,5 @@ Partial Class Registro_de_usuarios
     Friend WithEvents Label8 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents back As Button
+    Friend WithEvents btnlimpiar As Button
 End Class
