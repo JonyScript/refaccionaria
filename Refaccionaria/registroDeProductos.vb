@@ -4,4 +4,12 @@
         Me.Close()
 
     End Sub
+
+    Private Sub registroDeProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub DGVRproductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRproductos.CellContentClick
+
+    End Sub
 End Class
