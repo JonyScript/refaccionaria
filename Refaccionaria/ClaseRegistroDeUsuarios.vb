@@ -134,7 +134,7 @@
         If codigoUsuario <> "" Then
             ' Preparamos el query para modificar el registro
 
-            strSql = "UPDATE paquetes set codigoRol =" & codigoRol & ", " &
+            strSql = "UPDATE usuario set codigoRol =" & codigoRol & ", " &
                      " nombre =" & nombre & ", " &
                      " paterno = " & paterno & ", " &
                      " materno =" & materno & "," &
