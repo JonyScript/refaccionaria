@@ -44,6 +44,7 @@ Partial Class Registro_de_usuarios
         Me.Button2 = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
         Me.btnlimpiar = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -227,11 +228,21 @@ Partial Class Registro_de_usuarios
         Me.btnlimpiar.Text = "Limpiar"
         Me.btnlimpiar.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(332, 203)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 34)
+        Me.Button4.TabIndex = 24
+        Me.Button4.Text = "Actualizar datos"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Registro_de_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(539, 450)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Button2)
@@ -283,4 +294,5 @@ Partial Class Registro_de_usuarios
     Friend WithEvents Button2 As Button
     Friend WithEvents back As Button
     Friend WithEvents btnlimpiar As Button
+    Friend WithEvents Button4 As Button
 End Class

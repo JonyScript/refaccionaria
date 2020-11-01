@@ -148,4 +148,12 @@
         pass_txt.Clear()
         pass2_txt.Clear()
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim actualiza As New Registro_de_usuarios(username_txt.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text, cbx_rol.SelectedValue
+        actualiza.actualizaPaqueteEmp()
+        MessageBox.Show("Registro actualizado")
+        actualiza.PoblarDataGridActualizaPaquetes(DGVAP)
+        cnx.Close()
+    End Sub
 End Class

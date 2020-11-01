@@ -79,9 +79,9 @@ Partial Class ModificarProducto
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(121, 226)
+        Me.ComboBox1.Location = New System.Drawing.Point(110, 223)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(175, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(186, 24)
         Me.ComboBox1.TabIndex = 5
         '
         'Label4
