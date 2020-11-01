@@ -34,9 +34,9 @@ Partial Class Autenticación_de_usuarios
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Refaccionaria.My.Resources.Resources.inicio
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 17)
+        Me.PictureBox1.Location = New System.Drawing.Point(42, 42)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(186, 204)
+        Me.PictureBox1.Size = New System.Drawing.Size(218, 221)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -44,41 +44,44 @@ Partial Class Autenticación_de_usuarios
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(240, 47)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(298, 70)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 13)
+        Me.Label1.Size = New System.Drawing.Size(129, 17)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Nombre de usuario:"
+        Me.Label1.Text = "Nombre de usuario"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(240, 99)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(298, 134)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(81, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Contraseña"
         '
         'txtNombreDeUsuario
         '
-        Me.txtNombreDeUsuario.Location = New System.Drawing.Point(243, 64)
+        Me.txtNombreDeUsuario.Location = New System.Drawing.Point(301, 99)
         Me.txtNombreDeUsuario.Name = "txtNombreDeUsuario"
-        Me.txtNombreDeUsuario.Size = New System.Drawing.Size(150, 20)
+        Me.txtNombreDeUsuario.Size = New System.Drawing.Size(166, 20)
         Me.txtNombreDeUsuario.TabIndex = 3
         '
         'txtContraseña
         '
-        Me.txtContraseña.Location = New System.Drawing.Point(243, 115)
+        Me.txtContraseña.Location = New System.Drawing.Point(301, 165)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContraseña.Size = New System.Drawing.Size(150, 20)
+        Me.txtContraseña.Size = New System.Drawing.Size(166, 20)
         Me.txtContraseña.TabIndex = 4
         '
         'btnIniciarSesion
         '
-        Me.btnIniciarSesion.Location = New System.Drawing.Point(261, 158)
+        Me.btnIniciarSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIniciarSesion.Location = New System.Drawing.Point(323, 214)
         Me.btnIniciarSesion.Name = "btnIniciarSesion"
-        Me.btnIniciarSesion.Size = New System.Drawing.Size(105, 23)
+        Me.btnIniciarSesion.Size = New System.Drawing.Size(121, 33)
         Me.btnIniciarSesion.TabIndex = 5
         Me.btnIniciarSesion.Text = "Iniciar sesión"
         Me.btnIniciarSesion.UseVisualStyleBackColor = True
@@ -87,7 +90,7 @@ Partial Class Autenticación_de_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(412, 232)
+        Me.ClientSize = New System.Drawing.Size(533, 320)
         Me.Controls.Add(Me.btnIniciarSesion)
         Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.txtNombreDeUsuario)
