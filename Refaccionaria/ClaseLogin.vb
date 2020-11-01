@@ -24,7 +24,7 @@ Public Class ClaseLogin
         Dim xDT As DataTable
 
         strSQL = "SELECT * FROM usuario " &
-               "WHERE codigousuario ='" & usuario & "' and contrasena ='" & contrasena & "' and eliminado = 0"
+               "WHERE codigousuario ='" & usuario & "' and contrasena ='" & contrasena & "'"
         consultausuario = False
 
         xDT = xCnx.objetoDataAdapter(strSQL)

@@ -22,7 +22,7 @@ Partial Class registroDeProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGVRproductos = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -35,22 +35,28 @@ Partial Class registroDeProductos
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Medida = New System.Windows.Forms.ComboBox()
+        Me.NombreDproducto_txt = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        CType(Me.DGVRproductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DGVRproductos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(35, 89)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(717, 166)
-        Me.DataGridView1.TabIndex = 0
+        Me.DGVRproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVRproductos.Location = New System.Drawing.Point(89, 108)
+        Me.DGVRproductos.Name = "DGVRproductos"
+        Me.DGVRproductos.Size = New System.Drawing.Size(882, 166)
+        Me.DGVRproductos.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(175, 54)
+        Me.Label1.Location = New System.Drawing.Point(301, 63)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 1
@@ -58,7 +64,7 @@ Partial Class registroDeProductos
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(246, 56)
+        Me.TextBox1.Location = New System.Drawing.Point(372, 65)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(51, 20)
         Me.TextBox1.TabIndex = 2
@@ -67,7 +73,7 @@ Partial Class registroDeProductos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(303, 55)
+        Me.Label2.Location = New System.Drawing.Point(429, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(158, 20)
         Me.Label2.TabIndex = 3
@@ -75,7 +81,7 @@ Partial Class registroDeProductos
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(467, 56)
+        Me.TextBox2.Location = New System.Drawing.Point(593, 65)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(119, 20)
         Me.TextBox2.TabIndex = 4
@@ -83,7 +89,7 @@ Partial Class registroDeProductos
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(592, 51)
+        Me.Button1.Location = New System.Drawing.Point(718, 60)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 28)
         Me.Button1.TabIndex = 5
@@ -93,9 +99,9 @@ Partial Class registroDeProductos
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(784, 89)
+        Me.Button2.Location = New System.Drawing.Point(455, 404)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(105, 41)
+        Me.Button2.Size = New System.Drawing.Size(105, 45)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Agregar Productos"
         Me.Button2.UseVisualStyleBackColor = True
@@ -103,7 +109,7 @@ Partial Class registroDeProductos
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(790, 210)
+        Me.Button3.Location = New System.Drawing.Point(217, 404)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(89, 45)
         Me.Button3.TabIndex = 7
@@ -113,7 +119,7 @@ Partial Class registroDeProductos
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(331, 270)
+        Me.Button4.Location = New System.Drawing.Point(979, 164)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 45)
         Me.Button4.TabIndex = 8
@@ -123,9 +129,9 @@ Partial Class registroDeProductos
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(799, 155)
+        Me.Button5.Location = New System.Drawing.Point(740, 404)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(80, 36)
+        Me.Button5.Size = New System.Drawing.Size(80, 45)
         Me.Button5.TabIndex = 9
         Me.Button5.Text = "Modificar"
         Me.Button5.UseVisualStyleBackColor = True
@@ -133,7 +139,7 @@ Partial Class registroDeProductos
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(794, 301)
+        Me.Button6.Location = New System.Drawing.Point(979, 518)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(95, 43)
         Me.Button6.TabIndex = 10
@@ -144,7 +150,7 @@ Partial Class registroDeProductos
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(302, 9)
+        Me.Label3.Location = New System.Drawing.Point(428, 18)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(247, 29)
         Me.Label3.TabIndex = 11
@@ -160,11 +166,69 @@ Partial Class registroDeProductos
         Me.Button7.Text = "⮌"
         Me.Button7.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(69, 331)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(161, 20)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Nombre del producto "
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(362, 334)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(61, 20)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Medida"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(594, 334)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(118, 20)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "Precio de venta"
+        '
+        'Medida
+        '
+        Me.Medida.FormattingEnabled = True
+        Me.Medida.Location = New System.Drawing.Point(433, 333)
+        Me.Medida.Name = "Medida"
+        Me.Medida.Size = New System.Drawing.Size(121, 21)
+        Me.Medida.TabIndex = 16
+        '
+        'NombreDproducto_txt
+        '
+        Me.NombreDproducto_txt.Location = New System.Drawing.Point(236, 334)
+        Me.NombreDproducto_txt.Name = "NombreDproducto_txt"
+        Me.NombreDproducto_txt.Size = New System.Drawing.Size(100, 20)
+        Me.NombreDproducto_txt.TabIndex = 17
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(740, 336)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(162, 20)
+        Me.TextBox4.TabIndex = 18
+        '
         'registroDeProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(901, 356)
+        Me.ClientSize = New System.Drawing.Size(1086, 573)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.NombreDproducto_txt)
+        Me.Controls.Add(Me.Medida)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button6)
@@ -177,16 +241,16 @@ Partial Class registroDeProductos
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DGVRproductos)
         Me.Name = "registroDeProductos"
         Me.Text = "Registro de productos"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVRproductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGVRproductos As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
@@ -199,4 +263,10 @@ Partial Class registroDeProductos
     Friend WithEvents Button6 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Button7 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Medida As ComboBox
+    Friend WithEvents NombreDproducto_txt As TextBox
+    Friend WithEvents TextBox4 As TextBox
 End Class
