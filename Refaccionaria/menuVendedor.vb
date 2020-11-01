@@ -7,8 +7,8 @@
 
     Private Sub btnRegistroDeClientes2_Click(sender As Object, e As EventArgs) Handles btnRegistroDeClientes2.Click
         cnx.Close()
-        'registroDeClientes.Show()
-        'Me.Close()
+        RegistroDeClientes.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnCompraDeProductos2_Click(sender As Object, e As EventArgs) Handles btnCompraDeProductos2.Click

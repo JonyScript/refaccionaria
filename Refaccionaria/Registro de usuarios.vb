@@ -64,6 +64,12 @@
                 If user.consultaUnUsuario() = False Then
                     'Si el usuario no está registrado, la inserta como una nuevo
                     user.insertarUsuario()
+                    username_txt.Clear()
+                    nombre_txt.Clear()
+                    ap_txt.Clear()
+                    am_txt.Clear()
+                    pass2_txt.Clear()
+                    pass_txt.Clear()
                 Else
                     MessageBox.Show("El id del usuario ya existe")
                 End If
@@ -91,7 +97,6 @@
         nombre_txt.Text = DGVUsuarios.Rows(renglon).Cells(2).Value
         ap_txt.Text = DGVUsuarios.Rows(renglon).Cells(3).Value
         am_txt.Text = DGVUsuarios.Rows(renglon).Cells(4).Value
-        pass_txt.Text = DGVUsuarios.Rows(renglon).Cells(5).Value
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -100,7 +105,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
+            Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text, cbx_rol.SelectedValue)
             'Verificmos que el pais se encuentre registrado
             If user.consultaUnUsuario() = False Then
                 MsgBox("No se puede eliminar al usuario, verifique ...")
@@ -113,5 +118,24 @@
                 cnx.Close()
             End If
         End If
+    End Sub
+
+    Private Sub pass2_txt_TextChanged(sender As Object, e As EventArgs) Handles pass2_txt.TextChanged
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles back.Click
+        cnx.Close()
+        menuAdministrador.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnlimpiar_Click(sender As Object, e As EventArgs) Handles btnlimpiar.Click
+        username_txt.Clear()
+        nombre_txt.Clear()
+        ap_txt.Clear()
+        am_txt.Clear()
+        pass2_txt.Clear()
+        pass_txt.Clear()
     End Sub
 End Class

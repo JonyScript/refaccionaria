@@ -98,7 +98,7 @@
         If codigoUsuario <> "" And nombre <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO usuario VALUES('" & codigoUsuario & "',(Select codigoRol from rol where descripcion='" & rol & "'), '" & nombre & "', '" & paterno & "', '" & materno & "','" & contrasena & "')"
+            strSql = "INSERT INTO usuario VALUES('" & codigoUsuario & "',(Select codigoRol from rol where descripcion='" & rol & "'), '" & nombre & "', '" & paterno & "', '" & materno & "','" & contrasena & "', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo usuario agregado")
         Else
@@ -112,14 +112,15 @@
         'Validamos que ese alumno no esté Integrado en algún equipo
 
         If codigoUsuario <> "" Then
-            If codigoRol = 1 Then
+            If rol = 1 Then
                 MsgBox("No puede eliminar a otro administrador")
             Else
-                strSql = "DELETE FROM usuarios " &
-                         "WHERE codigoUsuario=" & Registro_de_usuarios.username_txt.Text
+                strSql = "UPDATE usuario " &
+                         "SET eliminado = 1 " &
+                         "WHERE codigoUsuario= '" & codigoUsuario & "'"
 
                 xCnx.objetoCommand(strSql)
-                MsgBox("Registro eliminado")
+                MsgBox("Usuario eliminado")
             End If
         Else
             MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
@@ -152,8 +153,8 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT codigoUsuario as Codigo, descripcion as Rol, nombre as Nombre, paterno as Paterno, materno as Materno, contrasena as Clave" &
-                 "  From usuario, rol where usuario.codigorol = rol.codigorol " & " Order By rol"
+        strSQL = "SELECT codigoUsuario as Codigo, descripcion as Rol, nombre as Nombre, paterno as Paterno, materno as Materno" &
+                 " From usuario, rol where usuario.codigorol = rol.codigorol and eliminado = 0" & " Order By rol"
         consultaTodosUsuarios = xCnx.objetoDataAdapter(strSQL)
     End Function
     Public Sub PoblarDataGridRegistroDeUsuarios(ByVal DGVUsuarios As DataGridView)
@@ -164,7 +165,6 @@
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVUsuarios.Columns.Item(0).Width = 100
         DGVUsuarios.Columns.Item(0).Width = 100
         DGVUsuarios.Columns.Item(0).Width = 100
         DGVUsuarios.Columns.Item(0).Width = 100
