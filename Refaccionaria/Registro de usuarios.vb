@@ -9,11 +9,6 @@
         datagrid.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
         cnx.Close()
     End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_rol.SelectedIndexChanged
         Dim x, i As Integer
         puestoUsuario = ""
