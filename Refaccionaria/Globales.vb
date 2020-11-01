@@ -8,7 +8,7 @@ Module Globales
     Public puestoUsuario As String
     Public nombreUsuarioConectado As String
     Public codigoRol As String
-
+    Public userActual As String
     Public dir2 As String
     Public dir3 As String
     Public dir4 As String

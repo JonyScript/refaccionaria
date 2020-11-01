@@ -89,9 +89,11 @@
 
     Private Sub DGVUsuarios_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUsuarios.CellClick
         Dim renglon As Integer
+
         'Al darle clic al renglón del DGV mostramos los datos en las cajas de texto
         'el valor de cada celda es pasado a la caja de texto o combo correspondiente
         renglon = DGVUsuarios.CurrentCellAddress.Y
+        userActual = DGVUsuarios.Rows(renglon).Cells(0).Value
         username_txt.Text = DGVUsuarios.Rows(renglon).Cells(0).Value
         cbx_rol.Text = DGVUsuarios.Rows(renglon).Cells(1).Value
         nombre_txt.Text = DGVUsuarios.Rows(renglon).Cells(2).Value
@@ -152,7 +154,6 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim actualiza As New ClaseRegistroDeUsuarios(username_txt.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text, cbx_rol.SelectedValue)
         actualiza.actualizaUsuario()
-        MessageBox.Show("Registro actualizado")
         actualiza.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
         cnx.Close()
     End Sub
