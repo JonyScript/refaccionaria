@@ -126,6 +126,25 @@
             MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
+    Public Sub actualizaUsuario()
+        Dim strSql As String
+        Dim xCnx As New Oracle
+        ' Validamos que no falten datos en las variables, en caso contrario no se 
+        ' permite hacer el Update
+        If codigoUsuario <> "" Then
+            ' Preparamos el query para modificar el registro
+
+            strSql = "UPDATE paquetes set codigoRol =" & codigoRol & ", " &
+                     " nombre =" & nombre & ", " &
+                     " paterno = " & paterno & ", " &
+                     " materno =" & materno & "," &
+                     " contrasena = " & contrasena & " , " &
+                     " WHERE codigoUsuario =" & Registro_de_usuarios.username_txt.Text
+            xCnx.objetoCommand(strSql)
+        Else
+            MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+        End If
+    End Sub
     Public Function consultaUnUsuario() As Boolean
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente
