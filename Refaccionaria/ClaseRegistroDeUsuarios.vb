@@ -98,7 +98,7 @@
         If codigoUsuario <> "" And nombre <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO usuario VALUES('" & codigoUsuario & "',(Select codigoRol from rol where descripcion='" & rol & "'), '" & nombre & "', '" & paterno & "', '" & materno & "','" & contrasena & "', 0)"
+            strSql = "INSERT INTO usuario VALUES('" & codigoUsuario & "',(Select codigoRol from rol where descripcion='" & rol & "'), '" & nombre & "', '" & paterno & "', '" & materno & "', prueba.cryptf('" & contrasena & "'), 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo usuario agregado")
         Else
