@@ -131,18 +131,27 @@
         Dim xCnx As New Oracle
         ' Validamos que no falten datos en las variables, en caso contrario no se 
         ' permite hacer el Update
-        If codigoUsuario <> "" Then
-            ' Preparamos el query para modificar el registro
-
-            strSql = "UPDATE usuario set codigoRol =" & codigoRol & ", " &
-                     " nombre =" & nombre & ", " &
-                     " paterno = " & paterno & ", " &
-                     " materno =" & materno & "," &
-                     " contrasena = " & contrasena & " , " &
-                     " WHERE codigoUsuario =" & Registro_de_usuarios.username_txt.Text
-            xCnx.objetoCommand(strSql)
-        Else
+        If codigoUsuario = "" Then
             MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+        ElseIf userActual = Registro_de_usuarios.username_txt.Text Then
+            ' Preparamos el query para modificar el registro
+            If contrasena = "" Then
+                strSql = "UPDATE usuario set codigoRol =" & rol & ", " &
+                     " nombre ='" & nombre & "', " &
+                     " paterno = '" & paterno & "', " &
+                     " materno = '" & materno & "' " &
+                     " WHERE codigoUsuario = '" & Registro_de_usuarios.username_txt.Text & "'"
+                xCnx.objetoCommand(strSql)
+            Else
+
+                strSql = "UPDATE usuario set codigoRol =" & rol & ", " &
+                     " nombre ='" & nombre & "', " &
+                     " paterno = '" & paterno & "', " &
+                     " materno = '" & materno & "'," &
+                     " contrasena = prueba.cryptf('" & contrasena & "')  " &
+                     " WHERE codigoUsuario = '" & Registro_de_usuarios.username_txt.Text & "'"
+                xCnx.objetoCommand(strSql)
+            End If
         End If
     End Sub
     Public Function consultaUnUsuario() As Boolean
