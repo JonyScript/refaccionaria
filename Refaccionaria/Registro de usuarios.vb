@@ -64,6 +64,12 @@
                 If user.consultaUnUsuario() = False Then
                     'Si el usuario no está registrado, la inserta como una nuevo
                     user.insertarUsuario()
+                    username_txt.Clear()
+                    nombre_txt.Clear()
+                    ap_txt.Clear()
+                    am_txt.Clear()
+                    pass2_txt.Clear()
+                    pass_txt.Clear()
                 Else
                     MessageBox.Show("El id del usuario ya existe")
                 End If
@@ -91,7 +97,6 @@
         nombre_txt.Text = DGVUsuarios.Rows(renglon).Cells(2).Value
         ap_txt.Text = DGVUsuarios.Rows(renglon).Cells(3).Value
         am_txt.Text = DGVUsuarios.Rows(renglon).Cells(4).Value
-        pass_txt.Text = DGVUsuarios.Rows(renglon).Cells(5).Value
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -123,5 +128,14 @@
         cnx.Close()
         menuAdministrador.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub btnlimpiar_Click(sender As Object, e As EventArgs) Handles btnlimpiar.Click
+        username_txt.Clear()
+        nombre_txt.Clear()
+        ap_txt.Clear()
+        am_txt.Clear()
+        pass2_txt.Clear()
+        pass_txt.Clear()
     End Sub
 End Class
