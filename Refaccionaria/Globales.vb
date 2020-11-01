@@ -21,6 +21,7 @@ Module Globales
     Public destinatario As String
     Public id_estadopaq As String
     Public id_motivo As String
+    Public codigoMedida As String
 
 
 

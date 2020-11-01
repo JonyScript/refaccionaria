@@ -1,6 +1,6 @@
 ﻿Public Class ClaseRegistroDeProductos
     Private codigoProducto As String
-    Private codigoMedida As String
+    Private CMedida As String
     Private nombreProducto As String
     Private precio As String
     Private existencia As String
@@ -10,7 +10,7 @@
     'Método constructor inicializa variables
     Public Sub New()
         codigoProducto = ""
-        codigoMedida = ""
+        CMedida = ""
         nombreProducto = ""
         precio = ""
         existencia = ""
@@ -18,11 +18,11 @@
     'Metodo constructor con valores proporcionados al instanciar el objeto
     Public Sub New(ByVal txtcodigoP As String,
                    ByVal txtcodigoM As String, ByVal txtnombreP As String,
-                   ByVal txtprecio As String, ByVal txtexistencia As String,)
+                   ByVal txtprecio As String, ByVal txtexistencia As String)
         'En estas variables recibimos los datos del formulario
 
         codigoProducto = txtcodigoP
-        codigoMedida = txtcodigoM
+        CMedida = txtcodigoM
         nombreProducto = txtnombreP
         precio = txtprecio
         existencia = txtexistencia
@@ -42,10 +42,10 @@
 
     Public Property getSetCmedida() As String
         Get
-            Return codigoMedida
+            Return CMedida
         End Get
         Set(ByVal Value As String)
-            codigoMedida = Value
+            CMedida = Value
         End Set
     End Property
 
@@ -81,57 +81,53 @@
         Dim xCnx As New Oracle
         ' Validamos que no falten datos en las variables, en caso contrario no se 
         ' permite hacer el insert
-        If codigoProducto <> "" And codigoMedida <> "" Then
+        If codigoProducto <> "" And CMedida <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO usuario VALUES('" & codigoProducto & "',(Select codigoRol from rol where descripcion='" & rol & "'), '" & nombre & "', '" & paterno & "', '" & materno & "', prueba.cryptf('" & contrasena & "'), 0)"
+            strSql = "INSERT INTO producto VALUES('" & codigoProducto & "',(Select codigoMedida from medida  where descripcion='" & CMedida & "'), '" & nombreProducto & "', " & precio & ", 0)"
             xCnx.objetoCommand(strSql)
-            MsgBox("Nuevo usuario agregado")
+            MsgBox("Nuevo producto agregado")
         Else
-            MsgBox("Faltan datos para el usuario, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+            MsgBox("Faltan datos para el producto, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
 
-    Public Sub eliminarUsuario()
+    Public Sub eliminarProducto()
         Dim strSql As String
         Dim xCnx As New Oracle
         'Validamos que ese alumno no esté Integrado en algún equipo
 
-        If codigoUsuario <> "" Then
-            If rol = 1 Then
-                MsgBox("No puede eliminar a otro administrador")
-            Else
-                strSql = "UPDATE usuario " &
+        If codigoProducto <> "" Then
+            strSql = "UPDATE producto " &
                          "SET eliminado = 1 " &
-                         "WHERE codigoUsuario= '" & codigoUsuario & "'"
+                         "WHERE codigoProducto= '" & codigoProducto & "'"
 
-                xCnx.objetoCommand(strSql)
-                MsgBox("Usuario eliminado")
-            End If
+            xCnx.objetoCommand(strSql)
+            MsgBox("Producto eliminado")
+
         Else
             MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
-    Public Sub actualizaUsuario()
+    Public Sub actualizarProductos()
         Dim strSql As String
         Dim xCnx As New Oracle
         ' Validamos que no falten datos en las variables, en caso contrario no se 
         ' permite hacer el Update
-        If codigoUsuario <> "" Then
+        If codigoProducto <> "" Then
             ' Preparamos el query para modificar el registro
 
-            strSql = "UPDATE usuario set codigoRol =" & codigoRol & ", " &
-                     " nombre =" & nombre & ", " &
-                     " paterno = " & paterno & ", " &
-                     " materno =" & materno & "," &
-                     " contrasena = " & contrasena & " , " &
-                     " WHERE codigoUsuario =" & Registro_de_usuarios.username_txt.Text
+            strSql = "UPDATE producto set codigoMedida=" & CMedida & ", " &
+                     " nombreProducto =" & nombreProducto & ", " &
+                     " precio = " & precio & ", " &
+                     " existencia =" & existencia & "," &
+                     " WHERE codigoProducto =" & codigoProducto
             xCnx.objetoCommand(strSql)
         Else
             MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
-    Public Function consultaUnUsuario() As Boolean
+    Public Function consultaUnProducto() As Boolean
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente
         Dim strSQL As String
@@ -140,31 +136,31 @@
         'Preparamos el query para buscar al usuario, con el dato
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
-        strSQL = "SELECT * FROM usuario " &
-                 "WHERE codigoUsuario= '" & Registro_de_usuarios.username_txt.Text & "' and eliminado = 0"
-        consultaUnUsuario = False
+        strSQL = "SELECT * FROM producto " &
+                 "WHERE codigoProducto= '" & codigoProducto & "' and eliminado = 0"
+        consultaUnProducto = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
-            If IsDBNull(xDT.Rows(0)("codigoUsuario")) Then
-                codigoUsuario = 0
+            If IsDBNull(xDT.Rows(0)("codigoProducto")) Then
+                codigoProducto = 0
             Else
-                Registro_de_usuarios.username_txt.Text = CStr(xDT.Rows(0)("codigoUsuario"))
-                codigoUsuario = CStr(xDT.Rows(0)("codigoUsuario"))
+                codigoProducto = CStr(xDT.Rows(0)("codigoProducto"))
+                ' codigoProducto = CStr(xDT.Rows(0)("codigoProducto"))
             End If
-            consultaUnUsuario = True
+            consultaUnProducto = True
         End If
     End Function
-    Public Function consultaTodosUsuarios() As Object
+    Public Function consultaTodosProductos() As Object
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT codigoUsuario as Codigo, descripcion as Rol, nombre as Nombre, paterno as Paterno, materno as Materno" &
-                 "  From usuario, rol where usuario.codigorol = rol.codigorol and eliminado = 0" & " Order By rol"
-        consultaTodosUsuarios = xCnx.objetoDataAdapter(strSQL)
+        strSQL = "SELECT codigoProducto as codigo, descripcion as medida, nombreProducto as producto, precio as precio, existencia as existencia" &
+                 "  From producto, medida where producto.codigoMedida = medida.codigoMedida and eliminado = 0" & " Order By codigo"
+        consultaTodosProductos = xCnx.objetoDataAdapter(strSQL)
     End Function
     Public Sub PoblarDataGridRegistroDeUsuarios(ByVal DGVUsuarios As DataGridView)
         'Llamamos al método que obtiene los registros de los usuarios
-        DGVUsuarios.DataSource = consultaTodosUsuarios()
+        DGVUsuarios.DataSource = consultaTodosProductos()
         DGVUsuarios.Refresh()
         'Establecer ancho de cada columna del DataGridView, el 
         'número de columnas del DGV debe ser igual al número

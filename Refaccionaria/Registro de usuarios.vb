@@ -96,10 +96,6 @@
         am_txt.Text = DGVUsuarios.Rows(renglon).Cells(4).Value
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text, cbx_rol.SelectedValue)
@@ -121,10 +117,6 @@
                 pass2_txt.Clear()
             End If
         End If
-    End Sub
-
-    Private Sub pass2_txt_TextChanged(sender As Object, e As EventArgs) Handles pass2_txt.TextChanged
-
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles back.Click

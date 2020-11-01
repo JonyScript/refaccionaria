@@ -9,9 +9,9 @@
         datagrid.PoblarDataGridRegistroDeUsuarios(DGVRproductos)
         cnx.Close()
     End Sub
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Medida.SelectedIndexChanged
+    Private Sub Medida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Medida.SelectedIndexChanged
         Dim x, i As Integer
-        puestoUsuario = ""
+        codigoMedida = ""
         dir = Medida.Text
         i = 0
         x = 0
@@ -26,7 +26,7 @@
         Next
 
         For x = 1 To i
-            puestoUsuario = puestoUsuario + Mid(dir, x, 1)
+            codigoMedida = codigoMedida + Mid(dir, x, 1)
         Next x
     End Sub
     Private Sub AgregarProductos_Click(sender As Object, e As EventArgs) Handles AgregarProductos.Click
@@ -37,8 +37,8 @@
         ElseIf PrecioDeVenta.Text = vbNullString Then
             MessageBox.Show("Captura precio de venta")
         Else
-            Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
-                user.getSetUsuario = username_txt.Text
+            Dim user As New ClaseRegistroDeProductos(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
+            user.getSetUsuario = username_txt.Text
                 user.getSetrol = cbx_rol.Text
                 user.getSetnombre = nombre_txt.Text
                 user.getSetpaterno = ap_txt.Text

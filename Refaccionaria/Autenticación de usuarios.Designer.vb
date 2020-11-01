@@ -36,7 +36,7 @@ Partial Class Autenticación_de_usuarios
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Refaccionaria.My.Resources.Resources.inicio
-        Me.PictureBox1.Location = New System.Drawing.Point(131, 146)
+        Me.PictureBox1.Location = New System.Drawing.Point(86, 146)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(211, 196)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
