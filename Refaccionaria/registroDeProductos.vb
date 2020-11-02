@@ -54,8 +54,8 @@
             End If
             cnx.Close()
         End If
-        Dim datagrid As New ClaseRegistroDeUsuarios()
-        datagrid.PoblarDataGridRegistroDeUsuarios(DGVRproductos)
+        Dim datagrid As New ClaseRegistroDeProductos()
+        datagrid.PoblarDataGridRegistroDeProductos(DGVRproductos)
         cnx.Close()
     End Sub
     Private Sub DGVRproductos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRproductos.CellClick
