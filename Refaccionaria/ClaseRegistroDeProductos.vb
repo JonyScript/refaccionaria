@@ -153,7 +153,7 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,descripcion as medida, precio as precio, existencia as existencia" &
+        strSQL = "SELECT codigoProducto as codigo,descripcion as medida,nombreProducto as producto, precio as precio, existencia as existencia" &
                  "  From producto, medida where producto.codigoMedida = medida.codigoMedida and eliminado = 0" & " Order By codigo"
         consultaTodosProductos = xCnx.objetoDataAdapter(strSQL)
     End Function
@@ -168,8 +168,7 @@
         DGVDProductos.Columns.Item(0).Width = 100
         DGVDProductos.Columns.Item(1).Width = 200
         DGVDProductos.Columns.Item(2).Width = 200
-        DGVDProductos.Columns.Item(3).Width = 200
-        DGVDProductos.Columns.Item(4).Width = 150
+        DGVDProductos.Columns.Item(3).Width = 240
 
     End Sub
 End Class

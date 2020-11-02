@@ -3,7 +3,7 @@
         DGVRproductos.ReadOnly = False
 
         llenarCombo(Medida, "Select codigoMedida, descripcion from medida", "codigoMedida", "descripcion")
-        codigoRol = Medida.SelectedValue
+        codigoMedida = Medida.SelectedValue
 
         Dim datagrid As New ClaseRegistroDeproductos()
         datagrid.PoblarDataGridRegistroDeProductos(DGVRproductos)
@@ -37,7 +37,7 @@
         ElseIf PrecioDeVenta.Text = vbNullString Then
             MessageBox.Show("Captura precio de venta")
         Else
-            Dim user As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.Text, PrecioDeVenta.Text, "existencia")
+            Dim user As New ClaseRegistroDeProductos(Codigo.Text, Medida.SelectedValue, NombreDproducto.Text, PrecioDeVenta.Text, "existencia")
             user.getSetCproducto = Codigo.Text
             user.getSetCmedida = Medida.Text
             user.getSetNproducto = NombreDproducto.Text
@@ -54,8 +54,8 @@
             End If
             cnx.Close()
         End If
-        Dim datagrid As New ClaseRegistroDeUsuarios()
-        datagrid.PoblarDataGridRegistroDeUsuarios(DGVRproductos)
+        Dim datagrid As New ClaseRegistroDeProductos()
+        datagrid.PoblarDataGridRegistroDeProductos(DGVRproductos)
         cnx.Close()
     End Sub
     Private Sub DGVRproductos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRproductos.CellClick
@@ -65,14 +65,14 @@
         'el valor de cada celda es pasado a la caja de texto o combo correspondiente
         renglon = DGVRproductos.CurrentCellAddress.Y
         Codigo.Text = DGVRproductos.Rows(renglon).Cells(0).Value
-        NombreDproducto.Text = DGVRproductos.Rows(renglon).Cells(1).Value
-        Medida.Text = DGVRproductos.Rows(renglon).Cells(2).Value
+        Medida.Text = DGVRproductos.Rows(renglon).Cells(1).Value
+        NombreDproducto.Text = DGVRproductos.Rows(renglon).Cells(2).Value
         PrecioDeVenta.Text = DGVRproductos.Rows(renglon).Cells(3).Value
     End Sub
 
     Private Sub EliminarP_Click(sender As Object, e As EventArgs) Handles EliminarP.Click
         If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            Dim user As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.Text, PrecioDeVenta.Text, "existencia")
+            Dim user As New ClaseRegistroDeProductos(Codigo.Text, Medida.SelectedValue, NombreDproducto.Text, PrecioDeVenta.Text, "existencia")
             'Verificmos que el pais se encuentre registrado
             If user.consultaUnProducto() = False Then
                 MsgBox("No se puede eliminar el producto, verifique ...")
@@ -100,7 +100,7 @@
         PrecioDeVenta.Clear()
     End Sub
     Private Sub ModificarP_Click(sender As Object, e As EventArgs) Handles ModificarP.Click
-        Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.Text, PrecioDeVenta.Text, "existencia")
+        Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, Medida.SelectedValue, NombreDproducto.Text, PrecioDeVenta.Text, "existencia")
         actualiza.actualizarProductos()
         actualiza.PoblarDataGridRegistroDeProductos(DGVRproductos)
         cnx.Close()

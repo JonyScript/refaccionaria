@@ -25,7 +25,6 @@ Partial Class registroDeProductos
         Me.DGVRproductos = New System.Windows.Forms.DataGridView()
         Me.AgregarProductos = New System.Windows.Forms.Button()
         Me.EliminarP = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.ModificarP = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -47,13 +46,13 @@ Partial Class registroDeProductos
         Me.DGVRproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVRproductos.Location = New System.Drawing.Point(89, 86)
         Me.DGVRproductos.Name = "DGVRproductos"
-        Me.DGVRproductos.Size = New System.Drawing.Size(882, 188)
+        Me.DGVRproductos.Size = New System.Drawing.Size(882, 215)
         Me.DGVRproductos.TabIndex = 0
         '
         'AgregarProductos
         '
         Me.AgregarProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AgregarProductos.Location = New System.Drawing.Point(477, 398)
+        Me.AgregarProductos.Location = New System.Drawing.Point(312, 385)
         Me.AgregarProductos.Name = "AgregarProductos"
         Me.AgregarProductos.Size = New System.Drawing.Size(105, 45)
         Me.AgregarProductos.TabIndex = 6
@@ -63,27 +62,17 @@ Partial Class registroDeProductos
         'EliminarP
         '
         Me.EliminarP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EliminarP.Location = New System.Drawing.Point(239, 398)
+        Me.EliminarP.Location = New System.Drawing.Point(454, 385)
         Me.EliminarP.Name = "EliminarP"
         Me.EliminarP.Size = New System.Drawing.Size(89, 45)
         Me.EliminarP.TabIndex = 7
         Me.EliminarP.Text = "Eliminar producto"
         Me.EliminarP.UseVisualStyleBackColor = True
         '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(979, 164)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 45)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Generar PDF"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'ModificarP
         '
         Me.ModificarP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ModificarP.Location = New System.Drawing.Point(758, 398)
+        Me.ModificarP.Location = New System.Drawing.Point(705, 385)
         Me.ModificarP.Name = "ModificarP"
         Me.ModificarP.Size = New System.Drawing.Size(80, 45)
         Me.ModificarP.TabIndex = 9
@@ -192,7 +181,7 @@ Partial Class registroDeProductos
         'limpiarP
         '
         Me.limpiarP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.limpiarP.Location = New System.Drawing.Point(980, 327)
+        Me.limpiarP.Location = New System.Drawing.Point(577, 396)
         Me.limpiarP.Name = "limpiarP"
         Me.limpiarP.Size = New System.Drawing.Size(84, 23)
         Me.limpiarP.TabIndex = 21
@@ -217,7 +206,6 @@ Partial Class registroDeProductos
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.ModificarP)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.EliminarP)
         Me.Controls.Add(Me.AgregarProductos)
         Me.Controls.Add(Me.DGVRproductos)
@@ -232,7 +220,6 @@ Partial Class registroDeProductos
     Friend WithEvents DGVRproductos As DataGridView
     Friend WithEvents AgregarProductos As Button
     Friend WithEvents EliminarP As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents ModificarP As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Label3 As Label
