@@ -103,6 +103,9 @@
         Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, Medida.SelectedValue, NombreDproducto.Text, PrecioDeVenta.Text, "existencia")
         actualiza.actualizarProductos()
         actualiza.PoblarDataGridRegistroDeProductos(DGVRproductos)
+        Codigo.Clear()
+        NombreDproducto.Clear()
+        PrecioDeVenta.Clear()
         cnx.Close()
     End Sub
 End Class
