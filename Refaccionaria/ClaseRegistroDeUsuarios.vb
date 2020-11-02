@@ -152,6 +152,8 @@
                      " WHERE codigoUsuario = '" & Registro_de_usuarios.username_txt.Text & "'"
                 xCnx.objetoCommand(strSql)
             End If
+        ElseIf userActual <> Registro_de_usuarios.username_txt.Text Then
+            MsgBox("No se puede actualizar el codigo de usuario")
         End If
     End Sub
     Public Function consultaUnUsuario() As Boolean
