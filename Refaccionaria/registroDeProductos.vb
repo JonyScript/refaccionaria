@@ -5,7 +5,7 @@
         llenarCombo(Medida, "Select codigoMedida, descripcion from medida", "codigoMedida", "descripcion")
         codigoMedida = Medida.SelectedValue
 
-        Dim datagrid As New ClaseRegistroDeproductos()
+        Dim datagrid As New ClaseRegistroDeProductos()
         datagrid.PoblarDataGridRegistroDeProductos(DGVRproductos)
         cnx.Close()
     End Sub
