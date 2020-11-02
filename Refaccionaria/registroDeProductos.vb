@@ -6,7 +6,7 @@
         codigoRol = Medida.SelectedValue
 
         Dim datagrid As New ClaseRegistroDeproductos()
-        datagrid.PoblarDataGridRegistroDeUsuarios(DGVRproductos)
+        datagrid.PoblarDataGridRegistroDeProductos(DGVRproductos)
         cnx.Close()
     End Sub
     Private Sub Medida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Medida.SelectedIndexChanged
@@ -37,33 +37,72 @@
         ElseIf PrecioDeVenta.Text = vbNullString Then
             MessageBox.Show("Captura precio de venta")
         Else
-            Dim user As New ClaseRegistroDeProductos(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
-            user.getSetUsuario = username_txt.Text
-                user.getSetrol = cbx_rol.Text
-                user.getSetnombre = nombre_txt.Text
-                user.getSetpaterno = ap_txt.Text
-                user.getSetmaterno = am_txt.Text
-                user.getSetcontrasena = pass_txt.Text
+            Dim user As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.Text, PrecioDeVenta.Text, "existencia")
+            user.getSetCproducto = Codigo.Text
+            user.getSetCmedida = Medida.Text
+            user.getSetNproducto = NombreDproducto.Text
+            user.getSetPrecio = PrecioDeVenta.Text
 
-                If user.consultaUnUsuario() = False Then
-                    'Si el usuario no está registrado, la inserta como una nuevo
-                    user.insertarUsuario()
-                    username_txt.Clear()
-                    nombre_txt.Clear()
-                    ap_txt.Clear()
-                    am_txt.Clear()
-                    pass_txt.Clear()
-                    pass2_txt.Clear()
-                Else
-                    MessageBox.Show("El id del usuario ya existe")
-                End If
-                cnx.Close()
+            If user.consultaUnProducto() = False Then
+                'Si el prodcuto no está registrado, la inserta como una nuevo
+                user.insertarProducto()
+                Codigo.Clear()
+                NombreDproducto.Clear()
+                PrecioDeVenta.Clear()
             Else
-                MessageBox.Show("Las contraseñas no son iguales")
+                MessageBox.Show("El id del producto ya existe")
             End If
-            Dim datagrid As New ClaseRegistroDeUsuarios()
-            datagrid.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
             cnx.Close()
         End If
+        Dim datagrid As New ClaseRegistroDeUsuarios()
+        datagrid.PoblarDataGridRegistroDeUsuarios(DGVRproductos)
+        cnx.Close()
+    End Sub
+    Private Sub DGVRproductos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRproductos.CellClick
+        Dim renglon As Integer
+
+        'Al darle clic al renglón del DGV mostramos los datos en las cajas de texto
+        'el valor de cada celda es pasado a la caja de texto o combo correspondiente
+        renglon = DGVRproductos.CurrentCellAddress.Y
+        Codigo.Text = DGVRproductos.Rows(renglon).Cells(0).Value
+        NombreDproducto.Text = DGVRproductos.Rows(renglon).Cells(1).Value
+        Medida.Text = DGVRproductos.Rows(renglon).Cells(2).Value
+        PrecioDeVenta.Text = DGVRproductos.Rows(renglon).Cells(3).Value
+    End Sub
+
+    Private Sub EliminarP_Click(sender As Object, e As EventArgs) Handles EliminarP.Click
+        If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            Dim user As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.Text, PrecioDeVenta.Text, "existencia")
+            'Verificmos que el pais se encuentre registrado
+            If user.consultaUnProducto() = False Then
+                MsgBox("No se puede eliminar el producto, verifique ...")
+            Else
+                'Llamamos al método que elimina el registro
+                user.eliminarProducto()
+                'Llamamnos al método para poblar el DGV para que se vea la eliminación del registro
+                user.PoblarDataGridRegistroDeProductos(DGVRproductos)
+                'Cerramos la conexión a la BD
+                cnx.Close()
+                Codigo.Clear()
+                NombreDproducto.Clear()
+                PrecioDeVenta.Clear()
+            End If
+        End If
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        menuAdministrador.Show()
+        Me.Close()
+    End Sub
+    Private Sub btnlimpiar_Click(sender As Object, e As EventArgs) Handles limpiarP.Click
+        Codigo.Clear()
+        NombreDproducto.Clear()
+        PrecioDeVenta.Clear()
+    End Sub
+    Private Sub ModificarP_Click(sender As Object, e As EventArgs) Handles ModificarP.Click
+        Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.Text, PrecioDeVenta.Text, "existencia")
+        actualiza.actualizarProductos()
+        actualiza.PoblarDataGridRegistroDeProductos(DGVRproductos)
+        cnx.Close()
     End Sub
 End Class

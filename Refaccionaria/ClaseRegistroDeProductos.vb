@@ -84,7 +84,7 @@
         If codigoProducto <> "" And CMedida <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO producto VALUES('" & codigoProducto & "',(Select codigoMedida from medida  where descripcion='" & CMedida & "'), '" & nombreProducto & "', " & precio & ", 0)"
+            strSql = "INSERT INTO producto VALUES('" & codigoProducto & "',(Select codigoMedida from medida  where descripcion='" & CMedida & "'), '" & nombreProducto & "', " & precio & ", 0,0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo producto agregado")
         Else
@@ -117,11 +117,10 @@
         If codigoProducto <> "" Then
             ' Preparamos el query para modificar el registro
 
-            strSql = "UPDATE producto set codigoMedida=" & CMedida & ", " &
-                     " nombreProducto =" & nombreProducto & ", " &
-                     " precio = " & precio & ", " &
-                     " existencia =" & existencia & "," &
-                     " WHERE codigoProducto =" & codigoProducto
+            strSql = "UPDATE producto set nombreProducto='" & nombreProducto & "', " &
+                     " codigoMedida =" & CMedida & ", " &
+                     " precio = " & precio & " " &
+                     " WHERE codigoProducto =" & codigoProducto & ""
             xCnx.objetoCommand(strSql)
         Else
             MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
@@ -154,23 +153,23 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT codigoProducto as codigo, descripcion as medida, nombreProducto as producto, precio as precio, existencia as existencia" &
+        strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,descripcion as medida, precio as precio, existencia as existencia" &
                  "  From producto, medida where producto.codigoMedida = medida.codigoMedida and eliminado = 0" & " Order By codigo"
         consultaTodosProductos = xCnx.objetoDataAdapter(strSQL)
     End Function
-    Public Sub PoblarDataGridRegistroDeUsuarios(ByVal DGVUsuarios As DataGridView)
+    Public Sub PoblarDataGridRegistroDeProductos(ByVal DGVDProductos As DataGridView)
         'Llamamos al método que obtiene los registros de los usuarios
-        DGVUsuarios.DataSource = consultaTodosProductos()
-        DGVUsuarios.Refresh()
+        DGVDProductos.DataSource = consultaTodosProductos()
+        DGVDProductos.Refresh()
         'Establecer ancho de cada columna del DataGridView, el 
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVUsuarios.Columns.Item(0).Width = 100
-        DGVUsuarios.Columns.Item(0).Width = 100
-        DGVUsuarios.Columns.Item(0).Width = 100
-        DGVUsuarios.Columns.Item(0).Width = 100
-        DGVUsuarios.Columns.Item(0).Width = 100
+        DGVDProductos.Columns.Item(0).Width = 100
+        DGVDProductos.Columns.Item(1).Width = 200
+        DGVDProductos.Columns.Item(2).Width = 200
+        DGVDProductos.Columns.Item(3).Width = 200
+        DGVDProductos.Columns.Item(4).Width = 150
 
     End Sub
 End Class

@@ -78,9 +78,6 @@
         End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUsuarios.CellContentClick
-
-    End Sub
 
     Private Sub DGVUsuarios_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUsuarios.CellClick
         Dim renglon As Integer
@@ -123,10 +120,6 @@
         cnx.Close()
         menuAdministrador.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub username_txt_TextChanged(sender As Object, e As EventArgs) Handles username_txt.TextChanged
-
     End Sub
 
     Private Sub btnlimpiar_Click(sender As Object, e As EventArgs) Handles btnlimpiar.Click
