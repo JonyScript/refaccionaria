@@ -30,14 +30,15 @@ Partial Class menuAdministrador
         Me.btnAnalisisDeVentas = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblFecha = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnVentas
         '
         Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentas.Location = New System.Drawing.Point(92, 141)
+        Me.btnVentas.Location = New System.Drawing.Point(144, 167)
         Me.btnVentas.Name = "btnVentas"
-        Me.btnVentas.Size = New System.Drawing.Size(176, 31)
+        Me.btnVentas.Size = New System.Drawing.Size(176, 71)
         Me.btnVentas.TabIndex = 0
         Me.btnVentas.Text = "Ventas"
         Me.btnVentas.UseVisualStyleBackColor = True
@@ -45,9 +46,9 @@ Partial Class menuAdministrador
         'btnRegistroDeClientes
         '
         Me.btnRegistroDeClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistroDeClientes.Location = New System.Drawing.Point(92, 192)
+        Me.btnRegistroDeClientes.Location = New System.Drawing.Point(144, 255)
         Me.btnRegistroDeClientes.Name = "btnRegistroDeClientes"
-        Me.btnRegistroDeClientes.Size = New System.Drawing.Size(176, 34)
+        Me.btnRegistroDeClientes.Size = New System.Drawing.Size(176, 71)
         Me.btnRegistroDeClientes.TabIndex = 1
         Me.btnRegistroDeClientes.Text = "Registro de clientes"
         Me.btnRegistroDeClientes.UseVisualStyleBackColor = True
@@ -55,9 +56,9 @@ Partial Class menuAdministrador
         'btnRegistroDeProductos
         '
         Me.btnRegistroDeProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistroDeProductos.Location = New System.Drawing.Point(92, 246)
+        Me.btnRegistroDeProductos.Location = New System.Drawing.Point(144, 343)
         Me.btnRegistroDeProductos.Name = "btnRegistroDeProductos"
-        Me.btnRegistroDeProductos.Size = New System.Drawing.Size(176, 32)
+        Me.btnRegistroDeProductos.Size = New System.Drawing.Size(176, 71)
         Me.btnRegistroDeProductos.TabIndex = 2
         Me.btnRegistroDeProductos.Text = "Registro de productos"
         Me.btnRegistroDeProductos.UseVisualStyleBackColor = True
@@ -65,9 +66,9 @@ Partial Class menuAdministrador
         'btnRegistroDeUsuarios
         '
         Me.btnRegistroDeUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistroDeUsuarios.Location = New System.Drawing.Point(92, 304)
+        Me.btnRegistroDeUsuarios.Location = New System.Drawing.Point(460, 167)
         Me.btnRegistroDeUsuarios.Name = "btnRegistroDeUsuarios"
-        Me.btnRegistroDeUsuarios.Size = New System.Drawing.Size(176, 30)
+        Me.btnRegistroDeUsuarios.Size = New System.Drawing.Size(176, 71)
         Me.btnRegistroDeUsuarios.TabIndex = 3
         Me.btnRegistroDeUsuarios.Text = "Registro de usuarios"
         Me.btnRegistroDeUsuarios.UseVisualStyleBackColor = True
@@ -75,9 +76,9 @@ Partial Class menuAdministrador
         'btnCompraDeProductos
         '
         Me.btnCompraDeProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCompraDeProductos.Location = New System.Drawing.Point(92, 356)
+        Me.btnCompraDeProductos.Location = New System.Drawing.Point(460, 255)
         Me.btnCompraDeProductos.Name = "btnCompraDeProductos"
-        Me.btnCompraDeProductos.Size = New System.Drawing.Size(177, 33)
+        Me.btnCompraDeProductos.Size = New System.Drawing.Size(177, 71)
         Me.btnCompraDeProductos.TabIndex = 4
         Me.btnCompraDeProductos.Text = "Compra de productos"
         Me.btnCompraDeProductos.UseVisualStyleBackColor = True
@@ -85,9 +86,9 @@ Partial Class menuAdministrador
         'btnAnalisisDeVentas
         '
         Me.btnAnalisisDeVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnalisisDeVentas.Location = New System.Drawing.Point(92, 406)
+        Me.btnAnalisisDeVentas.Location = New System.Drawing.Point(460, 343)
         Me.btnAnalisisDeVentas.Name = "btnAnalisisDeVentas"
-        Me.btnAnalisisDeVentas.Size = New System.Drawing.Size(176, 34)
+        Me.btnAnalisisDeVentas.Size = New System.Drawing.Size(176, 71)
         Me.btnAnalisisDeVentas.TabIndex = 5
         Me.btnAnalisisDeVentas.Text = "Análisis de ventas"
         Me.btnAnalisisDeVentas.UseVisualStyleBackColor = True
@@ -96,7 +97,7 @@ Partial Class menuAdministrador
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(48, 76)
+        Me.Label2.Location = New System.Drawing.Point(257, 81)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(272, 31)
         Me.Label2.TabIndex = 15
@@ -106,17 +107,28 @@ Partial Class menuAdministrador
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(96, 28)
+        Me.Label1.Location = New System.Drawing.Point(305, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(164, 31)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "¡Bienvenido!"
         '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.Location = New System.Drawing.Point(12, 33)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(57, 20)
+        Me.lblFecha.TabIndex = 16
+        Me.lblFecha.Text = "Label3"
+        '
         'menuAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(367, 474)
+        Me.ClientSize = New System.Drawing.Size(806, 486)
+        Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAnalisisDeVentas)
@@ -140,4 +152,5 @@ Partial Class menuAdministrador
     Friend WithEvents btnAnalisisDeVentas As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblFecha As Label
 End Class
