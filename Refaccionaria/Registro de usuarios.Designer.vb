@@ -51,35 +51,35 @@ Partial Class Registro_de_usuarios
         '
         'username_txt
         '
-        Me.username_txt.Location = New System.Drawing.Point(132, 24)
+        Me.username_txt.Location = New System.Drawing.Point(198, 24)
         Me.username_txt.Name = "username_txt"
         Me.username_txt.Size = New System.Drawing.Size(175, 20)
         Me.username_txt.TabIndex = 0
         '
         'nombre_txt
         '
-        Me.nombre_txt.Location = New System.Drawing.Point(132, 80)
+        Me.nombre_txt.Location = New System.Drawing.Point(198, 80)
         Me.nombre_txt.Name = "nombre_txt"
         Me.nombre_txt.Size = New System.Drawing.Size(175, 20)
         Me.nombre_txt.TabIndex = 1
         '
         'ap_txt
         '
-        Me.ap_txt.Location = New System.Drawing.Point(132, 110)
+        Me.ap_txt.Location = New System.Drawing.Point(198, 110)
         Me.ap_txt.Name = "ap_txt"
         Me.ap_txt.Size = New System.Drawing.Size(175, 20)
         Me.ap_txt.TabIndex = 2
         '
         'am_txt
         '
-        Me.am_txt.Location = New System.Drawing.Point(132, 140)
+        Me.am_txt.Location = New System.Drawing.Point(198, 140)
         Me.am_txt.Name = "am_txt"
         Me.am_txt.Size = New System.Drawing.Size(175, 20)
         Me.am_txt.TabIndex = 3
         '
         'pass_txt
         '
-        Me.pass_txt.Location = New System.Drawing.Point(132, 172)
+        Me.pass_txt.Location = New System.Drawing.Point(198, 172)
         Me.pass_txt.Name = "pass_txt"
         Me.pass_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.pass_txt.Size = New System.Drawing.Size(175, 20)
@@ -87,7 +87,7 @@ Partial Class Registro_de_usuarios
         '
         'pass2_txt
         '
-        Me.pass2_txt.Location = New System.Drawing.Point(132, 205)
+        Me.pass2_txt.Location = New System.Drawing.Point(198, 205)
         Me.pass2_txt.Name = "pass2_txt"
         Me.pass2_txt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.pass2_txt.Size = New System.Drawing.Size(175, 20)
@@ -96,7 +96,7 @@ Partial Class Registro_de_usuarios
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(30, 27)
+        Me.Label1.Location = New System.Drawing.Point(96, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 13)
         Me.Label1.TabIndex = 9
@@ -105,7 +105,7 @@ Partial Class Registro_de_usuarios
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(41, 140)
+        Me.Label2.Location = New System.Drawing.Point(107, 140)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 13)
         Me.Label2.TabIndex = 10
@@ -114,7 +114,7 @@ Partial Class Registro_de_usuarios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(71, 80)
+        Me.Label3.Location = New System.Drawing.Point(137, 80)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 11
@@ -123,7 +123,7 @@ Partial Class Registro_de_usuarios
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(43, 110)
+        Me.Label4.Location = New System.Drawing.Point(109, 110)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(83, 13)
         Me.Label4.TabIndex = 12
@@ -132,7 +132,7 @@ Partial Class Registro_de_usuarios
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(65, 175)
+        Me.Label5.Location = New System.Drawing.Point(131, 175)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(61, 13)
         Me.Label5.TabIndex = 13
@@ -141,7 +141,7 @@ Partial Class Registro_de_usuarios
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(19, 208)
+        Me.Label6.Location = New System.Drawing.Point(85, 208)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(107, 13)
         Me.Label6.TabIndex = 14
@@ -150,7 +150,7 @@ Partial Class Registro_de_usuarios
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(103, 50)
+        Me.Label7.Location = New System.Drawing.Point(169, 50)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(23, 13)
         Me.Label7.TabIndex = 15
@@ -159,14 +159,14 @@ Partial Class Registro_de_usuarios
         'cbx_rol
         '
         Me.cbx_rol.FormattingEnabled = True
-        Me.cbx_rol.Location = New System.Drawing.Point(132, 50)
+        Me.cbx_rol.Location = New System.Drawing.Point(198, 50)
         Me.cbx_rol.Name = "cbx_rol"
         Me.cbx_rol.Size = New System.Drawing.Size(175, 21)
         Me.cbx_rol.TabIndex = 16
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(422, 165)
+        Me.Button1.Location = New System.Drawing.Point(601, 165)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 17
@@ -176,7 +176,7 @@ Partial Class Registro_de_usuarios
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(363, 24)
+        Me.PictureBox1.Location = New System.Drawing.Point(542, 24)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(131, 124)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -186,15 +186,15 @@ Partial Class Registro_de_usuarios
         'DGVUsuarios
         '
         Me.DGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVUsuarios.Location = New System.Drawing.Point(12, 253)
+        Me.DGVUsuarios.Location = New System.Drawing.Point(12, 275)
         Me.DGVUsuarios.Name = "DGVUsuarios"
-        Me.DGVUsuarios.Size = New System.Drawing.Size(515, 185)
+        Me.DGVUsuarios.Size = New System.Drawing.Size(703, 185)
         Me.DGVUsuarios.TabIndex = 19
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(212, 237)
+        Me.Label8.Location = New System.Drawing.Point(313, 259)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(102, 13)
         Me.Label8.TabIndex = 20
@@ -202,7 +202,7 @@ Partial Class Registro_de_usuarios
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(422, 202)
+        Me.Button2.Location = New System.Drawing.Point(601, 202)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 21
@@ -221,7 +221,7 @@ Partial Class Registro_de_usuarios
         '
         'btnlimpiar
         '
-        Me.btnlimpiar.Location = New System.Drawing.Point(332, 165)
+        Me.btnlimpiar.Location = New System.Drawing.Point(511, 165)
         Me.btnlimpiar.Name = "btnlimpiar"
         Me.btnlimpiar.Size = New System.Drawing.Size(75, 23)
         Me.btnlimpiar.TabIndex = 23
@@ -230,7 +230,7 @@ Partial Class Registro_de_usuarios
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(332, 203)
+        Me.Button4.Location = New System.Drawing.Point(511, 203)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 34)
         Me.Button4.TabIndex = 24
@@ -241,7 +241,7 @@ Partial Class Registro_de_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(539, 450)
+        Me.ClientSize = New System.Drawing.Size(727, 482)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.back)
