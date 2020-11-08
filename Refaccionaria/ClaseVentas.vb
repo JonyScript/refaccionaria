@@ -30,7 +30,20 @@
         fechaVenta = ""
         totalVenta = ""
     End Sub
+    Public Sub insertarProducto()
+        Dim strSql As String
+        Dim xCnx As New Oracle
+        ' Validamos que no falten datos en las variables, en caso contrario no se 
+        ' permite hacer el insert
+        If codigoProducto <> "" And nombreProducto <> "" And cantidadProducto <> "" Then
+            ' Preparamos el query para insertar el registro
 
+            strSql = "INSERT INTO ventaDetallada VALUES((Select count(codigoVentaDetallada)+1 from ventaDetallada), " & codigoProducto & ", " & codigoVenta & ", " & cantidadProducto & ")"
+            xCnx.objetoCommand(strSql)
+        Else
+            MsgBox("Faltan datos obligatorios de la venta, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+        End If
+    End Sub
     Public Function consultaProductos() As Object
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String

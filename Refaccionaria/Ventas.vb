@@ -14,4 +14,13 @@
         cnx.Close()
     End Sub
 
+    Private Sub dgvexist_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvexist.CellClick
+        Dim renglon As Integer
+
+        'Al darle clic al renglón del DGV mostramos los datos en las cajas de texto
+        'el valor de cada celda es pasado a la caja de texto o combo correspondiente
+        renglon = dgvexist.CurrentCellAddress.Y
+        txtcodigoven.Text = dgvexist.Rows(renglon).Cells(0).Value
+        txtnombreven.Text = dgvexist.Rows(renglon).Cells(1).Value
+    End Sub
 End Class
