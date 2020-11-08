@@ -99,6 +99,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClaseLogin.vb" />
+    <Compile Include="ClaseRegistroDeClientes.vb" />
     <Compile Include="ClaseRegistroDeProductos.vb" />
     <Compile Include="ClaseRegistroDeUsuarios.vb" />
     <Compile Include="Globales.vb" />

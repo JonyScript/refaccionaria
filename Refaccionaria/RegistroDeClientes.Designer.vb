@@ -49,7 +49,7 @@ Partial Class RegistroDeClientes
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(51, 233)
+        Me.Label1.Location = New System.Drawing.Point(82, 106)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 0
@@ -59,7 +59,7 @@ Partial Class RegistroDeClientes
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(51, 277)
+        Me.Label2.Location = New System.Drawing.Point(41, 147)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(124, 20)
         Me.Label2.TabIndex = 1
@@ -69,7 +69,7 @@ Partial Class RegistroDeClientes
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(51, 321)
+        Me.Label3.Location = New System.Drawing.Point(37, 189)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(128, 20)
         Me.Label3.TabIndex = 2
@@ -79,7 +79,7 @@ Partial Class RegistroDeClientes
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(51, 364)
+        Me.Label4.Location = New System.Drawing.Point(94, 231)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 20)
         Me.Label4.TabIndex = 3
@@ -89,7 +89,7 @@ Partial Class RegistroDeClientes
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(479, 250)
+        Me.Label5.Location = New System.Drawing.Point(50, 271)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(115, 20)
         Me.Label5.TabIndex = 4
@@ -99,7 +99,7 @@ Partial Class RegistroDeClientes
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(479, 296)
+        Me.Label6.Location = New System.Drawing.Point(17, 317)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(148, 20)
         Me.Label6.TabIndex = 5
@@ -109,7 +109,7 @@ Partial Class RegistroDeClientes
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(479, 340)
+        Me.Label7.Location = New System.Drawing.Point(44, 357)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(121, 20)
         Me.Label7.TabIndex = 6
@@ -118,76 +118,76 @@ Partial Class RegistroDeClientes
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(365, 9)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft New Tai Lue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(726, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(203, 25)
+        Me.Label8.Size = New System.Drawing.Size(147, 21)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Clientes registrados"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(193, 233)
+        Me.TextBox1.Location = New System.Drawing.Point(171, 106)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
         Me.TextBox1.TabIndex = 8
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(633, 340)
+        Me.TextBox2.Location = New System.Drawing.Point(171, 359)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(138, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(186, 20)
         Me.TextBox2.TabIndex = 9
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(633, 298)
+        Me.TextBox3.Location = New System.Drawing.Point(171, 317)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(138, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(186, 20)
         Me.TextBox3.TabIndex = 10
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(633, 252)
+        Me.TextBox4.Location = New System.Drawing.Point(171, 271)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(138, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(186, 20)
         Me.TextBox4.TabIndex = 11
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(193, 366)
+        Me.TextBox5.Location = New System.Drawing.Point(171, 231)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(186, 20)
         Me.TextBox5.TabIndex = 12
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(193, 323)
+        Me.TextBox6.Location = New System.Drawing.Point(171, 189)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(186, 20)
         Me.TextBox6.TabIndex = 13
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(193, 277)
+        Me.TextBox7.Location = New System.Drawing.Point(171, 147)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(186, 20)
         Me.TextBox7.TabIndex = 14
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(125, 51)
+        Me.DataGridView1.Location = New System.Drawing.Point(493, 33)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(670, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(613, 442)
         Me.DataGridView1.TabIndex = 15
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(828, 248)
+        Me.Button1.Location = New System.Drawing.Point(374, 186)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 25)
+        Me.Button1.Size = New System.Drawing.Size(104, 25)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Agregar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -195,9 +195,9 @@ Partial Class RegistroDeClientes
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(827, 340)
+        Me.Button3.Location = New System.Drawing.Point(374, 230)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(104, 23)
         Me.Button3.TabIndex = 18
         Me.Button3.Text = "Editar"
         Me.Button3.UseVisualStyleBackColor = True
@@ -205,9 +205,9 @@ Partial Class RegistroDeClientes
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(827, 296)
+        Me.Button4.Location = New System.Drawing.Point(374, 271)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.Size = New System.Drawing.Size(104, 23)
         Me.Button4.TabIndex = 19
         Me.Button4.Text = "Eliminar"
         Me.Button4.UseVisualStyleBackColor = True
@@ -226,7 +226,7 @@ Partial Class RegistroDeClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(928, 450)
+        Me.ClientSize = New System.Drawing.Size(1118, 487)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
