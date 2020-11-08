@@ -185,9 +185,9 @@ Partial Class registroDeProductos
         'limpiarP
         '
         Me.limpiarP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.limpiarP.Location = New System.Drawing.Point(577, 396)
+        Me.limpiarP.Location = New System.Drawing.Point(577, 385)
         Me.limpiarP.Name = "limpiarP"
-        Me.limpiarP.Size = New System.Drawing.Size(84, 23)
+        Me.limpiarP.Size = New System.Drawing.Size(84, 45)
         Me.limpiarP.TabIndex = 21
         Me.limpiarP.Text = "Limpiar"
         Me.limpiarP.UseVisualStyleBackColor = True
@@ -201,7 +201,7 @@ Partial Class registroDeProductos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(657, 325)
+        Me.Label2.Location = New System.Drawing.Point(655, 324)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 20)
         Me.Label2.TabIndex = 24
@@ -210,7 +210,7 @@ Partial Class registroDeProductos
         'Marca
         '
         Me.Marca.FormattingEnabled = True
-        Me.Marca.Location = New System.Drawing.Point(724, 327)
+        Me.Marca.Location = New System.Drawing.Point(720, 325)
         Me.Marca.Name = "Marca"
         Me.Marca.Size = New System.Drawing.Size(100, 21)
         Me.Marca.TabIndex = 25
