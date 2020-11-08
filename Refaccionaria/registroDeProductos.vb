@@ -133,4 +133,8 @@
         PrecioDeVenta.Clear()
         cnx.Close()
     End Sub
+
+    Private Sub DGVRproductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRproductos.CellContentClick
+
+    End Sub
 End Class
