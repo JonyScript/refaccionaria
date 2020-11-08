@@ -133,10 +133,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Oracle.vb" />
-    <Compile Include="Registro de usuarios.Designer.vb">
-      <DependentUpon>Registro de usuarios.vb</DependentUpon>
+    <Compile Include="RegistroDeUsuarios.Designer.vb">
+      <DependentUpon>RegistroDeUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="Registro de usuarios.vb">
+    <Compile Include="RegistroDeUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistroDeClientes.Designer.vb">
@@ -145,10 +145,10 @@
     <Compile Include="RegistroDeClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registroDeProductos.Designer.vb">
-      <DependentUpon>registroDeProductos.vb</DependentUpon>
+    <Compile Include="RegistroDeProductos.Designer.vb">
+      <DependentUpon>RegistroDeProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="registroDeProductos.vb">
+    <Compile Include="RegistroDeProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventas.Designer.vb">
@@ -174,14 +174,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro de usuarios.resx">
-      <DependentUpon>Registro de usuarios.vb</DependentUpon>
+    <EmbeddedResource Include="RegistroDeUsuarios.resx">
+      <DependentUpon>RegistroDeUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeClientes.resx">
       <DependentUpon>RegistroDeClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="registroDeProductos.resx">
-      <DependentUpon>registroDeProductos.vb</DependentUpon>
+    <EmbeddedResource Include="RegistroDeProductos.resx">
+      <DependentUpon>RegistroDeProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.vb</DependentUpon>
