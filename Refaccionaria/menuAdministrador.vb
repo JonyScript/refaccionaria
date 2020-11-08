@@ -1,8 +1,8 @@
 ﻿Public Class menuAdministrador
     Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
         cnx.Close()
-        'ventas.Show()
-        'Me.Close()
+        Ventas.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnRegistroDeClientes_Click(sender As Object, e As EventArgs) Handles btnRegistroDeClientes.Click
