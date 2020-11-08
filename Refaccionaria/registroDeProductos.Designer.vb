@@ -22,6 +22,7 @@ Partial Class registroDeProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.DGVRproductos = New System.Windows.Forms.DataGridView()
         Me.AgregarProductos = New System.Windows.Forms.Button()
         Me.EliminarP = New System.Windows.Forms.Button()
@@ -38,6 +39,9 @@ Partial Class registroDeProductos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Codigo = New System.Windows.Forms.TextBox()
         Me.limpiarP = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Marca = New System.Windows.Forms.ComboBox()
         CType(Me.DGVRproductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -113,7 +117,7 @@ Partial Class registroDeProductos
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(403, 328)
+        Me.Label4.Location = New System.Drawing.Point(150, 324)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(161, 20)
         Me.Label4.TabIndex = 13
@@ -123,7 +127,7 @@ Partial Class registroDeProductos
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(191, 327)
+        Me.Label5.Location = New System.Drawing.Point(434, 325)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(65, 20)
         Me.Label5.TabIndex = 14
@@ -133,7 +137,7 @@ Partial Class registroDeProductos
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(676, 328)
+        Me.Label6.Location = New System.Drawing.Point(830, 324)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(122, 20)
         Me.Label6.TabIndex = 15
@@ -142,30 +146,30 @@ Partial Class registroDeProductos
         'Medida
         '
         Me.Medida.FormattingEnabled = True
-        Me.Medida.Location = New System.Drawing.Point(262, 328)
+        Me.Medida.Location = New System.Drawing.Point(505, 326)
         Me.Medida.Name = "Medida"
         Me.Medida.Size = New System.Drawing.Size(121, 21)
         Me.Medida.TabIndex = 16
         '
         'NombreDproducto
         '
-        Me.NombreDproducto.Location = New System.Drawing.Point(570, 330)
+        Me.NombreDproducto.Location = New System.Drawing.Point(317, 326)
         Me.NombreDproducto.Name = "NombreDproducto"
         Me.NombreDproducto.Size = New System.Drawing.Size(100, 20)
         Me.NombreDproducto.TabIndex = 17
         '
         'PrecioDeVenta
         '
-        Me.PrecioDeVenta.Location = New System.Drawing.Point(800, 328)
+        Me.PrecioDeVenta.Location = New System.Drawing.Point(954, 324)
         Me.PrecioDeVenta.Name = "PrecioDeVenta"
-        Me.PrecioDeVenta.Size = New System.Drawing.Size(162, 20)
+        Me.PrecioDeVenta.Size = New System.Drawing.Size(120, 20)
         Me.PrecioDeVenta.TabIndex = 18
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(38, 324)
+        Me.Label1.Location = New System.Drawing.Point(9, 324)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 20)
         Me.Label1.TabIndex = 19
@@ -173,7 +177,7 @@ Partial Class registroDeProductos
         '
         'Codigo
         '
-        Me.Codigo.Location = New System.Drawing.Point(103, 326)
+        Me.Codigo.Location = New System.Drawing.Point(74, 326)
         Me.Codigo.Name = "Codigo"
         Me.Codigo.Size = New System.Drawing.Size(58, 20)
         Me.Codigo.TabIndex = 20
@@ -188,11 +192,36 @@ Partial Class registroDeProductos
         Me.limpiarP.Text = "Limpiar"
         Me.limpiarP.UseVisualStyleBackColor = True
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(657, 325)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(61, 20)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "Marca: "
+        '
+        'Marca
+        '
+        Me.Marca.FormattingEnabled = True
+        Me.Marca.Location = New System.Drawing.Point(724, 327)
+        Me.Marca.Name = "Marca"
+        Me.Marca.Size = New System.Drawing.Size(100, 21)
+        Me.Marca.TabIndex = 25
+        '
         'registroDeProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1086, 573)
+        Me.Controls.Add(Me.Marca)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.limpiarP)
         Me.Controls.Add(Me.Codigo)
         Me.Controls.Add(Me.Label1)
@@ -233,4 +262,7 @@ Partial Class registroDeProductos
     Friend WithEvents Label1 As Label
     Friend WithEvents Codigo As TextBox
     Friend WithEvents limpiarP As Button
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Marca As ComboBox
 End Class

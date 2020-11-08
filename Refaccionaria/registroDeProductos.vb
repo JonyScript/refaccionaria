@@ -1,14 +1,17 @@
 ﻿Public Class registroDeProductos
     Private Sub registroDeProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DGVRproductos.ReadOnly = False
-
         llenarCombo(Medida, "Select codigoMedida, descripcion from medida", "codigoMedida", "descripcion")
         codigoMedida = Medida.SelectedValue
+        llenarCombo(Marca, "Select codigoMarca, descripcion from marca", "codigoMarca", "descripcion")
+        codigoMarca = Marca.SelectedValue
 
         Dim datagrid As New ClaseRegistroDeProductos()
         datagrid.PoblarDataGridRegistroDeProductos(DGVRproductos)
         cnx.Close()
+        DGVRproductos.ReadOnly = False
     End Sub
+
     Private Sub Medida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Medida.SelectedIndexChanged
         Dim x, i As Integer
         codigoMedida = ""
@@ -29,6 +32,26 @@
             codigoMedida = codigoMedida + Mid(dir, x, 1)
         Next x
     End Sub
+    Private Sub Marca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Marca.SelectedIndexChanged
+        Dim x, i As Integer
+        codigoMarca = ""
+        dir = Marca.Text
+        i = 0
+        x = 0
+
+        For x = 0 To dir.Length - 1
+            If dir.Chars(x) = " " Then
+
+
+                Exit For
+            End If
+            i = i + 1
+        Next
+
+        For x = 1 To i
+            codigoMarca = codigoMarca + Mid(dir, x, 1)
+        Next x
+    End Sub
     Private Sub AgregarProductos_Click(sender As Object, e As EventArgs) Handles AgregarProductos.Click
         If Codigo.Text = vbNullString Then
             MessageBox.Show("Capturar el codigo")
@@ -37,10 +60,11 @@
         ElseIf PrecioDeVenta.Text = vbNullString Then
             MessageBox.Show("Captura precio de venta")
         Else
-            Dim user As New ClaseRegistroDeProductos(Codigo.Text, Medida.SelectedValue, NombreDproducto.Text, PrecioDeVenta.Text, "existencia")
+            Dim user As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.SelectedValue, Marca.SelectedValue, PrecioDeVenta.Text, "existencia")
             user.getSetCproducto = Codigo.Text
-            user.getSetCmedida = Medida.Text
             user.getSetNproducto = NombreDproducto.Text
+            user.getSetCmedida = Medida.Text
+            user.getSetCmarca = Marca.Text
             user.getSetPrecio = PrecioDeVenta.Text
 
             If user.consultaUnProducto() = False Then
@@ -65,14 +89,15 @@
         'el valor de cada celda es pasado a la caja de texto o combo correspondiente
         renglon = DGVRproductos.CurrentCellAddress.Y
         Codigo.Text = DGVRproductos.Rows(renglon).Cells(0).Value
-        Medida.Text = DGVRproductos.Rows(renglon).Cells(1).Value
-        NombreDproducto.Text = DGVRproductos.Rows(renglon).Cells(2).Value
-        PrecioDeVenta.Text = DGVRproductos.Rows(renglon).Cells(3).Value
+        NombreDproducto.Text = DGVRproductos.Rows(renglon).Cells(1).Value
+        Medida.Text = DGVRproductos.Rows(renglon).Cells(2).Value
+        Marca.Text = DGVRproductos.Rows(renglon).Cells(3).Value
+        PrecioDeVenta.Text = DGVRproductos.Rows(renglon).Cells(4).Value
     End Sub
 
     Private Sub EliminarP_Click(sender As Object, e As EventArgs) Handles EliminarP.Click
         If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            Dim user As New ClaseRegistroDeProductos(Codigo.Text, Medida.SelectedValue, NombreDproducto.Text, PrecioDeVenta.Text, "existencia")
+            Dim user As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.SelectedValue, Marca.SelectedValue, PrecioDeVenta.Text, "existencia")
             'Verificmos que el pais se encuentre registrado
             If user.consultaUnProducto() = False Then
                 MsgBox("No se puede eliminar el producto, verifique ...")
@@ -100,7 +125,7 @@
         PrecioDeVenta.Clear()
     End Sub
     Private Sub ModificarP_Click(sender As Object, e As EventArgs) Handles ModificarP.Click
-        Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, Medida.SelectedValue, NombreDproducto.Text, PrecioDeVenta.Text, "existencia")
+        Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.SelectedValue, Marca.SelectedValue, PrecioDeVenta.Text, "existencia")
         actualiza.actualizarProductos()
         actualiza.PoblarDataGridRegistroDeProductos(DGVRproductos)
         Codigo.Clear()

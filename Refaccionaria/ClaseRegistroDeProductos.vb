@@ -1,7 +1,8 @@
 ﻿Public Class ClaseRegistroDeProductos
     Private codigoProducto As String
-    Private CMedida As String
     Private nombreProducto As String
+    Private CMedida As String
+    Private CMarca As String
     Private precio As String
     Private existencia As String
 
@@ -10,20 +11,23 @@
     'Método constructor inicializa variables
     Public Sub New()
         codigoProducto = ""
-        CMedida = ""
         nombreProducto = ""
+        CMedida = ""
+        CMarca = ""
         precio = ""
         existencia = ""
     End Sub
     'Metodo constructor con valores proporcionados al instanciar el objeto
     Public Sub New(ByVal txtcodigoP As String,
-                   ByVal txtcodigoM As String, ByVal txtnombreP As String,
+                   ByVal txtnombreP As String, ByVal txtcodigoM As String,
+                   ByVal txtcodigoMarca As String,
                    ByVal txtprecio As String, ByVal txtexistencia As String)
         'En estas variables recibimos los datos del formulario
 
         codigoProducto = txtcodigoP
-        CMedida = txtcodigoM
         nombreProducto = txtnombreP
+        CMedida = txtcodigoM
+        CMarca = txtcodigoMarca
         precio = txtprecio
         existencia = txtexistencia
 
@@ -39,6 +43,14 @@
             codigoProducto = Value
         End Set
     End Property
+    Public Property getSetNproducto() As String 'String
+        Get
+            Return nombreProducto
+        End Get
+        Set(ByVal Value As String)
+            nombreProducto = Value
+        End Set
+    End Property
 
     Public Property getSetCmedida() As String
         Get
@@ -49,12 +61,12 @@
         End Set
     End Property
 
-    Public Property getSetNproducto() As String 'String
+    Public Property getSetCmarca() As String
         Get
-            Return nombreProducto
+            Return CMarca
         End Get
         Set(ByVal Value As String)
-            nombreProducto = Value
+            CMarca = Value
         End Set
     End Property
 
@@ -81,10 +93,10 @@
         Dim xCnx As New Oracle
         ' Validamos que no falten datos en las variables, en caso contrario no se 
         ' permite hacer el insert
-        If codigoProducto <> "" And CMedida <> "" Then
+        If codigoProducto <> "" And CMedida <> "" And CMarca <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO producto VALUES('" & codigoProducto & "',(Select codigoMedida from medida  where descripcion='" & CMedida & "'), '" & nombreProducto & "', " & precio & ", 0,0)"
+            strSql = "INSERT INTO producto VALUES('" & codigoProducto & "','" & nombreProducto & "', (Select codigoMedida from medida  where descripcion='" & CMedida & "'),(Select codigoMarca from marca  where descripcion='" & CMarca & "'), " & precio & ", 0,0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo producto agregado")
         Else
@@ -119,6 +131,7 @@
 
             strSql = "UPDATE producto set nombreProducto='" & nombreProducto & "', " &
                      " codigoMedida =" & CMedida & ", " &
+                     " codigoMarca =" & CMarca & ", " &
                      " precio = " & precio & " " &
                      " WHERE codigoProducto =" & codigoProducto & ""
             xCnx.objetoCommand(strSql)
@@ -153,8 +166,8 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT codigoProducto as codigo,descripcion as medida,nombreProducto as producto, precio as precio, existencia as existencia" &
-                 "  From producto, medida where producto.codigoMedida = medida.codigoMedida and eliminado = 0" & " Order By codigo"
+        strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,medida.descripcion as medida,marca.descripcion as marca, precio as precio, existencia as existencia" &
+                 "  From producto, medida, marca where producto.codigoMedida = medida.codigoMedida and producto.codigoMarca = marca.codigoMarca and eliminado = 0" & " Order By codigo"
         consultaTodosProductos = xCnx.objetoDataAdapter(strSQL)
     End Function
     Public Sub PoblarDataGridRegistroDeProductos(ByVal DGVDProductos As DataGridView)
@@ -168,7 +181,8 @@
         DGVDProductos.Columns.Item(0).Width = 100
         DGVDProductos.Columns.Item(1).Width = 200
         DGVDProductos.Columns.Item(2).Width = 200
-        DGVDProductos.Columns.Item(3).Width = 240
+        DGVDProductos.Columns.Item(3).Width = 200
+        DGVDProductos.Columns.Item(4).Width = 200
 
     End Sub
 End Class
