@@ -49,6 +49,7 @@ Partial Class Ventas
         Me.btnfactura = New System.Windows.Forms.Button()
         Me.dgvexist = New System.Windows.Forms.DataGridView()
         Me.dgvventa = New System.Windows.Forms.DataGridView()
+        Me.btnnuevaventa = New System.Windows.Forms.Button()
         CType(Me.dgvexist, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvventa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -215,11 +216,11 @@ Partial Class Ventas
         '
         'btnagregar
         '
-        Me.btnagregar.Location = New System.Drawing.Point(839, 305)
+        Me.btnagregar.Location = New System.Drawing.Point(810, 303)
         Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnagregar.Size = New System.Drawing.Size(113, 23)
         Me.btnagregar.TabIndex = 19
-        Me.btnagregar.Text = "Agregar"
+        Me.btnagregar.Text = "Agregar producto"
         Me.btnagregar.UseVisualStyleBackColor = True
         '
         'btnremover
@@ -283,11 +284,21 @@ Partial Class Ventas
         Me.dgvventa.Size = New System.Drawing.Size(749, 150)
         Me.dgvventa.TabIndex = 26
         '
+        'btnnuevaventa
+        '
+        Me.btnnuevaventa.Location = New System.Drawing.Point(950, 421)
+        Me.btnnuevaventa.Name = "btnnuevaventa"
+        Me.btnnuevaventa.Size = New System.Drawing.Size(92, 23)
+        Me.btnnuevaventa.TabIndex = 27
+        Me.btnnuevaventa.Text = "Nueva venta"
+        Me.btnnuevaventa.UseVisualStyleBackColor = True
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1242, 644)
+        Me.Controls.Add(Me.btnnuevaventa)
         Me.Controls.Add(Me.dgvventa)
         Me.Controls.Add(Me.dgvexist)
         Me.Controls.Add(Me.btnfactura)
@@ -351,4 +362,5 @@ Partial Class Ventas
     Friend WithEvents btnfactura As Button
     Friend WithEvents dgvexist As DataGridView
     Friend WithEvents dgvventa As DataGridView
+    Friend WithEvents btnnuevaventa As Button
 End Class

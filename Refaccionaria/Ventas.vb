@@ -23,4 +23,28 @@
         txtcodigoven.Text = dgvexist.Rows(renglon).Cells(0).Value
         txtnombreven.Text = dgvexist.Rows(renglon).Cells(1).Value
     End Sub
+
+    Private Sub btnagregar_Click(sender As Object, e As EventArgs) Handles btnagregar.Click
+        Dim venta As New ClaseVentas()
+        venta.insertarProducto(txtcodigoven.Text, txtcantidad.Text)
+        venta.PoblarDataGridVentas(dgvventa)
+        cnx.Close()
+    End Sub
+
+    Private Sub btnnuevaventa_Click(sender As Object, e As EventArgs) Handles btnnuevaventa.Click
+        Dim venta As New ClaseVentas()
+        venta.insertarVenta(codigoCliente)
+        cnx.Close()
+    End Sub
+
+    Private Sub dgvventa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvventa.CellClick
+        Dim renglon As Integer
+
+        'Al darle clic al renglón del DGV mostramos los datos en las cajas de texto
+        'el valor de cada celda es pasado a la caja de texto o combo correspondiente
+        renglon = dgvexist.CurrentCellAddress.Y
+        txtcodigoven.Text = dgvexist.Rows(renglon).Cells(0).Value
+        txtnombreven.Text = dgvexist.Rows(renglon).Cells(1).Value
+        txtnombreven.Text = dgvexist.Rows(renglon).Cells(4).Value
+    End Sub
 End Class

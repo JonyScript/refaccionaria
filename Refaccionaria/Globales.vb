@@ -23,6 +23,7 @@ Module Globales
     Public id_motivo As String
     Public codigoMedida As String
     Public codigoMarca As String
+    Public codigoVenta As String
 
 
 
