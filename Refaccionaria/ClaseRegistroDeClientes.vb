@@ -96,14 +96,40 @@
         Dim xCnx As New Oracle
         ' Validamos que no falten datos en las variables, en caso contrario no se 
         ' permite hacer el insert
-        If nombre <> "" Then
-            ' Preparamos el query para insertar el registro
-
-            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ", '" & RFC & "', '" & direccion & "', '" & mail & "')"
+        If nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" And direccion <> "" And mail <> "" Then
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', '" & direccion & "', '" & mail & "')"
+            xCnx.objetoCommand(strSql)
+            MsgBox("Nuevo cliente registrado")
+        ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" And direccion <> "" Then
+            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, RFC, direccion)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', '" & direccion & "')"
+            xCnx.objetoCommand(strSql)
+            MsgBox("Nuevo cliente registrado")
+        ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" And mail <> "" Then
+            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, RFC, mail)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', '" & mail & "')"
+            xCnx.objetoCommand(strSql)
+            MsgBox("Nuevo cliente registrado")
+        ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And direccion <> "" And mail <> "" Then
+            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, direccion, mail)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & direccion & "', '" & mail & "')"
+            xCnx.objetoCommand(strSql)
+            MsgBox("Nuevo cliente registrado")
+        ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" Then
+            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, RFC)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "')"
+            xCnx.objetoCommand(strSql)
+            MsgBox("Nuevo cliente registrado")
+        ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And direccion <> "" Then
+            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, direccion)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & direccion & "')"
+            xCnx.objetoCommand(strSql)
+            MsgBox("Nuevo cliente registrado")
+        ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And mail <> "" Then
+            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, mail)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ", '" & mail & "')"
+            xCnx.objetoCommand(strSql)
+            MsgBox("Nuevo cliente registrado")
+        ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" Then
+            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ")"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         Else
-            MsgBox("Faltan datos obligatorios del cliente, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+            MsgBox("Faltan datos obligatorios, verifique", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
     Public Function consultaUnCliente() As Boolean
@@ -116,14 +142,14 @@
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
         strSQL = "SELECT * FROM cliente " &
-                 "WHERE codigoCliente = '" & codigoCliente & "'"
+                 "WHERE telefono = '" & telefono & "'"
         consultaUnCliente = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
-            If IsDBNull(xDT.Rows(0)("codigoCliente")) Then
-                codigoCliente = 0
+            If IsDBNull(xDT.Rows(0)("telefono")) Then
+                telefono = 0
             Else
-                codigoCliente = CStr(xDT.Rows(0)("codigoCliente"))
+                telefono = CStr(xDT.Rows(0)("telefono"))
             End If
             consultaUnCliente = True
         End If

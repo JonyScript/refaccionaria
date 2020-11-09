@@ -5,7 +5,7 @@
         ElseIf puestoUsuario = 2 Then
             menuVendedor.Show()
         End If
-
+        Me.Close()
     End Sub
 
     Private Sub RegistroDeClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -62,5 +62,20 @@
 
     Private Sub Label10_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Tel_txt_TextChanged(sender As Object, e As EventArgs) Handles tel_txt.TextChanged
+        'Condicional que evalua que la tecla pulsada sea un número si no lo es mostrará un MSGBOX con una orden de que teclées sólo números
+
+
+
+
+    End Sub
+
+    Private Sub tel_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tel_txt.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros")
+        End If
     End Sub
 End Class
