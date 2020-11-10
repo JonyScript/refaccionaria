@@ -61,11 +61,11 @@
             MessageBox.Show("Captura precio de venta")
         Else
             Dim user As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.SelectedValue, Marca.SelectedValue, PrecioDeVenta.Text, "existencia")
-            user.getSetCproducto = Codigo.Text
-            user.getSetNproducto = NombreDproducto.Text
-            user.getSetCmedida = Medida.Text
-            user.getSetCmarca = Marca.Text
-            user.getSetPrecio = PrecioDeVenta.Text
+            'user.getSetCproducto = Codigo.Text
+            'user.getSetNproducto = NombreDproducto.Text
+            'user.getSetCmedida = Medida.Text
+            'user.getSetCmarca = Marca.Text
+            'user.getSetPrecio = PrecioDeVenta.Text
 
             If user.consultaUnProducto() = False Then
                 'Si el prodcuto no está registrado, la inserta como una nuevo
@@ -74,7 +74,7 @@
                 NombreDproducto.Clear()
                 PrecioDeVenta.Clear()
             Else
-                MessageBox.Show("El id del producto ya existe")
+                MessageBox.Show("El producto ya existe")
             End If
             cnx.Close()
         End If
@@ -126,12 +126,17 @@
     End Sub
     Private Sub ModificarP_Click(sender As Object, e As EventArgs) Handles ModificarP.Click
         Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.SelectedValue, Marca.SelectedValue, PrecioDeVenta.Text, "existencia")
-        actualiza.actualizarProductos()
-        actualiza.PoblarDataGridRegistroDeProductos(DGVRproductos)
-        Codigo.Clear()
-        NombreDproducto.Clear()
-        PrecioDeVenta.Clear()
-        cnx.Close()
+        If actualiza.consultaUnProductoUpdt() = False Then
+            actualiza.actualizarProductos()
+            actualiza.PoblarDataGridRegistroDeProductos(DGVRproductos)
+            Codigo.Clear()
+            NombreDproducto.Clear()
+            PrecioDeVenta.Clear()
+            cnx.Close()
+        Else
+            MsgBox("Este producto ya existe")
+        End If
+
     End Sub
 
     Private Sub DGVRproductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRproductos.CellContentClick
