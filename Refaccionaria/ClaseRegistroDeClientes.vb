@@ -9,7 +9,6 @@
     Private mail As String
 
     Public Sub New()
-        codigoCliente = ""
         nombre = ""
         paterno = ""
         materno = ""
@@ -23,7 +22,6 @@
                    ByVal txtpaternoC As String, ByVal txtmaternoC As String,
                    ByVal txttelefonoC As String, ByVal txtRFC As String,
                    ByVal txtdireccionC As String, ByVal txtmailC As String)
-
         nombre = txtnombreC
         paterno = txtpaternoC
         materno = txtmaternoC
@@ -33,7 +31,14 @@
         mail = txtmailC
 
     End Sub
-
+    Public Property getScodigoC() As String
+        Get
+            Return codigoCliente
+        End Get
+        Set(ByVal Value As String)
+            codigoCliente = Value
+        End Set
+    End Property
     Public Property getSetnombreC() As String
         Get
             Return nombre
@@ -130,6 +135,61 @@
             MsgBox("Nuevo cliente registrado")
         Else
             MsgBox("Faltan datos obligatorios, verifique", MsgBoxStyle.Critical, "ATENCIÓN!!")
+        End If
+    End Sub
+    Public Sub actualizaCliente()
+        Dim strSql As String
+        Dim xCnx As New Oracle
+        ' Validamos que no falten datos en las variables, en caso contrario no se 
+        ' permite hacer el Update
+        If nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" And direccion <> "" And mail <> "" Then
+            strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
+                         " paterno = '" & paterno & "', " &
+                         " materno = '" & materno & "', " &
+                         " telefono = " & telefono & ", " &
+                         " rfc = '" & RFC & "'," &
+                         " direccion ='" & direccion & "', " &
+                         " mail ='" & mail & "', " &
+                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+            xCnx.objetoCommand(strSql)
+        ElseIf RFC = "" And direccion = "" And mail = "" Then
+            strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
+                         " paterno = '" & paterno & "', " &
+                         " materno = '" & materno & "', " &
+                         " telefono = " & telefono & ", " &
+                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+            xCnx.objetoCommand(strSql)
+        ElseIf RFC = "" And direccion = "" Then
+            strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
+                         " paterno = '" & paterno & "', " &
+                         " materno = '" & materno & "', " &
+                         " telefono = " & telefono & ", " &
+                         " mail ='" & mail & "', " &
+                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+            xCnx.objetoCommand(strSql)
+        ElseIf RFC = "" And mail = "" Then
+            strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
+                         " paterno = '" & paterno & "', " &
+                         " materno = '" & materno & "', " &
+                         " telefono = " & telefono & ", " &
+                         " direccion ='" & direccion & "', " &
+                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+            xCnx.objetoCommand(strSql)
+        ElseIf direccion = "" And mail = "" Then
+            strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
+                         " paterno = '" & paterno & "', " &
+                         " materno = '" & materno & "', " &
+                         " telefono = " & telefono & ", " &
+                         " rfc = '" & RFC & "'," &
+                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+        ElseIf nombre <> "" Then
+            MsgBox("No se puede actualizar, datos obligatorios")
+        ElseIf paterno <> "" Then
+            MsgBox("No se puede actualizar, datos obligatorios")
+        ElseIf materno <> "" Then
+            MsgBox("No se puede actualizar, datos obligatorios")
+        ElseIf telefono <> "" Then
+            MsgBox("No se puede actualizar, datos obligatorios")
         End If
     End Sub
     Public Function consultaUnCliente() As Boolean

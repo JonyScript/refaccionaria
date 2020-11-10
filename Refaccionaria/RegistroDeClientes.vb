@@ -78,4 +78,11 @@
             MsgBox("Solo puede digitar numeros")
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim actualiza As New ClaseRegistroDeClientes(name_txt.Text, pat_txt.Text, mat_txt.Text, tel_txt.Text, rfc_txt.Text, dir_txt.Text, mail_txt.Text)
+        actualiza.actualizaCliente()
+        actualiza.PoblarDataGridRegistroDeClientes(DGVClientes)
+        cnx.Close()
+    End Sub
 End Class
