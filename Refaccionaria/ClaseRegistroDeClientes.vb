@@ -170,12 +170,12 @@
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVUsuarios.Columns.Item(0).Width = 100
+        DGVUsuarios.Columns.Item(0).Width = 60
         DGVUsuarios.Columns.Item(1).Width = 100
-        DGVUsuarios.Columns.Item(2).Width = 150
-        DGVUsuarios.Columns.Item(3).Width = 150
-        DGVUsuarios.Columns.Item(4).Width = 150
-        DGVUsuarios.Columns.Item(5).Width = 150
+        DGVUsuarios.Columns.Item(2).Width = 100
+        DGVUsuarios.Columns.Item(3).Width = 100
+        DGVUsuarios.Columns.Item(4).Width = 100
+        DGVUsuarios.Columns.Item(5).Width = 100
         DGVUsuarios.Columns.Item(6).Width = 150
         DGVUsuarios.Columns.Item(7).Width = 150
     End Sub

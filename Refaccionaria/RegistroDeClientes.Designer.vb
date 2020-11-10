@@ -179,7 +179,7 @@ Partial Class RegistroDeClientes
         Me.DGVClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVClientes.Location = New System.Drawing.Point(393, 33)
         Me.DGVClientes.Name = "DGVClientes"
-        Me.DGVClientes.Size = New System.Drawing.Size(873, 565)
+        Me.DGVClientes.Size = New System.Drawing.Size(902, 565)
         Me.DGVClientes.TabIndex = 15
         '
         'Button1
@@ -226,7 +226,7 @@ Partial Class RegistroDeClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1278, 610)
+        Me.ClientSize = New System.Drawing.Size(1299, 610)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
