@@ -93,4 +93,28 @@
     Private Sub DGVClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVClientes.CellContentClick
 
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            Dim cliente As New ClaseRegistroDeClientes(name_txt.Text, pat_txt.Text, mat_txt.Text, tel_txt.Text, rfc_txt.Text, dir_txt.Text, mail_txt.Text)
+            'Verificmos que el pais se encuentre registrado
+            If cliente.consultaUnCliente() = False Then
+                MsgBox("No se puede eliminar al cliente, verifique ...")
+            Else
+                'Llamamos al método que elimina el registro
+                cliente.eliminarCliente()
+                'Llamamnos al método para poblar el DGV para que se vea la eliminación del registro
+                cliente.PoblarDataGridRegistroDeClientes(DGVClientes)
+                'Cerramos la conexión a la BD
+                cnx.Close()
+                name_txt.Clear()
+                mat_txt.Clear()
+                pat_txt.Clear()
+                tel_txt.Clear()
+                rfc_txt.Clear()
+                dir_txt.Clear()
+                mail_txt.Clear()
+            End If
+        End If
+    End Sub
 End Class

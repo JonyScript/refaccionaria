@@ -192,6 +192,23 @@
             MsgBox("No se puede actualizar, datos obligatorios")
         End If
     End Sub
+    Public Sub eliminarCliente()
+        Dim strSql As String
+        Dim xCnx As New Oracle
+        'Validamos que ese alumno no esté Integrado en algún equipo
+
+        If telefono <> "" Then
+
+            strSql = "UPDATE cliente " &
+                     "SET eliminado = 1 " &
+                     "WHERE telefono= " & telefono & ""
+
+            xCnx.objetoCommand(strSql)
+            MsgBox("Usuario eliminado")
+        Else
+            MsgBox("Faltan datos !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+        End If
+    End Sub
     Public Function consultaUnCliente() As Boolean
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente
@@ -202,7 +219,7 @@
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
         strSQL = "SELECT * FROM cliente " &
-                 "WHERE telefono = '" & telefono & "'"
+                 "WHERE telefono = " & telefono & " and eliminado = 0"
         consultaUnCliente = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
@@ -219,7 +236,7 @@
         Dim strSQL As String
         Dim xCnx As New Oracle
         strSQL = "SELECT codigoCliente as Codigo, nombre as Nombre, paterno as Paterno, materno as Materno, telefono, rfc, direccion, mail as Correo" &
-                 " From cliente order By codigoCliente"
+                 " From cliente where eliminado = 0 order By codigoCliente"
         consultaTodosClientes = xCnx.objetoDataAdapter(strSQL)
     End Function
     Public Sub PoblarDataGridRegistroDeClientes(ByVal DGVUsuarios As DataGridView)
