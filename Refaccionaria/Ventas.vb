@@ -47,4 +47,13 @@
         txtnombreven.Text = dgvexist.Rows(renglon).Cells(1).Value
         txtnombreven.Text = dgvexist.Rows(renglon).Cells(4).Value
     End Sub
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        If puestoUsuario = 1 Then
+            menuAdministrador.Show()
+        ElseIf puestoUsuario = 2 Then
+            menuVendedor.Show()
+        End If
+        Me.Close()
+    End Sub
 End Class

@@ -116,7 +116,11 @@
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        menuAdministrador.Show()
+        If puestoUsuario = 1 Then
+            menuAdministrador.Show()
+        ElseIf puestoUsuario = 2 Then
+            menuVendedor.Show()
+        End If
         Me.Close()
     End Sub
     Private Sub btnlimpiar_Click(sender As Object, e As EventArgs) Handles limpiarP.Click

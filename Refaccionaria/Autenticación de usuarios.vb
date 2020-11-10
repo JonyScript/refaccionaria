@@ -17,7 +17,8 @@
             menuVendedor.Show()
             Me.Hide()
         End If
-
+        txtNombreDeUsuario.Clear()
+        txtContraseña.Clear()
     End Sub
 
     Private Sub TxtContraseña_TextChanged(sender As Object, e As EventArgs) Handles txtContraseña.TextChanged

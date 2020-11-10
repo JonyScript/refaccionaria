@@ -31,6 +31,7 @@ Partial Class menuAdministrador
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblFecha = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnVentas
@@ -123,11 +124,22 @@ Partial Class menuAdministrador
         Me.lblFecha.TabIndex = 16
         Me.lblFecha.Text = "Label3"
         '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(700, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 23)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Cerrar sesion"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'menuAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(806, 486)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -153,4 +165,5 @@ Partial Class menuAdministrador
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblFecha As Label
+    Friend WithEvents Button1 As Button
 End Class
