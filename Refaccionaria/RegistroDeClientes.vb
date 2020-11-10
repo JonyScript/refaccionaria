@@ -64,12 +64,16 @@
 
     End Sub
 
-    Private Sub Tel_txt_TextChanged(sender As Object, e As EventArgs) Handles tel_txt.TextChanged
-        'Condicional que evalua que la tecla pulsada sea un número si no lo es mostrará un MSGBOX con una orden de que teclées sólo números
-
-
-
-
+    Private Sub DGVClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVClientes.CellClick
+        Dim renglon As Integer
+        renglon = DGVClientes.CurrentCellAddress.Y
+        name_txt.Text = DGVClientes.Rows(renglon).Cells(1).Value
+        pat_txt.Text = DGVClientes.Rows(renglon).Cells(2).Value
+        mat_txt.Text = DGVClientes.Rows(renglon).Cells(3).Value
+        tel_txt.Text = DGVClientes.Rows(renglon).Cells(4).Value
+        rfc_txt.Text = DGVClientes.Rows(renglon).Cells(5).Value
+        dir_txt.Text = DGVClientes.Rows(renglon).Cells(6).Value
+        mail_txt.Text = DGVClientes.Rows(renglon).Cells(7).Value
     End Sub
 
     Private Sub tel_txt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tel_txt.KeyPress
@@ -84,5 +88,9 @@
         actualiza.actualizaCliente()
         actualiza.PoblarDataGridRegistroDeClientes(DGVClientes)
         cnx.Close()
+    End Sub
+
+    Private Sub DGVClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVClientes.CellContentClick
+
     End Sub
 End Class

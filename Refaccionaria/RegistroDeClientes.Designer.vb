@@ -199,7 +199,7 @@ Partial Class RegistroDeClientes
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(104, 23)
         Me.Button3.TabIndex = 18
-        Me.Button3.Text = "Editar"
+        Me.Button3.Text = "Actualizar"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4

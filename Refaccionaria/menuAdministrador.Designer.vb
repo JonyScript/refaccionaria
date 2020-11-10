@@ -117,7 +117,7 @@ Partial Class menuAdministrador
         '
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha.Location = New System.Drawing.Point(12, 33)
+        Me.lblFecha.Location = New System.Drawing.Point(12, 19)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(57, 20)
         Me.lblFecha.TabIndex = 16

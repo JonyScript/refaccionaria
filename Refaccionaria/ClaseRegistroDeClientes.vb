@@ -106,31 +106,31 @@
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" And direccion <> "" Then
-            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, RFC, direccion, eliminado)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', '" & direccion & "', 0)"
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', '" & direccion & "',' - ', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" And mail <> "" Then
-            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, RFC, mail, eliminado)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', '" & mail & "', 0)"
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', ' - ','" & mail & "', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And direccion <> "" And mail <> "" Then
-            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, direccion, mail, eliminado)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & direccion & "', '" & mail & "', 0)"
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",' - ','" & direccion & "', '" & mail & "', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And RFC <> "" Then
-            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, RFC, eliminado)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', 0)"
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & RFC & "', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And direccion <> "" Then
-            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, direccion, eliminado)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",'" & direccion & "', 0)"
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",' - ','" & direccion & "',' - ', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" And mail <> "" Then
-            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, mail, eliminado)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ", '" & mail & "', 0)"
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ",' - ',' - ','" & mail & "', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         ElseIf nombre <> "" And paterno <> "" And materno <> "" And telefono <> "" Then
-            strSql = "INSERT INTO cliente(codigoCliente, nombre, paterno, materno, telefono, eliminado)VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ", 0)"
+            strSql = "INSERT INTO cliente VALUES((Select count(codigoCliente)+1 from cliente), '" & nombre & "', '" & paterno & "', '" & materno & "', " & telefono & ", ' - ',' - ',' - ', 0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo cliente registrado")
         Else
@@ -149,39 +149,39 @@
                          " telefono = " & telefono & ", " &
                          " rfc = '" & RFC & "'," &
                          " direccion ='" & direccion & "', " &
-                         " mail ='" & mail & "', " &
-                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+                         " mail ='" & mail & "'" &
+                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
             xCnx.objetoCommand(strSql)
         ElseIf RFC = "" And direccion = "" And mail = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
                          " paterno = '" & paterno & "', " &
                          " materno = '" & materno & "', " &
-                         " telefono = " & telefono & ", " &
-                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+                         " telefono = " & telefono & " " &
+                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
             xCnx.objetoCommand(strSql)
         ElseIf RFC = "" And direccion = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
                          " paterno = '" & paterno & "', " &
                          " materno = '" & materno & "', " &
                          " telefono = " & telefono & ", " &
-                         " mail ='" & mail & "', " &
-                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+                         " mail ='" & mail & "' " &
+                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
             xCnx.objetoCommand(strSql)
         ElseIf RFC = "" And mail = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
                          " paterno = '" & paterno & "', " &
                          " materno = '" & materno & "', " &
                          " telefono = " & telefono & ", " &
-                         " direccion ='" & direccion & "', " &
-                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+                         " direccion ='" & direccion & "' " &
+                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
             xCnx.objetoCommand(strSql)
         ElseIf direccion = "" And mail = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
                          " paterno = '" & paterno & "', " &
                          " materno = '" & materno & "', " &
                          " telefono = " & telefono & ", " &
-                         " rfc = '" & RFC & "'," &
-                         " WHERE telefono = '" & RegistroDeClientes.tel_txt.Text & "'"
+                         " rfc = '" & RFC & "'" &
+                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
         ElseIf nombre <> "" Then
             MsgBox("No se puede actualizar, datos obligatorios")
         ElseIf paterno <> "" Then

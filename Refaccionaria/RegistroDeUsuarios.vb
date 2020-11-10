@@ -163,4 +163,8 @@
         actualiza.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
         cnx.Close()
     End Sub
+
+    Private Sub DGVUsuarios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUsuarios.CellContentClick
+
+    End Sub
 End Class
