@@ -47,4 +47,9 @@
         txtnombreven.Text = dgvexist.Rows(renglon).Cells(1).Value
         txtnombreven.Text = dgvexist.Rows(renglon).Cells(4).Value
     End Sub
+
+    Private Sub btnfactura_Click(sender As Object, e As EventArgs) Handles btnfactura.Click
+        Dim webAddress As String = "https://www.factureya.com/Portal/Presentacion/Home/Index.aspx"
+        Process.Start(webAddress)
+    End Sub
 End Class
