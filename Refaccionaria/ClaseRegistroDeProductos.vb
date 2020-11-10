@@ -96,7 +96,7 @@
         If codigoProducto <> "" And CMedida <> "" And CMarca <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO producto VALUES('" & codigoProducto & "','" & nombreProducto & "', (Select codigoMedida from medida  where descripcion='" & CMedida & "'),(Select codigoMarca from marca  where descripcion='" & CMarca & "'), " & precio & ", 0,0)"
+            strSql = "INSERT INTO producto VALUES(" & codigoProducto & ",'" & nombreProducto & "', (Select codigoMedida from medida  where descripcion='" & CMedida & "'),(Select codigoMarca from marca  where descripcion='" & CMarca & "'), " & precio & ", 0,0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo producto agregado")
         Else
