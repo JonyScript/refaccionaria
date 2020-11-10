@@ -30,6 +30,28 @@
         Next x
     End Sub
 
+    Public Function validarContraseña() As Boolean
+        'Se asegura de que la contraseña sea compleja
+        Dim existeNumero = False
+        Dim existeLetraMayuscula = False
+        Dim existeLetraMinuscula = False
+        'Si su longitud es menor de 8 caracteres, no es válida.
+        If (pass_txt.Text.Length < 8) Then Return False
+        ' Verifica si al menos hay un número y una letra en mayúscula.
+        For Each c As Char In pass_txt.Text
+            If (Char.IsDigit(c)) Then
+                existeNumero = True
+                Continue For
+            End If
+            If (c = c.ToString().ToUpper()) Then
+                existeLetraMayuscula = True
+            End If
+            If (c = c.ToString().ToLower()) Then
+                existeLetraMinuscula = True
+            End If
+        Next
+        Return ((existeNumero) And (existeLetraMayuscula) And (existeLetraMinuscula))
+    End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If username_txt.Text = vbNullString Then
@@ -48,29 +70,33 @@
             MessageBox.Show("Capturar rol de usuario")
         Else
             If (pass_txt.Text = pass2_txt.Text) Then
-                Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
-                user.getSetUsuario = username_txt.Text
-                user.getSetrol = cbx_rol.Text
-                user.getSetnombre = nombre_txt.Text
-                user.getSetpaterno = ap_txt.Text
-                user.getSetmaterno = am_txt.Text
-                user.getSetcontrasena = pass_txt.Text
+                If (validarContraseña()) Then
+                    Dim user As New ClaseRegistroDeUsuarios(username_txt.Text, cbx_rol.Text, nombre_txt.Text, ap_txt.Text, am_txt.Text, pass_txt.Text)
+                    user.getSetUsuario = username_txt.Text
+                    user.getSetrol = cbx_rol.Text
+                    user.getSetnombre = nombre_txt.Text
+                    user.getSetpaterno = ap_txt.Text
+                    user.getSetmaterno = am_txt.Text
+                    user.getSetcontrasena = pass_txt.Text
 
-                If user.consultaUnUsuario() = False Then
-                    'Si el usuario no está registrado, la inserta como una nuevo
-                    user.insertarUsuario()
-                    username_txt.Clear()
-                    nombre_txt.Clear()
-                    ap_txt.Clear()
-                    am_txt.Clear()
-                    pass_txt.Clear()
-                    pass2_txt.Clear()
+                    If user.consultaUnUsuario() = False Then
+                        'Si el usuario no está registrado, la inserta como una nuevo
+                        user.insertarUsuario()
+                        username_txt.Clear()
+                        nombre_txt.Clear()
+                        ap_txt.Clear()
+                        am_txt.Clear()
+                        pass_txt.Clear()
+                        pass2_txt.Clear()
+                    Else
+                        MessageBox.Show("El id del usuario ya existe")
+                    End If
+                    cnx.Close()
                 Else
-                    MessageBox.Show("El id del usuario ya existe")
+                    MessageBox.Show("La contraseña debe tener: un tamaño de al menos 8, un numero y una letra mayuscula")
                 End If
-                cnx.Close()
             Else
-                MessageBox.Show("Las contraseñas no son iguales")
+                    MessageBox.Show("Las contraseñas no son iguales")
             End If
             Dim datagrid As New ClaseRegistroDeUsuarios()
             datagrid.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
