@@ -96,7 +96,7 @@
         If codigoProducto <> "" And CMedida <> "" And CMarca <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO producto VALUES(" & codigoProducto & ",'" & nombreProducto & "', (Select codigoMedida from medida  where descripcion='" & CMedida & "'),(Select codigoMarca from marca  where descripcion='" & CMarca & "'), " & precio & ", 0,0)"
+            strSql = "INSERT INTO producto VALUES(" & codigoProducto & ",'" & nombreProducto & "', " & CMedida & ", " & CMarca & ", " & precio & ", 0,0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo producto agregado")
         Else
@@ -149,10 +149,10 @@
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
         strSQL = "SELECT * FROM producto " &
-                 "WHERE codigoProducto= '" & codigoProducto & "' and eliminado = 0"
+                 "WHERE (codigoProducto= '" & codigoProducto & "' and eliminado = 0) OR (nombreProducto = '" & nombreProducto & "' and codigoMarca = " & CMarca & " and eliminado = 0)"
         consultaUnProducto = False
         xDT = xCnx.objetoDataAdapter(strSQL)
-        If xDT.Rows.Count = 1 Then
+        If xDT.Rows.Count > 0 Then
             If IsDBNull(xDT.Rows(0)("codigoProducto")) Then
                 codigoProducto = 0
             Else
@@ -162,6 +162,30 @@
             consultaUnProducto = True
         End If
     End Function
+    Public Function consultaUnProductoUpdt() As Boolean
+        ' Método para buscar a un usuario en párticular, para saber
+        ' si es un nuevo usuario o uno existente
+        Dim strSQL As String
+        Dim xCnx As New Oracle
+        Dim xDT As DataTable
+        'Preparamos el query para buscar al usuario, con el dato
+        'capturado en la caja de textos txt_usuario de la pantalla
+        'FrmUsuarios
+        strSQL = "SELECT * FROM producto " &
+                 "WHERE nombreProducto = '" & nombreProducto & "' and codigoMarca = " & CMarca & " and eliminado = 0"
+        consultaUnProductoUpdt = False
+        xDT = xCnx.objetoDataAdapter(strSQL)
+        If xDT.Rows.Count > 0 Then
+            If IsDBNull(xDT.Rows(0)("codigoProducto")) Then
+                codigoProducto = 0
+            Else
+                codigoProducto = CStr(xDT.Rows(0)("codigoProducto"))
+                ' codigoProducto = CStr(xDT.Rows(0)("codigoProducto"))
+            End If
+            consultaUnProductoUpdt = True
+        End If
+    End Function
+
     Public Function consultaTodosProductos() As Object
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
