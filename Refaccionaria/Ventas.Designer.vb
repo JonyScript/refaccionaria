@@ -171,6 +171,7 @@ Partial Class Ventas
         '
         'txtcodigoven
         '
+        Me.txtcodigoven.Enabled = False
         Me.txtcodigoven.Location = New System.Drawing.Point(195, 305)
         Me.txtcodigoven.Name = "txtcodigoven"
         Me.txtcodigoven.Size = New System.Drawing.Size(70, 20)
@@ -178,6 +179,7 @@ Partial Class Ventas
         '
         'txtnombreven
         '
+        Me.txtnombreven.Enabled = False
         Me.txtnombreven.Location = New System.Drawing.Point(411, 305)
         Me.txtnombreven.Name = "txtnombreven"
         Me.txtnombreven.Size = New System.Drawing.Size(196, 20)
@@ -244,7 +246,7 @@ Partial Class Ventas
         '
         'btnconfirmar
         '
-        Me.btnconfirmar.Location = New System.Drawing.Point(1034, 515)
+        Me.btnconfirmar.Location = New System.Drawing.Point(1036, 556)
         Me.btnconfirmar.Name = "btnconfirmar"
         Me.btnconfirmar.Size = New System.Drawing.Size(117, 23)
         Me.btnconfirmar.TabIndex = 22
@@ -253,7 +255,7 @@ Partial Class Ventas
         '
         'btnnota
         '
-        Me.btnnota.Location = New System.Drawing.Point(1034, 543)
+        Me.btnnota.Location = New System.Drawing.Point(1036, 585)
         Me.btnnota.Name = "btnnota"
         Me.btnnota.Size = New System.Drawing.Size(117, 23)
         Me.btnnota.TabIndex = 23
@@ -262,7 +264,7 @@ Partial Class Ventas
         '
         'btnfactura
         '
-        Me.btnfactura.Location = New System.Drawing.Point(1034, 573)
+        Me.btnfactura.Location = New System.Drawing.Point(1036, 614)
         Me.btnfactura.Name = "btnfactura"
         Me.btnfactura.Size = New System.Drawing.Size(117, 23)
         Me.btnfactura.TabIndex = 24
@@ -274,7 +276,7 @@ Partial Class Ventas
         Me.dgvexist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvexist.Location = New System.Drawing.Point(174, 124)
         Me.dgvexist.Name = "dgvexist"
-        Me.dgvexist.Size = New System.Drawing.Size(749, 150)
+        Me.dgvexist.Size = New System.Drawing.Size(977, 150)
         Me.dgvexist.TabIndex = 25
         '
         'dgvventa
@@ -282,14 +284,14 @@ Partial Class Ventas
         Me.dgvventa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvventa.Location = New System.Drawing.Point(174, 356)
         Me.dgvventa.Name = "dgvventa"
-        Me.dgvventa.Size = New System.Drawing.Size(749, 150)
+        Me.dgvventa.Size = New System.Drawing.Size(977, 150)
         Me.dgvventa.TabIndex = 26
         '
         'btnnuevaventa
         '
-        Me.btnnuevaventa.Location = New System.Drawing.Point(950, 421)
+        Me.btnnuevaventa.Location = New System.Drawing.Point(1036, 527)
         Me.btnnuevaventa.Name = "btnnuevaventa"
-        Me.btnnuevaventa.Size = New System.Drawing.Size(92, 23)
+        Me.btnnuevaventa.Size = New System.Drawing.Size(117, 23)
         Me.btnnuevaventa.TabIndex = 27
         Me.btnnuevaventa.Text = "Nueva venta"
         Me.btnnuevaventa.UseVisualStyleBackColor = True
