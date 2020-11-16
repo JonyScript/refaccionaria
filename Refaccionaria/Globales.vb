@@ -25,7 +25,7 @@ Module Globales
     Public codigoMarca As String
     Public codigoVenta As String
 
-
+    Public clienteGlobal As String
 
     Dim dt As Date = Today
 

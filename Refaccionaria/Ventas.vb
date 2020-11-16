@@ -102,4 +102,10 @@
         txtcodigoven.Clear()
         txtnombreven.Clear()
     End Sub
+
+    Private Sub btnnota_Click(sender As Object, e As EventArgs) Handles btnnota.Click
+        cnx.Close()
+        Notas.Show()
+        Me.Close()
+    End Sub
 End Class

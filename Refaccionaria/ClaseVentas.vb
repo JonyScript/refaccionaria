@@ -100,6 +100,7 @@
         ' permite hacer el insert
         getCodigoVenta()
         codigoCliente = cdgcliente
+        clienteGlobal = cdgcliente
         If codigoCliente <> "" And UsuarioConectado <> "" Then
             ' Preparamos el query para insertar el registro
 

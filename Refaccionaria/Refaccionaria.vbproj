@@ -99,6 +99,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClaseLogin.vb" />
+    <Compile Include="ClaseNotas.vb" />
     <Compile Include="ClaseRegistroDeClientes.vb" />
     <Compile Include="ClaseRegistroDeProductos.vb" />
     <Compile Include="ClaseRegistroDeUsuarios.vb" />
@@ -131,6 +132,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Notas.Designer.vb">
+      <DependentUpon>Notas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Notas.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Oracle.vb" />
     <Compile Include="RegistroDeUsuarios.Designer.vb">
@@ -173,6 +180,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notas.resx">
+      <DependentUpon>Notas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeUsuarios.resx">
       <DependentUpon>RegistroDeUsuarios.vb</DependentUpon>
