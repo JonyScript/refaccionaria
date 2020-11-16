@@ -24,6 +24,7 @@ Module Globales
     Public codigoMedida As String
     Public codigoMarca As String
     Public codigoVenta As String
+    Public telprev As String
 
     Public clienteGlobal As String
 

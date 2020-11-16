@@ -11,7 +11,8 @@
     End Sub
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_rol.SelectedIndexChanged
         Dim x, i As Integer
-        puestoUsuario = ""
+        Dim puestoUsuarios As String
+        puestoUsuarios = ""
         dir = cbx_rol.Text
         i = 0
         x = 0
@@ -26,7 +27,7 @@
         Next
 
         For x = 1 To i
-            puestoUsuario = puestoUsuario + Mid(dir, x, 1)
+            puestoUsuarios = puestoUsuarios + Mid(dir, x, 1)
         Next x
     End Sub
 

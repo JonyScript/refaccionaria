@@ -66,6 +66,7 @@
 
     Private Sub DGVClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVClientes.CellClick
         Dim renglon As Integer
+        telprev = DGVClientes.Rows(renglon).Cells(4).Value
         renglon = DGVClientes.CurrentCellAddress.Y
         name_txt.Text = DGVClientes.Rows(renglon).Cells(1).Value
         pat_txt.Text = DGVClientes.Rows(renglon).Cells(2).Value
@@ -88,6 +89,13 @@
         actualiza.actualizaCliente()
         actualiza.PoblarDataGridRegistroDeClientes(DGVClientes)
         cnx.Close()
+        name_txt.Clear()
+        mat_txt.Clear()
+        pat_txt.Clear()
+        tel_txt.Clear()
+        rfc_txt.Clear()
+        dir_txt.Clear()
+        mail_txt.Clear()
     End Sub
 
     Private Sub DGVClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVClientes.CellContentClick
@@ -97,7 +105,7 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         If MessageBox.Show("¿Esta seguro?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             Dim cliente As New ClaseRegistroDeClientes(name_txt.Text, pat_txt.Text, mat_txt.Text, tel_txt.Text, rfc_txt.Text, dir_txt.Text, mail_txt.Text)
-            'Verificmos que el pais se encuentre registrado
+            'Verificmos que el cliente se encuentre registrado
             If cliente.consultaUnCliente() = False Then
                 MsgBox("No se puede eliminar al cliente, verifique ...")
             Else
@@ -116,5 +124,15 @@
                 mail_txt.Clear()
             End If
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        name_txt.Clear()
+        mat_txt.Clear()
+        pat_txt.Clear()
+        tel_txt.Clear()
+        rfc_txt.Clear()
+        dir_txt.Clear()
+        mail_txt.Clear()
     End Sub
 End Class

@@ -6,7 +6,7 @@
         dgvexist.ReadOnly = False
         dgvventa.ReadOnly = False
 
-        llenarCombo(cmbcliente, "Select codigoCliente, nombre || ' ' || paterno || ' ' || materno as nombre from cliente", "codigoCliente", "Nombre")
+        llenarCombo(cmbcliente, "Select codigoCliente, nombre || ' ' || paterno || ' ' || materno as nombre from cliente where eliminado = 0", "codigoCliente", "Nombre")
         codigoCliente = cmbcliente.SelectedValue
 
         'botones y controles inicialmente escondidos / desactivados

@@ -150,14 +150,14 @@
                          " rfc = '" & RFC & "'," &
                          " direccion ='" & direccion & "', " &
                          " mail ='" & mail & "'" &
-                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
+                         " WHERE telefono = " & telprev
             xCnx.objetoCommand(strSql)
         ElseIf RFC = "" And direccion = "" And mail = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
                          " paterno = '" & paterno & "', " &
                          " materno = '" & materno & "', " &
                          " telefono = " & telefono & " " &
-                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
+                         " WHERE telefono = " & telprev
             xCnx.objetoCommand(strSql)
         ElseIf RFC = "" And direccion = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
@@ -165,7 +165,7 @@
                          " materno = '" & materno & "', " &
                          " telefono = " & telefono & ", " &
                          " mail ='" & mail & "' " &
-                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
+                         " WHERE telefono = " & telprev
             xCnx.objetoCommand(strSql)
         ElseIf RFC = "" And mail = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
@@ -173,7 +173,7 @@
                          " materno = '" & materno & "', " &
                          " telefono = " & telefono & ", " &
                          " direccion ='" & direccion & "' " &
-                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
+                         " WHERE telefono = " & telprev
             xCnx.objetoCommand(strSql)
         ElseIf direccion = "" And mail = "" Then
             strSql = "UPDATE cliente set nombre ='" & nombre & "', " &
@@ -181,7 +181,7 @@
                          " materno = '" & materno & "', " &
                          " telefono = " & telefono & ", " &
                          " rfc = '" & RFC & "'" &
-                         " WHERE telefono = " & RegistroDeClientes.tel_txt.Text & ""
+                         " WHERE telefono = " & telprev
         ElseIf nombre <> "" Then
             MsgBox("No se puede actualizar, datos obligatorios")
         ElseIf paterno <> "" Then

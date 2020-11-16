@@ -121,7 +121,7 @@ Partial Class Ventas
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(786, 578)
+        Me.Label8.Location = New System.Drawing.Point(799, 569)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(31, 13)
         Me.Label8.TabIndex = 7
@@ -131,7 +131,7 @@ Partial Class Ventas
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(41, 109)
+        Me.Label9.Location = New System.Drawing.Point(41, 185)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(105, 24)
         Me.Label9.TabIndex = 8
@@ -141,7 +141,7 @@ Partial Class Ventas
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(41, 332)
+        Me.Label10.Location = New System.Drawing.Point(75, 408)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(59, 24)
         Me.Label10.TabIndex = 9
@@ -172,7 +172,7 @@ Partial Class Ventas
         'txtcodigoven
         '
         Me.txtcodigoven.Enabled = False
-        Me.txtcodigoven.Location = New System.Drawing.Point(195, 305)
+        Me.txtcodigoven.Location = New System.Drawing.Point(195, 311)
         Me.txtcodigoven.Name = "txtcodigoven"
         Me.txtcodigoven.Size = New System.Drawing.Size(70, 20)
         Me.txtcodigoven.TabIndex = 13
@@ -180,21 +180,21 @@ Partial Class Ventas
         'txtnombreven
         '
         Me.txtnombreven.Enabled = False
-        Me.txtnombreven.Location = New System.Drawing.Point(411, 305)
+        Me.txtnombreven.Location = New System.Drawing.Point(411, 311)
         Me.txtnombreven.Name = "txtnombreven"
         Me.txtnombreven.Size = New System.Drawing.Size(196, 20)
         Me.txtnombreven.TabIndex = 14
         '
         'txtcantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(684, 305)
+        Me.txtcantidad.Location = New System.Drawing.Point(684, 311)
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
         Me.txtcantidad.TabIndex = 15
         '
         'txttotal
         '
-        Me.txttotal.Location = New System.Drawing.Point(823, 571)
+        Me.txttotal.Location = New System.Drawing.Point(836, 562)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(100, 20)
         Me.txttotal.TabIndex = 16
@@ -219,7 +219,7 @@ Partial Class Ventas
         '
         'btnagregar
         '
-        Me.btnagregar.Location = New System.Drawing.Point(810, 303)
+        Me.btnagregar.Location = New System.Drawing.Point(823, 308)
         Me.btnagregar.Name = "btnagregar"
         Me.btnagregar.Size = New System.Drawing.Size(113, 23)
         Me.btnagregar.TabIndex = 19

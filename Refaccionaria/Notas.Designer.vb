@@ -112,14 +112,14 @@ Partial Class Notas
         '
         Me.txtvendedor.Location = New System.Drawing.Point(184, 508)
         Me.txtvendedor.Name = "txtvendedor"
-        Me.txtvendedor.Size = New System.Drawing.Size(100, 20)
+        Me.txtvendedor.Size = New System.Drawing.Size(184, 20)
         Me.txtvendedor.TabIndex = 8
         '
         'txtcliente
         '
         Me.txtcliente.Location = New System.Drawing.Point(184, 546)
         Me.txtcliente.Name = "txtcliente"
-        Me.txtcliente.Size = New System.Drawing.Size(100, 20)
+        Me.txtcliente.Size = New System.Drawing.Size(184, 20)
         Me.txtcliente.TabIndex = 9
         '
         'txttotal
