@@ -184,6 +184,24 @@
         End If
     End Sub
 
+    Public Function consultaUnProducto(ByVal cdgproducto As String) As Boolean
+        ' Método para buscar a un usuario en párticular, para saber
+        ' si es un nuevo usuario o uno existente
+        Dim strSQL As String
+        Dim xCnx As New Oracle
+        Dim xDT As DataTable
+        'Preparamos el query para buscar al usuario, con el dato
+        'capturado en la caja de textos txt_usuario de la pantalla
+        'FrmUsuarios
+        strSQL = "SELECT * FROM ventadetallada " &
+                 "WHERE codigoVenta= " & codigoVenta & " and codigoproducto= " & cdgproducto
+        consultaUnProducto = False
+        xDT = xCnx.objetoDataAdapter(strSQL)
+        If xDT.Rows.Count = 1 Then
+            consultaUnProducto = True
+        End If
+    End Function
+
     Public Function consultaProductos() As Object
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String

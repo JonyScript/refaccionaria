@@ -33,7 +33,12 @@
     Private Sub btnagregar_Click(sender As Object, e As EventArgs) Handles btnagregar.Click
         'boton para agregar productos a una venta / agregar registros a venta detallada
         Dim venta As New ClaseVentas()
-        venta.insertarProducto(txtcodigoven.Text, txtcantidad.Text)
+        If venta.consultaUnProducto(txtcodigoven.Text) = False Then
+            venta.insertarProducto(txtcodigoven.Text, txtcantidad.Text)
+        Else
+            MsgBox("Este producto ya ha sido insertado en la venta actual")
+        End If
+
         venta.PoblarDataGridVentas(dgvventa)
         venta.PoblarDataGridExist(dgvexist)
         cnx.Close()
