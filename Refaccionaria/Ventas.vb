@@ -12,6 +12,9 @@
         'botones y controles inicialmente escondidos / desactivados
         btnagregar.Enabled = False
         btnremover.Enabled = False
+        btnnota.Enabled = False
+        btnfactura.Enabled = False
+        btnconfirmar.Enabled = False
         dgvventa.Hide()
 
         Dim datagridext As New ClaseVentas()
@@ -45,12 +48,15 @@
         txtcantidad.Clear()
         txtcodigoven.Clear()
         txtnombreven.Clear()
+        txttotal.Text = venta.getTotal
     End Sub
 
     Private Sub btnnuevaventa_Click(sender As Object, e As EventArgs) Handles btnnuevaventa.Click
 
         'activar inicialmente escondidos
         btnagregar.Enabled = True
+        btnnuevaventa.Enabled = False
+        btnconfirmar.Enabled = True
         dgvventa.Show()
         codigoCliente = cmbcliente.SelectedValue
 
@@ -90,9 +96,13 @@
         'al confirmar venta se desactiva el boton para agregar y remover productos
         btnagregar.Enabled = False
         btnremover.Enabled = False
-        dgvventa.Hide()
+        btnnuevaventa.Enabled = True
+        btnnota.Enabled = True
+        btnfactura.Enabled = True
+        btnconfirmar.Enabled = False
         Dim venta As New ClaseVentas()
         txttotal.Text = venta.getTotal()
+        venta.insertarTotal(venta.getTotal())
         cnx.Close()
     End Sub
 
@@ -111,6 +121,12 @@
     Private Sub btnnota_Click(sender As Object, e As EventArgs) Handles btnnota.Click
         cnx.Close()
         Notas.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btnregistro_Click(sender As Object, e As EventArgs) Handles btnregistro.Click
+        cnx.Close()
+        RegistroDeVentas.Show()
         Me.Close()
     End Sub
 End Class

@@ -103,6 +103,7 @@
     <Compile Include="ClaseRegistroDeClientes.vb" />
     <Compile Include="ClaseRegistroDeProductos.vb" />
     <Compile Include="ClaseRegistroDeUsuarios.vb" />
+    <Compile Include="ClaseRegistroDeVentas.vb" />
     <Compile Include="ClaseVentas.vb" />
     <Compile Include="Globales.vb" />
     <Compile Include="menuAdministrador.Designer.vb">
@@ -158,6 +159,12 @@
     <Compile Include="RegistroDeProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegistroDeVentas.Designer.vb">
+      <DependentUpon>RegistroDeVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroDeVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas.Designer.vb">
       <DependentUpon>Ventas.vb</DependentUpon>
     </Compile>
@@ -192,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeProductos.resx">
       <DependentUpon>RegistroDeProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroDeVentas.resx">
+      <DependentUpon>RegistroDeVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.vb</DependentUpon>

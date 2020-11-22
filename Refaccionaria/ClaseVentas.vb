@@ -245,6 +245,22 @@
         End If
     End Function
 
+    Public Sub insertarTotal(ByVal total As String)
+        'sub para devolver existencias del inventario en caso de eliminar producto de la venta / venta no realizada
+        Dim strSql As String
+        Dim xCnx As New Oracle
+        ' Validamos que no falten datos en las variables, en caso contrario no se 
+        ' permite hacer el update
+        If total <> "" Then
+            ' Preparamos el query para insertar el registro
+
+            strSql = "update venta set totalVenta = " & total & " where codigoVenta = " & codigoVenta
+            xCnx.objetoCommand(strSql)
+        Else
+            MsgBox("Error al insertar el total del producto !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+        End If
+    End Sub
+
     Public Sub PoblarDataGridExist(ByVal DGVExist As DataGridView)
         'Llamamos al método que obtiene los registros de los usuarios
         DGVExist.DataSource = consultaProductos()
