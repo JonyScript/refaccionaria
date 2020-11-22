@@ -24,6 +24,7 @@
     End Sub
 
     Private Sub MenuVendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblfecha2.Text = Today
 
     End Sub
 
@@ -35,5 +36,9 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Autenticación_de_usuarios.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles lblfecha2.Click
+
     End Sub
 End Class

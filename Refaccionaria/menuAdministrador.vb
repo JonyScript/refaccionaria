@@ -47,4 +47,8 @@
         Autenticación_de_usuarios.Show()
         Me.Close()
     End Sub
+
+    Private Sub LblFecha_Click(sender As Object, e As EventArgs) Handles lblFecha.Click
+
+    End Sub
 End Class

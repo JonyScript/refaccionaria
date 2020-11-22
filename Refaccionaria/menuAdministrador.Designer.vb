@@ -32,6 +32,7 @@ Partial Class menuAdministrador
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        'Me.OracleCommand1 = New Oracle.ManagedDataAccess.Client.OracleCommand()
         Me.SuspendLayout()
         '
         'btnVentas
@@ -134,6 +135,10 @@ Partial Class menuAdministrador
         Me.Button1.Text = "Cerrar sesion"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'OracleCommand1
+        '
+        ' Me.OracleCommand1.Transaction = Nothing
+        '
         'menuAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -150,7 +155,7 @@ Partial Class menuAdministrador
         Me.Controls.Add(Me.btnRegistroDeClientes)
         Me.Controls.Add(Me.btnVentas)
         Me.Name = "menuAdministrador"
-        Me.Text = "menuAdministrador"
+        Me.Text = "Menú"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -166,4 +171,5 @@ Partial Class menuAdministrador
     Friend WithEvents Label1 As Label
     Friend WithEvents lblFecha As Label
     Friend WithEvents Button1 As Button
+    ' Private WithEvents OracleCommand1 As Oracle.ManagedDataAccess.Client.OracleCommand
 End Class
