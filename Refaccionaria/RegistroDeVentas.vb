@@ -22,4 +22,8 @@
         Ventas.Show()
         Me.Close()
     End Sub
+
+    Private Sub DGVVentas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVVentas.CellContentClick
+
+    End Sub
 End Class
