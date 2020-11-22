@@ -98,6 +98,7 @@ Partial Class Notas
         '
         'txtcdgventa
         '
+        Me.txtcdgventa.Enabled = False
         Me.txtcdgventa.Location = New System.Drawing.Point(374, 43)
         Me.txtcdgventa.Name = "txtcdgventa"
         Me.txtcdgventa.Size = New System.Drawing.Size(100, 20)
@@ -105,6 +106,7 @@ Partial Class Notas
         '
         'txtfecha
         '
+        Me.txtfecha.Enabled = False
         Me.txtfecha.Location = New System.Drawing.Point(374, 74)
         Me.txtfecha.Name = "txtfecha"
         Me.txtfecha.Size = New System.Drawing.Size(100, 20)
@@ -112,6 +114,7 @@ Partial Class Notas
         '
         'txtvendedor
         '
+        Me.txtvendedor.Enabled = False
         Me.txtvendedor.Location = New System.Drawing.Point(184, 508)
         Me.txtvendedor.Name = "txtvendedor"
         Me.txtvendedor.Size = New System.Drawing.Size(184, 20)
@@ -119,6 +122,7 @@ Partial Class Notas
         '
         'txtcliente
         '
+        Me.txtcliente.Enabled = False
         Me.txtcliente.Location = New System.Drawing.Point(184, 546)
         Me.txtcliente.Name = "txtcliente"
         Me.txtcliente.Size = New System.Drawing.Size(184, 20)
@@ -126,6 +130,7 @@ Partial Class Notas
         '
         'txttotal
         '
+        Me.txttotal.Enabled = False
         Me.txttotal.Location = New System.Drawing.Point(575, 528)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(100, 20)

@@ -194,6 +194,7 @@ Partial Class Ventas
         '
         'txttotal
         '
+        Me.txttotal.Enabled = False
         Me.txttotal.Location = New System.Drawing.Point(836, 562)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(100, 20)
