@@ -3,26 +3,26 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT venta.codigoProducto as codigo, totalVenta as total, cliente.nombre || ' ' || cliente.paterno || ' ' || cliente.materno as cliente, " &
+        strSQL = "SELECT venta.codigoVenta as codigo, totalVenta as total, cliente.nombre || ' ' || cliente.paterno || ' ' || cliente.materno as cliente, " &
                  "usuario.nombre || ' ' || usuario.paterno || ' ' || usuario.materno as vendedor, fechaVenta as fecha " &
                  "From venta, usuario, cliente where venta.codigoCliente = cliente.codigoCliente and " &
                  "venta.codigoUsuario = usuario.codigoUsuario and usuario.eliminado = 0 and cliente.eliminado = 0 Order By codigo"
         consultaVenta = xCnx.objetoDataAdapter(strSQL)
     End Function
-    Public Function consultaVentaDetallada() As Object
+    Public Function consultaVentaDetallada(ByVal cdg As String) As Object
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
         strSQL = "SELECT ventaDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,precio as precio, cantidadProducto as cantidad, precio * cantidadProducto as importe " &
                  "From producto, medida, ventaDetallada, venta, marca where producto.codigoMarca = marca.codigoMarca and producto.codigoMedida = medida.codigoMedida and producto.codigoProducto = ventaDetallada.codigoProducto " &
-                 "and venta.codigoVenta = ventaDetallada.codigoVenta and eliminado = 0 Order By codigo"
+                 "and venta.codigoVenta = ventaDetallada.codigoVenta and eliminado = 0 and venta.codigoVenta = " & cdg & " Order By codigo"
         consultaVentaDetallada = xCnx.objetoDataAdapter(strSQL)
     End Function
 
     Public Sub PoblarDataGridVenta(ByVal DGVDVenta As DataGridView)
 
         'Llamamos al método que obtiene los registros de los usuarios
-        DGVDVenta.DataSource = consultaVentaDetallada()
+        DGVDVenta.DataSource = consultaVenta()
         DGVDVenta.Refresh()
         'Establecer ancho de cada columna del DataGridView, el 
         'número de columnas del DGV debe ser igual al número
@@ -35,10 +35,10 @@
         DGVDVenta.Columns.Item(4).Width = 100
     End Sub
 
-    Public Sub PoblarDataGridVentaDetallada(ByVal DGVDProd As DataGridView)
+    Public Sub PoblarDataGridVentaDetallada(ByVal DGVDProd As DataGridView, ByVal cdg As String)
 
         'Llamamos al método que obtiene los registros de los usuarios
-        DGVDProd.DataSource = consultaVentaDetallada()
+        DGVDProd.DataSource = consultaVentaDetallada(cdg)
         DGVDProd.Refresh()
         'Establecer ancho de cada columna del DataGridView, el 
         'número de columnas del DGV debe ser igual al número
