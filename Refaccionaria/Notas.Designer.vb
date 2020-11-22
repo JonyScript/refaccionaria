@@ -22,8 +22,6 @@ Partial Class Notas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Notas))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DGVNotas = New System.Windows.Forms.DataGridView()
@@ -35,9 +33,7 @@ Partial Class Notas
         Me.txtvendedor = New System.Windows.Forms.TextBox()
         Me.txtcliente = New System.Windows.Forms.TextBox()
         Me.txttotal = New System.Windows.Forms.TextBox()
-        Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.print = New System.Windows.Forms.Button()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         CType(Me.DGVNotas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -134,14 +130,6 @@ Partial Class Notas
         Me.txttotal.Size = New System.Drawing.Size(100, 20)
         Me.txttotal.TabIndex = 10
         '
-        'PrintForm1
-        '
-        Me.PrintForm1.DocumentName = "document"
-        Me.PrintForm1.Form = Me
-        Me.PrintForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
-        Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
-        Me.PrintForm1.PrintFileName = Nothing
-        '
         'print
         '
         Me.print.Location = New System.Drawing.Point(783, 601)
@@ -151,15 +139,11 @@ Partial Class Notas
         Me.print.Text = "Imprimir"
         Me.print.UseVisualStyleBackColor = True
         '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.UseEXDialog = True
-        '
         'Notas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(870, 636)
+        Me.ClientSize = New System.Drawing.Size(867, 636)
         Me.Controls.Add(Me.print)
         Me.Controls.Add(Me.txttotal)
         Me.Controls.Add(Me.txtcliente)
@@ -191,7 +175,5 @@ Partial Class Notas
     Friend WithEvents txtvendedor As TextBox
     Friend WithEvents txtcliente As TextBox
     Friend WithEvents txttotal As TextBox
-    Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
     Friend WithEvents print As Button
-    Friend WithEvents PrintDialog1 As PrintDialog
 End Class
