@@ -1,5 +1,9 @@
-﻿Public Class registroDeProductos
+﻿Imports iTextSharp.text
+Imports iTextSharp.text.pdf
+Imports System.IO
+Public Class registroDeProductos
     Private Sub registroDeProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Labelfecha.Text = Today
         DGVRproductos.ReadOnly = False
         llenarCombo(Medida, "Select codigoMedida, descripcion from medida", "codigoMedida", "descripcion")
         codigoMedida = Medida.SelectedValue
@@ -142,8 +146,64 @@
         End If
 
     End Sub
+    Private Sub imprimirP_Click(sender As Object, e As EventArgs) Handles imprimirP.Click
+        Try
+            Dim doc As New Document(PageSize.A4.Rotate(), 10, 10, 10, 10)
+            'Guarda el reporte en el escritorio de windows (Desktop).
+            Dim filename As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\refaccionaria\productos" & Replace(Labelfecha.Text, "/", "-") & ".pdf"
+            Dim file As New FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.ReadWrite)
+            PdfWriter.GetInstance(doc, file)
+            doc.Open()
+            ExportarDatosPDF(doc)
+            doc.Close()
+            Process.Start(filename)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Public Function GetColumnasSize(ByVal dg As DataGridView) As Single()
+        Dim values As Single() = New Single(dg.ColumnCount - 1) {}
+        For i As Integer = 0 To dg.ColumnCount - 1
+            values(i) = CSng(dg.Columns(i).Width)
+        Next
+        Return values
+    End Function
 
-    Private Sub DGVRproductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRproductos.CellContentClick
-
+    Public Sub ExportarDatosPDF(ByVal document As Document)
+        'Se crea un objeto PDFTable con el numero de columnas del DataGridView.
+        Dim datatable As New PdfPTable(DGVRproductos.ColumnCount)
+        'Se asignan las propiedades del .PDF
+        datatable.DefaultCell.Padding = 3
+        Dim headerwidths As Single() = GetColumnasSize(DGVRproductos)
+        datatable.SetWidths(headerwidths)
+        datatable.WidthPercentage = 100
+        datatable.DefaultCell.BorderWidth = datatable.DefaultCell.HorizontalAlignment = Element.ALIGN_LEFT
+        'Se crea el encabezado en el PDF.
+        Dim encabezado As New Paragraph("Fecha: " & Labelfecha.Text & "", New Font(Font.Name = "Tahoma", 20, Font.Bold))
+        'Se capturan los nombres de las columnas del DataGridView.
+        For i As Integer = 0 To DGVRproductos.ColumnCount - 1
+            datatable.AddCell(DGVRproductos.Columns(i).HeaderText)
+        Next
+        datatable.HeaderRows = 1
+        datatable.DefaultCell.BorderWidth = 1  'Se generan las columnas del DataGridView.
+        For i As Integer = 0 To DGVRproductos.RowCount - 2
+            For j As Integer = 0 To DGVRproductos.ColumnCount - 1
+                'If (j = 3) Then 'ubica la imagen en la columna 3 de datagridview
+                'capturo la ruta de la imagen
+                '   Dim RutaImage As String
+                ' RutaImage = DGVNotas("ruta_imagen", i).Value
+                ' 'Procedo a convertir la imagen de tipo itextsharp.text.image
+                'Dim Img As Image = Image.GetInstance(RutaImage)
+                ''agrego la imagen a la celda
+                'datatable.AddCell(Img)
+                'Else
+                datatable.AddCell(DGVRproductos(j, i).Value.ToString())
+                'End If
+            Next
+            datatable.CompleteRow()
+        Next
+        'Se agrega el PDFTable al documento.
+        document.Add(encabezado)
+        document.Add(datatable)
     End Sub
 End Class

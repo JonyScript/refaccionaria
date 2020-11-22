@@ -14,13 +14,10 @@ Public Class Notas
     End Sub
 
     Private Sub print_Click(sender As Object, e As EventArgs) Handles print.Click
-        'PrintForm1.PrintAction = Printing.PrintAction.PrintToPreview
-        'PrintForm1.Print()
-
         Try
             Dim doc As New Document(PageSize.A4.Rotate(), 10, 10, 10, 10)
             'Guarda el reporte en el escritorio de windows (Desktop).
-            Dim filename As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\notas\venta" & txtcdgventa.Text & ".pdf"
+            Dim filename As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\refaccionaria\venta" & txtcdgventa.Text & ".pdf"
             Dim file As New FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.ReadWrite)
             PdfWriter.GetInstance(doc, file)
             doc.Open()
@@ -90,5 +87,9 @@ Public Class Notas
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Ventas.Show()
         Me.Close()
+    End Sub
+
+    Private Sub txtfecha_TextChanged(sender As Object, e As EventArgs) Handles txtfecha.TextChanged
+
     End Sub
 End Class

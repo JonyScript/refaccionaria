@@ -42,6 +42,8 @@ Partial Class registroDeProductos
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Marca = New System.Windows.Forms.ComboBox()
+        Me.imprimirP = New System.Windows.Forms.Button()
+        Me.Labelfecha = New System.Windows.Forms.Label()
         CType(Me.DGVRproductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -215,11 +217,33 @@ Partial Class registroDeProductos
         Me.Marca.Size = New System.Drawing.Size(100, 21)
         Me.Marca.TabIndex = 25
         '
+        'imprimirP
+        '
+        Me.imprimirP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.imprimirP.Location = New System.Drawing.Point(979, 267)
+        Me.imprimirP.Name = "imprimirP"
+        Me.imprimirP.Size = New System.Drawing.Size(75, 23)
+        Me.imprimirP.TabIndex = 26
+        Me.imprimirP.Text = "Imprimir"
+        Me.imprimirP.UseVisualStyleBackColor = True
+        '
+        'Labelfecha
+        '
+        Me.Labelfecha.AutoSize = True
+        Me.Labelfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Labelfecha.Location = New System.Drawing.Point(965, 28)
+        Me.Labelfecha.Name = "Labelfecha"
+        Me.Labelfecha.Size = New System.Drawing.Size(49, 16)
+        Me.Labelfecha.TabIndex = 27
+        Me.Labelfecha.Text = "Label7"
+        '
         'registroDeProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1086, 573)
+        Me.Controls.Add(Me.Labelfecha)
+        Me.Controls.Add(Me.imprimirP)
         Me.Controls.Add(Me.Marca)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.limpiarP)
@@ -265,4 +289,6 @@ Partial Class registroDeProductos
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents Label2 As Label
     Friend WithEvents Marca As ComboBox
+    Friend WithEvents imprimirP As Button
+    Friend WithEvents Labelfecha As Label
 End Class
