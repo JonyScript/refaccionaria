@@ -9,4 +9,9 @@
         txttotal.Text = nota.getTotal()
         cnx.Close()
     End Sub
+
+    Private Sub print_Click(sender As Object, e As EventArgs) Handles print.Click
+        PrintForm1.PrintAction = Printing.PrintAction.PrintToPreview
+        PrintForm1.Print()
+    End Sub
 End Class
