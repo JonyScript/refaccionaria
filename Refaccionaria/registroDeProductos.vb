@@ -134,7 +134,7 @@ Public Class registroDeProductos
     End Sub
     Private Sub ModificarP_Click(sender As Object, e As EventArgs) Handles ModificarP.Click
         Dim actualiza As New ClaseRegistroDeProductos(Codigo.Text, NombreDproducto.Text, Medida.SelectedValue, Marca.SelectedValue, PrecioDeVenta.Text, "existencia")
-        If actualiza.consultaUnProductoUpdt() = False Then
+        If actualiza.consultaUnProductoUpdt() = True Then
             actualiza.actualizarProductos()
             actualiza.PoblarDataGridRegistroDeProductos(DGVRproductos)
             Codigo.Clear()
