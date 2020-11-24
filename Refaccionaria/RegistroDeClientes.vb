@@ -1,6 +1,8 @@
 ﻿Public Class RegistroDeClientes
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        If puestoUsuario = 1 Then
+        If formPrev = "ventas" Then
+            Ventas.Show()
+        ElseIf puestoUsuario = 1 Then
             menuAdministrador.Show()
         ElseIf puestoUsuario = 2 Then
             menuVendedor.Show()
