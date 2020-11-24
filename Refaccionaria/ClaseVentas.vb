@@ -206,9 +206,19 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,precio as precio, existencia as existencia " &
+        If Ventas.txtcodigoprod.Text <> "" Then
+            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,precio as precio, existencia as existencia " &
+                 "From producto, medida, marca where producto.codigoMedida = medida.codigoMedida and producto.codigoMarca = Marca.codigoMarca and eliminado = 0 and codigoProducto = " & Ventas.txtcodigoprod.Text & " Order By codigo"
+            consultaProductos = xCnx.objetoDataAdapter(strSQL)
+        ElseIf Ventas.txtnombreprod.Text <> "" Then
+            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,precio as precio, existencia as existencia " &
+                 "From producto, medida, marca where producto.codigoMedida = medida.codigoMedida and producto.codigoMarca = Marca.codigoMarca and eliminado = 0 and nombreProducto = '" & Ventas.txtnombreprod.Text & "' Order By codigo"
+            consultaProductos = xCnx.objetoDataAdapter(strSQL)
+        Else
+            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,precio as precio, existencia as existencia " &
                  "From producto, medida, marca where producto.codigoMedida = medida.codigoMedida and producto.codigoMarca = Marca.codigoMarca and eliminado = 0" & " Order By codigo"
-        consultaProductos = xCnx.objetoDataAdapter(strSQL)
+            consultaProductos = xCnx.objetoDataAdapter(strSQL)
+        End If
     End Function
 
     Public Function consultaVenta() As Object

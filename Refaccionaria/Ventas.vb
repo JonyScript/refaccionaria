@@ -2,6 +2,7 @@
     Private codigoCliente As String
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        formPrev = "ventas"
         lblfecha.Text = Today
         dgvexist.ReadOnly = False
         dgvventa.ReadOnly = False
@@ -128,5 +129,25 @@
         cnx.Close()
         RegistroDeVentas.Show()
         Me.Close()
+    End Sub
+
+    Private Sub cmbcliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcliente.SelectedIndexChanged
+        'If formPrev = "1" Then
+        'llenarCombo(cmbcliente, "Select codigoCliente, nombre || ' ' || paterno || ' ' || materno as nombre from cliente where eliminado = 0", "codigoCliente", "Nombre")
+        'codigoCliente = cmbcliente.SelectedValue
+        'End If
+    End Sub
+
+    Private Sub btncliente_Click(sender As Object, e As EventArgs) Handles btncliente.Click
+        cnx.Close()
+        RegistroDeClientes.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
+        Dim venta As New ClaseVentas()
+        venta.PoblarDataGridExist(dgvexist)
+        txtcodigoprod.Clear()
+        txtnombreprod.Clear()
     End Sub
 End Class

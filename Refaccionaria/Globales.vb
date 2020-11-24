@@ -26,6 +26,9 @@ Module Globales
     Public codigoVenta As String
     Public telprev As String
 
+    'variable para guardar el formulario previo, util en ventas al agregar clientes nuevos
+    Public formPrev As String
+
     Public clienteGlobal As String
 
     Dim dt As Date = Today

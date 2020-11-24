@@ -172,7 +172,7 @@
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
         strSQL = "SELECT * FROM producto " &
-                 "WHERE nombreProducto = '" & nombreProducto & "' and codigoMarca = " & CMarca & " and eliminado = 0"
+                 "WHERE codigoProducto = " & codigoProducto & " and eliminado = 0"
         consultaUnProductoUpdt = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count > 0 Then
