@@ -70,18 +70,33 @@ Public Class Notas
                 ''agrego la imagen a la celda
                 'datatable.AddCell(Img)
                 'Else
-                datatable.AddCell(DGVNotas(j, i).Value.ToString())
+                Dim cell As New PdfPCell(New Paragraph(DGVNotas(j, i).Value.ToString()))
+                If (j = DGVNotas.ColumnCount - 1 Or j = DGVNotas.ColumnCount - 3) Then
+                    cell.HorizontalAlignment = 2
+                    cell.HorizontalAlignment = Element.ALIGN_RIGHT
+                    datatable.AddCell(cell)
+                Else
+                    datatable.AddCell(cell)
+                End If
                 'End If
             Next
             datatable.CompleteRow()
         Next
         'Se agrega el PDFTable al documento.
         document.Add(encabezado)
+        document.Add(Chunk.NEWLINE)
         document.Add(fecha)
+        document.Add(Chunk.NEWLINE)
         document.Add(cliente)
+        document.Add(Chunk.NEWLINE)
         document.Add(vendedor)
+        document.Add(Chunk.NEWLINE)
         document.Add(datatable)
-        document.Add(total)
+        Dim para = New Paragraph(total)
+        para.SpacingBefore = 20
+        para.SpacingAfter = 20
+        para.Alignment = 2 '0-Left, 1 middle,2 Right
+        document.Add(para)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
