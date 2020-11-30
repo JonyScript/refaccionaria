@@ -102,12 +102,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalisisDeVentas.Designer.vb">
+      <DependentUpon>AnalisisDeVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnalisisDeVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Autenticación de usuarios.Designer.vb">
       <DependentUpon>Autenticación de usuarios.vb</DependentUpon>
     </Compile>
     <Compile Include="Autenticación de usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClaseAnalisisDeVentas.vb" />
     <Compile Include="ClaseCompras.vb" />
     <Compile Include="ClaseLogin.vb" />
     <Compile Include="ClaseNotas.vb" />
@@ -211,6 +218,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AnalisisDeVentas.resx">
+      <DependentUpon>AnalisisDeVentas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Autenticación de usuarios.resx">
       <DependentUpon>Autenticación de usuarios.vb</DependentUpon>
     </EmbeddedResource>
