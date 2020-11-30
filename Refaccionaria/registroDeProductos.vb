@@ -206,4 +206,9 @@ Public Class registroDeProductos
         document.Add(encabezado)
         document.Add(datatable)
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        CompraDeProductos.Show()
+        Me.Close()
+    End Sub
 End Class

@@ -96,7 +96,7 @@
         If codigoProducto <> "" And CMedida <> "" And CMarca <> "" Then
             ' Preparamos el query para insertar el registro
 
-            strSql = "INSERT INTO producto VALUES(" & codigoProducto & ",'" & nombreProducto & "', " & CMedida & ", " & CMarca & ", " & precio & ", 0,0)"
+            strSql = "INSERT INTO producto VALUES(" & codigoProducto & ",'" & nombreProducto & "', " & CMedida & ", " & CMarca & ", " & precio & ",0,0)"
             xCnx.objetoCommand(strSql)
             MsgBox("Nuevo producto agregado")
         Else
@@ -168,11 +168,7 @@
         Dim strSQL As String
         Dim xCnx As New Oracle
         Dim xDT As DataTable
-        'Preparamos el query para buscar al usuario, con el dato
-        'capturado en la caja de textos txt_usuario de la pantalla
-        'FrmUsuarios
-        strSQL = "SELECT * FROM producto " &
-                 "WHERE codigoProducto = " & codigoProducto & " and eliminado = 0"
+        strSQL = NewMethod()
         consultaUnProductoUpdt = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count > 0 Then
@@ -184,6 +180,14 @@
             End If
             consultaUnProductoUpdt = True
         End If
+    End Function
+
+    Private Function NewMethod() As String
+        'Preparamos el query para buscar al usuario, con el dato
+        'capturado en la caja de textos txt_usuario de la pantalla
+        'FrmUsuarios
+        Return "SELECT * FROM producto " &
+                 "WHERE codigoProducto = " & codigoProducto & " and eliminado = 0"
     End Function
 
     Public Function consultaTodosProductos() As Object

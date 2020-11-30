@@ -150,4 +150,5 @@
         txtcodigoprod.Clear()
         txtnombreprod.Clear()
     End Sub
+
 End Class
