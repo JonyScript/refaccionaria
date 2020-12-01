@@ -31,8 +31,8 @@
 
     Private Sub btnAnalisisDeVentas_Click(sender As Object, e As EventArgs) Handles btnAnalisisDeVentas.Click
         cnx.Close()
-        'analisisDeVentas.Show()
-        'Me.Close()
+        AnalisisDeVentas.Show()
+        Me.Close()
     End Sub
 
     Private Sub menuAdministrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load

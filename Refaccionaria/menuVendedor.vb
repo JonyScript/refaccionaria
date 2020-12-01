@@ -13,14 +13,14 @@
 
     Private Sub btnCompraDeProductos2_Click(sender As Object, e As EventArgs) Handles btnCompraDeProductos2.Click
         cnx.Close()
-        'compraDeProductos.Show()
-        'Me.Close()
+        CompraDeProductos.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnAnalisisDeVentas2_Click(sender As Object, e As EventArgs) Handles btnAnalisisDeVentas2.Click
         cnx.Close()
-        'analisisDeVentas.Show()
-        'Me.Close()
+        AnalisisDeVentas.Show()
+        Me.Close()
     End Sub
 
     Private Sub MenuVendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load

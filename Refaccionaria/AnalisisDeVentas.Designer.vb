@@ -24,9 +24,9 @@ Partial Class AnalisisDeVentas
     Private Sub InitializeComponent()
         Me.masvendidos = New System.Windows.Forms.DataGridView()
         Me.menosvendidos = New System.Windows.Forms.DataGridView()
-        'Me.OracleCommandBuilder1 = New Oracle.ManagedDataAccess.Client.OracleCommandBuilder()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.back = New System.Windows.Forms.Button()
         CType(Me.masvendidos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.menosvendidos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -36,27 +36,22 @@ Partial Class AnalisisDeVentas
         Me.masvendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.masvendidos.Location = New System.Drawing.Point(12, 39)
         Me.masvendidos.Name = "masvendidos"
-        Me.masvendidos.Size = New System.Drawing.Size(765, 160)
+        Me.masvendidos.Size = New System.Drawing.Size(541, 210)
         Me.masvendidos.TabIndex = 0
         '
         'menosvendidos
         '
         Me.menosvendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.menosvendidos.Location = New System.Drawing.Point(12, 238)
+        Me.menosvendidos.Location = New System.Drawing.Point(12, 285)
         Me.menosvendidos.Name = "menosvendidos"
-        Me.menosvendidos.Size = New System.Drawing.Size(768, 152)
+        Me.menosvendidos.Size = New System.Drawing.Size(541, 202)
         Me.menosvendidos.TabIndex = 1
-        '
-        'OracleCommandBuilder1
-        '
-        'Me.OracleCommandBuilder1.CatalogLocation = System.Data.Common.CatalogLocation.[End]
-        'Me.OracleCommandBuilder1.CatalogSeparator = "@"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(298, 16)
+        Me.Label1.Location = New System.Drawing.Point(201, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(182, 20)
         Me.Label1.TabIndex = 2
@@ -66,17 +61,28 @@ Partial Class AnalisisDeVentas
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(301, 215)
+        Me.Label2.Location = New System.Drawing.Point(192, 262)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(200, 20)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Productos menos vendidos"
         '
+        'back
+        '
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.back.Location = New System.Drawing.Point(12, 2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(27, 31)
+        Me.back.TabIndex = 29
+        Me.back.Text = "⮌"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'AnalisisDeVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 407)
+        Me.ClientSize = New System.Drawing.Size(567, 499)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.menosvendidos)
@@ -95,4 +101,5 @@ Partial Class AnalisisDeVentas
     'Friend WithEvents OracleCommandBuilder1 As Oracle.ManagedDataAccess.Client.OracleCommandBuilder
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents back As Button
 End Class
