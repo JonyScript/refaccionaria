@@ -1,6 +1,5 @@
 ﻿Public Class Ventas
     Private codigoCliente As String
-
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formPrev = "ventas"
         lblfecha.Text = Today
