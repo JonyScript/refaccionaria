@@ -210,6 +210,7 @@
         DGVDProductos.Columns.Item(1).Width = 200
         DGVDProductos.Columns.Item(2).Width = 200
         DGVDProductos.Columns.Item(3).Width = 200
+        DGVDProductos.Columns.Item(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDProductos.Columns.Item(4).Width = 200
 
     End Sub
