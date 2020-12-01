@@ -182,13 +182,13 @@
                          " telefono = " & telefono & ", " &
                          " rfc = '" & RFC & "'" &
                          " WHERE telefono = " & telprev
-        ElseIf nombre <> "" Then
+        ElseIf nombre = "" Then
+            MsgBox("No se puede actualizar , datos obligatorios")
+        ElseIf paterno = "" Then
             MsgBox("No se puede actualizar, datos obligatorios")
-        ElseIf paterno <> "" Then
+        ElseIf materno = "" Then
             MsgBox("No se puede actualizar, datos obligatorios")
-        ElseIf materno <> "" Then
-            MsgBox("No se puede actualizar, datos obligatorios")
-        ElseIf telefono <> "" Then
+        ElseIf telefono = "" Then
             MsgBox("No se puede actualizar, datos obligatorios")
         End If
     End Sub

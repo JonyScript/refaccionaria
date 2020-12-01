@@ -25,11 +25,15 @@ Module Globales
     Public codigoMarca As String
     Public codigoVenta As String
     Public telprev As String
+    Public codigoProveedor As String
+    Public codigoCompra As String
 
     'variable para guardar el formulario previo, util en ventas al agregar clientes nuevos
     Public formPrev As String
 
     Public clienteGlobal As String
+
+    Public proveedorGlobal As String
 
     Dim dt As Date = Today
 

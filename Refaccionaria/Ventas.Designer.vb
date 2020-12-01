@@ -49,7 +49,6 @@ Partial Class Ventas
         Me.btnfactura = New System.Windows.Forms.Button()
         Me.dgvexist = New System.Windows.Forms.DataGridView()
         Me.dgvventa = New System.Windows.Forms.DataGridView()
-        Me.btnnuevaventa = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
         CType(Me.dgvexist, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvventa, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -288,15 +287,6 @@ Partial Class Ventas
         Me.dgvventa.Size = New System.Drawing.Size(977, 150)
         Me.dgvventa.TabIndex = 26
         '
-        'btnnuevaventa
-        '
-        Me.btnnuevaventa.Location = New System.Drawing.Point(1036, 527)
-        Me.btnnuevaventa.Name = "btnnuevaventa"
-        Me.btnnuevaventa.Size = New System.Drawing.Size(117, 23)
-        Me.btnnuevaventa.TabIndex = 27
-        Me.btnnuevaventa.Text = "Nueva venta"
-        Me.btnnuevaventa.UseVisualStyleBackColor = True
-        '
         'back
         '
         Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -313,7 +303,6 @@ Partial Class Ventas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1242, 644)
         Me.Controls.Add(Me.back)
-        Me.Controls.Add(Me.btnnuevaventa)
         Me.Controls.Add(Me.dgvventa)
         Me.Controls.Add(Me.dgvexist)
         Me.Controls.Add(Me.btnfactura)
@@ -377,6 +366,5 @@ Partial Class Ventas
     Friend WithEvents btnfactura As Button
     Friend WithEvents dgvexist As DataGridView
     Friend WithEvents dgvventa As DataGridView
-    Friend WithEvents btnnuevaventa As Button
     Friend WithEvents back As Button
 End Class

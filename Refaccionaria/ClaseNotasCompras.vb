@@ -1,16 +1,16 @@
-﻿Public Class ClaseNotas
-    Private total As String
+﻿Public Class ClaseNotasCompras
+    Private totalCompra As String
     Private fecha As String
-    Private cliente As String
+    Private proveedor As String
 
-    Public Function consultaNota() As Object
-        'Método para listar a todos los usuarios en el DGV
+    Public Function consultaNotaC() As Object
+        '   Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT ventaDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,precio as precio, cantidadProducto as cantidad, precio * cantidadProducto as importe " &
-                 "From producto, medida, ventaDetallada, venta, marca where producto.codigoMarca = marca.codigoMarca and producto.codigoMedida = medida.codigoMedida and producto.codigoProducto = ventaDetallada.codigoProducto " &
-                 "and venta.codigoVenta = ventaDetallada.codigoVenta and eliminado = 0 and ventaDetallada.codigoVenta = " & codigoVenta & " Order By codigo"
-        consultaNota = xCnx.objetoDataAdapter(strSQL)
+        strSQL = "SELECT compraDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,precioCompra as precio, cantidadProducto as cantidad, precioCompra * cantidadProducto as importe " &
+                     "From producto, medida, compraDetallada, compra, marca where producto.codigoMarca = marca.codigoMarca and producto.codigoMedida = medida.codigoMedida and producto.codigoProducto = compraDetallada.codigoProducto " &
+                     "and compra.codigoCompra = compraDetallada.codigoCompra and eliminado = 0 and compraDetallada.codigoCompra = " & codigoCompra & " Order By codigo"
+        consultaNotaC = xCnx.objetoDataAdapter(strSQL)
     End Function
 
     Public Function getTotal() As String
@@ -22,16 +22,16 @@
         'Preparamos el query para buscar al usuario, con el dato
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
-        strSQL = "SELECT sum(cantidadproducto * precio) as total FROM ventadetallada, producto " &
-            "where ventadetallada.codigoproducto = producto.codigoproducto and codigoventa = " & codigoVenta
+        strSQL = "SELECT sum(cantidadproducto * precioCompra) as total FROM compraDetallada, producto " &
+            "where compraDetallada.codigoproducto = producto.codigoproducto and codigocompra = " & codigoCompra
         getTotal = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
             If IsDBNull(xDT.Rows(0)("total")) Then
-                total = 1
+                totalCompra = 1
             Else
-                total = CStr(xDT.Rows(0)("total"))
-                Return total
+                totalCompra = CStr(xDT.Rows(0)("total"))
+                Return totalCompra
             End If
             getTotal = True
         End If
@@ -46,8 +46,8 @@
         'Preparamos el query para buscar al usuario, con el dato
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
-        strSQL = "SELECT fechaventa as fecha FROM venta " &
-            "where codigoventa = " & codigoVenta
+        strSQL = "SELECT fechacompra as fecha FROM compra " &
+            "where codigocompra = " & codigoCompra
         getFecha = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
@@ -61,7 +61,7 @@
         End If
     End Function
 
-    Public Function getCliente() As String
+    Public Function getProveedor() As String
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente
         Dim strSQL As String
@@ -70,38 +70,36 @@
         'Preparamos el query para buscar al usuario, con el dato
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
-        strSQL = "Select nombre || ' ' || paterno || ' ' || materno as nombre from cliente " &
-            "where codigocliente = " & clienteGlobal
-        getCliente = False
+        strSQL = "Select nombre as nombre from proveedor " &
+            "where codigoProveedor = " & proveedorGlobal
+        getProveedor = False
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
             If IsDBNull(xDT.Rows(0)("nombre")) Then
-                cliente = 1
+                proveedor = 1
             Else
-                cliente = CStr(xDT.Rows(0)("nombre"))
-                Return cliente
+                proveedor = CStr(xDT.Rows(0)("nombre"))
+                Return proveedor
             End If
-            getCliente = True
+            getProveedor = True
         End If
     End Function
 
-    Public Sub PoblarDataGridNotas(ByVal DGVDNotas As DataGridView)
+    Public Sub PoblarDataGridNotasCompras(ByVal DGVDNotasCompras As DataGridView)
 
         'Llamamos al método que obtiene los registros de los usuarios
-        DGVDNotas.DataSource = consultaNota()
-        DGVDNotas.Refresh()
+        DGVDNotasCompras.DataSource = consultaNotaC()
+        DGVDNotasCompras.Refresh()
         'Establecer ancho de cada columna del DataGridView, el 
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVDNotas.Columns.Item(0).Width = 100
-        DGVDNotas.Columns.Item(1).Width = 200
-        DGVDNotas.Columns.Item(2).Width = 100
-        DGVDNotas.Columns.Item(3).Width = 100
-        DGVDNotas.Columns.Item(4).Width = 100
-        DGVDNotas.Columns.Item(5).Width = 100
-        DGVDNotas.Columns.Item(6).Width = 100
-        DGVDNotas.Columns.Item(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        DGVDNotasCompras.Columns.Item(0).Width = 100
+        DGVDNotasCompras.Columns.Item(1).Width = 200
+        DGVDNotasCompras.Columns.Item(2).Width = 100
+        DGVDNotasCompras.Columns.Item(3).Width = 100
+        DGVDNotasCompras.Columns.Item(4).Width = 100
+        DGVDNotasCompras.Columns.Item(5).Width = 100
+        DGVDNotasCompras.Columns.Item(6).Width = 100
     End Sub
-
 End Class

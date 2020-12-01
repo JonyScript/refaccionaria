@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -115,13 +115,23 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClaseAnalisisDeVentas.vb" />
+    <Compile Include="ClaseCompras.vb" />
     <Compile Include="ClaseLogin.vb" />
     <Compile Include="ClaseNotas.vb" />
+    <Compile Include="ClaseNotasCompras.vb" />
     <Compile Include="ClaseRegistroDeClientes.vb" />
+    <Compile Include="ClaseRegistroDeCompras.vb" />
     <Compile Include="ClaseRegistroDeProductos.vb" />
+    <Compile Include="ClaseRegistroDeProveedor.vb" />
     <Compile Include="ClaseRegistroDeUsuarios.vb" />
     <Compile Include="ClaseRegistroDeVentas.vb" />
     <Compile Include="ClaseVentas.vb" />
+    <Compile Include="CompraDeProductos.Designer.vb">
+      <DependentUpon>CompraDeProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CompraDeProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Globales.vb" />
     <Compile Include="menuAdministrador.Designer.vb">
       <DependentUpon>menuAdministrador.vb</DependentUpon>
@@ -157,7 +167,25 @@
     <Compile Include="Notas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NotasCompra.Designer.vb">
+      <DependentUpon>NotasCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotasCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nuevoProveedor.Designer.vb">
+      <DependentUpon>nuevoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="nuevoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Oracle.vb" />
+    <Compile Include="RegistroDeCompras.Designer.vb">
+      <DependentUpon>RegistroDeCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroDeCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RegistroDeUsuarios.Designer.vb">
       <DependentUpon>RegistroDeUsuarios.vb</DependentUpon>
     </Compile>
@@ -196,6 +224,9 @@
     <EmbeddedResource Include="Autenticación de usuarios.resx">
       <DependentUpon>Autenticación de usuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CompraDeProductos.resx">
+      <DependentUpon>CompraDeProductos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menuAdministrador.resx">
       <DependentUpon>menuAdministrador.vb</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +241,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Notas.resx">
       <DependentUpon>Notas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotasCompra.resx">
+      <DependentUpon>NotasCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevoProveedor.resx">
+      <DependentUpon>nuevoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroDeCompras.resx">
+      <DependentUpon>RegistroDeCompras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeUsuarios.resx">
       <DependentUpon>RegistroDeUsuarios.vb</DependentUpon>

@@ -25,8 +25,8 @@
 
     Private Sub btnCompraDeProductos_Click(sender As Object, e As EventArgs) Handles btnCompraDeProductos.Click
         cnx.Close()
-        'compraDeProductos.Show()
-        'Me.Close()
+        CompraDeProductos.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnAnalisisDeVentas_Click(sender As Object, e As EventArgs) Handles btnAnalisisDeVentas.Click
