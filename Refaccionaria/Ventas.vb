@@ -52,19 +52,19 @@
         txttotal.Text = venta.getTotal
     End Sub
 
-    Private Sub btnnuevaventa_Click(sender As Object, e As EventArgs) Handles btnnuevaventa.Click
+    'Private Sub btnnuevaventa_Click(sender As Object, e As EventArgs)
 
-        'activar inicialmente escondidos
-        btnagregar.Enabled = True
-        btnnuevaventa.Enabled = False
-        btnconfirmar.Enabled = True
-        dgvventa.Show()
-        codigoCliente = cmbcliente.SelectedValue
+    'activar inicialmente escondidos
+    'btnagregar.Enabled = True
+    'btnnuevaventa.Enabled = False
+    'btnconfirmar.Enabled = True
+    'dgvventa.Show()
+    'codigoCliente = cmbcliente.SelectedValue
 
-        Dim venta As New ClaseVentas()
-        venta.insertarVenta(codigoCliente)
-        cnx.Close()
-    End Sub
+    'Dim venta As New ClaseVentas()
+    'venta.insertarVenta(codigoCliente)
+    'cnx.Close()
+    'End Sub
 
     Private Sub dgvventa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvventa.CellClick
         btnremover.Enabled = True
@@ -97,7 +97,7 @@
         'al confirmar venta se desactiva el boton para agregar y remover productos
         btnagregar.Enabled = False
         btnremover.Enabled = False
-        btnnuevaventa.Enabled = True
+        'btnnuevaventa.Enabled = True
         btnnota.Enabled = True
         btnfactura.Enabled = True
         btnconfirmar.Enabled = False
@@ -131,11 +131,21 @@
         Me.Close()
     End Sub
 
-    Private Sub cmbcliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcliente.SelectedIndexChanged
+    Private Sub cmbcliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcliente.DropDownClosed
         'If formPrev = "1" Then
         'llenarCombo(cmbcliente, "Select codigoCliente, nombre || ' ' || paterno || ' ' || materno as nombre from cliente where eliminado = 0", "codigoCliente", "Nombre")
         'codigoCliente = cmbcliente.SelectedValue
         'End If
+        'activar inicialmente escondidos
+        btnagregar.Enabled = True
+        'btnnuevaventa.Enabled = False
+        btnconfirmar.Enabled = True
+        dgvventa.Show()
+        codigoCliente = cmbcliente.SelectedValue
+
+        Dim venta As New ClaseVentas()
+        venta.insertarVenta(codigoCliente)
+        cnx.Close()
     End Sub
 
     Private Sub btncliente_Click(sender As Object, e As EventArgs) Handles btncliente.Click

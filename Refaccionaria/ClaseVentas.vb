@@ -284,6 +284,7 @@
         DGVExist.Columns.Item(2).Width = 100
         DGVExist.Columns.Item(3).Width = 200
         DGVExist.Columns.Item(4).Width = 100
+        DGVExist.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVExist.Columns.Item(5).Width = 100
 
     End Sub
@@ -302,8 +303,10 @@
         DGVVentas.Columns.Item(2).Width = 100
         DGVVentas.Columns.Item(3).Width = 100
         DGVVentas.Columns.Item(4).Width = 100
+        DGVVentas.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVVentas.Columns.Item(5).Width = 100
         DGVVentas.Columns.Item(6).Width = 100
+        DGVVentas.Columns.Item(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
 End Class
