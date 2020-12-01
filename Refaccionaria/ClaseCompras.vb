@@ -233,16 +233,6 @@
                      "and compra.codigoCompra = compraDetallada.codigoCompra and eliminado = 0 and compraDetallada.codigoCompra = " & codigoCompra & " Order By codigo"
         consultaCompra = xCnx.objetoDataAdapter(strSQL)
     End Function
-    'Public Function consultaCompra(ByVal cdg As String) As Object
-    ''Método para listar a todos los usuarios en el DGV
-    'Dim strSQL As String
-    'Dim xCnx As New Oracle
-    '   strSQL = "SELECT compraDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,precioCompra as precio, cantidadProducto as cantidad, precioCompra * cantidadProducto as importe " &
-    '           "From producto, medida, compraDetallada, compra, marca where producto.codigoMarca = marca.codigoMarca and producto.codigoMedida = medida.codigoMedida and producto.codigoProducto = compraDetallada.codigoProducto " &
-    '          "and compra.codigoCompra = compraDetallada.codigoCompra and eliminado = 0 and compra.codigoCompra = " & cdg & " Order By codigo"
-    ' consultaCompra = xCnx.objetoDataAdapter(strSQL)
-    'End Function
-
     Public Function getTotal() As String
         ' Método para buscar a un usuario en párticular, para saber
         ' si es un nuevo usuario o uno existente

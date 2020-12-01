@@ -54,6 +54,8 @@ Partial Class CompraDeProductos
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PrecioCompra = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PrecioVenta = New System.Windows.Forms.TextBox()
         CType(Me.dgvcompra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvexist2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -335,11 +337,30 @@ Partial Class CompraDeProductos
         Me.Button1.Text = "Nuevo producto"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(663, 285)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(70, 13)
+        Me.Label11.TabIndex = 64
+        Me.Label11.Text = "Precio venta:"
+        '
+        'PrecioVenta
+        '
+        Me.PrecioVenta.Enabled = False
+        Me.PrecioVenta.Location = New System.Drawing.Point(744, 282)
+        Me.PrecioVenta.Name = "PrecioVenta"
+        Me.PrecioVenta.Size = New System.Drawing.Size(100, 20)
+        Me.PrecioVenta.TabIndex = 65
+        '
         'CompraDeProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1314, 651)
+        Me.Controls.Add(Me.PrecioVenta)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PrecioCompra)
         Me.Controls.Add(Me.Label5)
@@ -413,4 +434,6 @@ Partial Class CompraDeProductos
     Friend WithEvents Label5 As Label
     Friend WithEvents PrecioCompra As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PrecioVenta As TextBox
 End Class

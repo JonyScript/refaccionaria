@@ -24,7 +24,7 @@ Partial Class AnalisisDeVentas
     Private Sub InitializeComponent()
         Me.masvendidos = New System.Windows.Forms.DataGridView()
         Me.menosvendidos = New System.Windows.Forms.DataGridView()
-        Me.OracleCommandBuilder1 = New Oracle.ManagedDataAccess.Client.OracleCommandBuilder()
+        'Me.OracleCommandBuilder1 = New Oracle.ManagedDataAccess.Client.OracleCommandBuilder()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.masvendidos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,8 +49,8 @@ Partial Class AnalisisDeVentas
         '
         'OracleCommandBuilder1
         '
-        Me.OracleCommandBuilder1.CatalogLocation = System.Data.Common.CatalogLocation.[End]
-        Me.OracleCommandBuilder1.CatalogSeparator = "@"
+        ' Me.OracleCommandBuilder1.CatalogLocation = System.Data.Common.CatalogLocation.[End]
+        ' Me.OracleCommandBuilder1.CatalogSeparator = "@"
         '
         'Label1
         '
@@ -92,7 +92,7 @@ Partial Class AnalisisDeVentas
 
     Friend WithEvents masvendidos As DataGridView
     Friend WithEvents menosvendidos As DataGridView
-    Friend WithEvents OracleCommandBuilder1 As Oracle.ManagedDataAccess.Client.OracleCommandBuilder
+    ' Friend WithEvents OracleCommandBuilder1 As Oracle.ManagedDataAccess.Client.OracleCommandBuilder
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
 End Class

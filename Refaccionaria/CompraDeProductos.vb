@@ -32,6 +32,7 @@
         renglon = dgvexist2.CurrentCellAddress.Y
         txtcodigocom.Text = dgvexist2.Rows(renglon).Cells(0).Value
         txtnombrecom.Text = dgvexist2.Rows(renglon).Cells(1).Value
+        PrecioVenta.Text = dgvexist2.Rows(renglon).Cells(4).Value
     End Sub
 
     Private Sub btnagregar_Click(sender As Object, e As EventArgs) Handles btnagregar.Click
@@ -50,6 +51,7 @@
         txtcodigocom.Clear()
         txtnombrecom.Clear()
         PrecioCompra.Clear()
+        PrecioVenta.Clear()
         txttotal.Text = compra.getTotal
     End Sub
     Private Sub btnnuevacompra_Click(sender As Object, e As EventArgs) Handles btnnuevacompra.Click
@@ -117,6 +119,7 @@
         txtcodigocom.Clear()
         txtnombrecom.Clear()
         PrecioCompra.Clear()
+        PrecioVenta.Clear()
 
     End Sub
 
@@ -144,6 +147,7 @@
         txtcodigoprod.Clear()
         txtnombreprod.Clear()
         PrecioCompra.Clear()
+        PrecioVenta.Clear()
 
     End Sub
 
