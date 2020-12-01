@@ -70,8 +70,8 @@
                 existencia = 0
             Else
                 existencia = CStr(xDT.Rows(0)("existencia"))
-            End If
-            getExistencia = True
+        End If
+        getExistencia = True
         End If
     End Function
 
@@ -149,9 +149,13 @@
                 agregarExistencia(cantidadProducto, codigoProducto)
                 'Else
                 'MsgBox("No hay existencias suficientes, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+            ElseIf CInt(cantidadProducto) >= CInt(existencia) Then
+                strSql = "INSERT INTO compraDetallada VALUES(" & codigoCompraDetallada & ", " & codigoProducto & ", " & codigoCompra & "," & precioCompra & ", " & cantidadProducto & ")"
+                xCnx.objetoCommand(strSql)
+                agregarExistencia(cantidadProducto, codigoProducto)
             End If
         Else
-            MsgBox("Faltan datos obligatorios de la venta, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+            MsgBox("Faltan datos obligatorios de la compra, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
 
@@ -167,7 +171,7 @@
             strSql = "update producto set existencia = existencia-" & cantidadproducto & " where codigoProducto = " & cdgproducto
             xCnx.objetoCommand(strSql)
         Else
-            MsgBox("Error al reducir la existencia del producto !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+            MsgBox("Error al agregar la existencia del producto !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
 
@@ -184,7 +188,7 @@
             xCnx.objetoCommand(strSql)
             devolverExistencia(cantidadProducto, codigoProducto)
         Else
-            MsgBox("No hay producto seleccionado de la venta, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
+            MsgBox("No hay producto seleccionado de la compra, verifique !!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
     End Sub
 
@@ -285,8 +289,10 @@
         DGVExist2.Columns.Item(1).Width = 200
         DGVExist2.Columns.Item(2).Width = 100
         DGVExist2.Columns.Item(3).Width = 200
-        DGVExist2.Columns.Item(4).Width = 100
+        DGVExist2.Columns.Item(4).Width = 200
+        DGVExist2.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVExist2.Columns.Item(5).Width = 100
+        DGVExist2.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
     End Sub
 
@@ -304,7 +310,10 @@
         DGVCompra.Columns.Item(2).Width = 100
         DGVCompra.Columns.Item(3).Width = 100
         DGVCompra.Columns.Item(4).Width = 100
+        DGVCompra.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVCompra.Columns.Item(5).Width = 100
+        DGVCompra.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVCompra.Columns.Item(6).Width = 100
+        DGVCompra.Columns.Item(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 End Class

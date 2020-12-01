@@ -206,12 +206,16 @@
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVDProductos.Columns.Item(0).Width = 100
-        DGVDProductos.Columns.Item(1).Width = 200
-        DGVDProductos.Columns.Item(2).Width = 200
-        DGVDProductos.Columns.Item(3).Width = 200
-        DGVDProductos.Columns.Item(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        DGVDProductos.Columns.Item(4).Width = 200
+        DGVDProductos.Columns.Item(0).Width = 70
+        DGVDProductos.Columns.Item(1).Width = 150
+        DGVDProductos.Columns.Item(2).Width = 150
+        DGVDProductos.Columns.Item(3).Width = 150
+        DGVDProductos.Columns.Item(4).Width = 150
+        DGVDProductos.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        DGVDProductos.Columns.Item(5).Width = 150
+        DGVDProductos.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+
+
 
     End Sub
 End Class

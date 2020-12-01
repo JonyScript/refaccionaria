@@ -23,7 +23,6 @@ Partial Class CompraDeProductos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.back = New System.Windows.Forms.Button()
-        Me.btnnuevacompra = New System.Windows.Forms.Button()
         Me.dgvcompra = New System.Windows.Forms.DataGridView()
         Me.dgvexist2 = New System.Windows.Forms.DataGridView()
         Me.btnfactura = New System.Windows.Forms.Button()
@@ -69,15 +68,6 @@ Partial Class CompraDeProductos
         Me.back.TabIndex = 55
         Me.back.Text = "⮌"
         Me.back.UseVisualStyleBackColor = True
-        '
-        'btnnuevacompra
-        '
-        Me.btnnuevacompra.Location = New System.Drawing.Point(1068, 521)
-        Me.btnnuevacompra.Name = "btnnuevacompra"
-        Me.btnnuevacompra.Size = New System.Drawing.Size(117, 23)
-        Me.btnnuevacompra.TabIndex = 54
-        Me.btnnuevacompra.Text = "Nueva compra"
-        Me.btnnuevacompra.UseVisualStyleBackColor = True
         '
         'dgvcompra
         '
@@ -370,7 +360,6 @@ Partial Class CompraDeProductos
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.back)
-        Me.Controls.Add(Me.btnnuevacompra)
         Me.Controls.Add(Me.dgvcompra)
         Me.Controls.Add(Me.dgvexist2)
         Me.Controls.Add(Me.btnfactura)
@@ -403,7 +392,6 @@ Partial Class CompraDeProductos
     End Sub
 
     Friend WithEvents back As Button
-    Friend WithEvents btnnuevacompra As Button
     Friend WithEvents dgvcompra As DataGridView
     Friend WithEvents dgvexist2 As DataGridView
     Friend WithEvents btnfactura As Button

@@ -54,11 +54,22 @@
         PrecioVenta.Clear()
         txttotal.Text = compra.getTotal
     End Sub
-    Private Sub btnnuevacompra_Click(sender As Object, e As EventArgs) Handles btnnuevacompra.Click
+    'cmbproovedor
+    ' Private Sub btnnuevacompra_Click(sender As Object, e As EventArgs) Handles btnnuevacompra.Click
+    '    'activar inicialmente escondidos
+    '   btnagregar.Enabled = True
+    '  btnnuevacompra.Enabled = False
+    ' btnconfirmar.Enabled = True
+    'dgvcompra.Show()
+    'codigoProveedor = cmbproovedor.SelectedValue
 
-        'activar inicialmente escondidos
+    '    Dim compra As New ClaseCompras()
+    '       compra.insertarCompra(codigoProveedor)
+    '      cnx.Close()
+    ' End Sub
+    Private Sub cmbproovedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbproovedor.DropDownClosed
         btnagregar.Enabled = True
-        btnnuevacompra.Enabled = False
+        'btnnuevaventa.Enabled = False
         btnconfirmar.Enabled = True
         dgvcompra.Show()
         codigoProveedor = cmbproovedor.SelectedValue
@@ -67,7 +78,6 @@
         compra.insertarCompra(codigoProveedor)
         cnx.Close()
     End Sub
-
     Private Sub dgvcompra_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvcompra.CellClick
         btnremover.Enabled = True
         Dim renglon As Integer
@@ -99,7 +109,6 @@
         'al confirmar venta se desactiva el boton para agregar y remover productos
         btnagregar.Enabled = False
         btnremover.Enabled = False
-        btnnuevacompra.Enabled = True
         btnnota.Enabled = True
         btnfactura.Enabled = True
         btnconfirmar.Enabled = False
@@ -142,8 +151,8 @@
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
-        Dim venta As New ClaseCompras()
-        venta.PoblarDataGridExist2(dgvexist2)
+        Dim compra As New ClaseCompras()
+        compra.PoblarDataGridExist2(dgvexist2)
         txtcodigoprod.Clear()
         txtnombreprod.Clear()
         PrecioCompra.Clear()
