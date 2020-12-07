@@ -1,51 +1,48 @@
 ﻿Public Class ClaseAnalisisDeVentas
-    Public Function consultaVentaMAX() As Object
+    Public Function consultaVentaPROD() As Object
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "select ventadetallada.codigoproducto as codigo, nombreproducto as producto, marca.descripcion as marca, sum(cantidadproducto) as vendidos " &
-                 "From ventadetallada, producto, marca where ventadetallada.codigoproducto = producto.codigoproducto and producto.codigomarca = marca.codigomarca " &
-                 "group by ventadetallada.codigoproducto, producto.nombreproducto, producto.codigomarca, marca.descripcion having sum(cantidadproducto) >= 10"
-        consultaVentaMAX = xCnx.objetoDataAdapter(strSQL)
+        strSQL = "select ventadetallada.codigoproducto as Codigo, nombreproducto as producto, marca.descripcion as marca, sum(cantidadproducto) as vendidos, sum(cantidadproducto)*precio as Total " &
+                 "From ventadetallada, producto, marca, venta where to_char(fechaventa, 'RR') ='" & AnalisisDeVentas.cb_anio.SelectedValue & "' and to_char(fechaventa, 'MM') = '" & AnalisisDeVentas.cb_mes.SelectedValue & "' and venta.codigoventa = ventadetallada.codigoventa and " &
+                 "ventadetallada.codigoproducto = producto.codigoproducto and producto.codigomarca = marca.codigomarca " &
+                 "group by ventadetallada.codigoproducto, producto.nombreproducto, producto.codigomarca, marca.descripcion, producto.precio order by sum(cantidadproducto) desc"
+        consultaVentaPROD = xCnx.objetoDataAdapter(strSQL)
     End Function
-    Public Function consultaVentaMIN() As Object
+    Public Function consultaVentaGAN() As Object
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "select ventadetallada.codigoproducto as codigo, nombreproducto as producto, marca.descripcion as marca, sum(cantidadproducto) as vendidos " &
-                 "From ventadetallada, producto, marca where ventadetallada.codigoproducto = producto.codigoproducto and producto.codigomarca = marca.codigomarca " &
-                 "group by ventadetallada.codigoproducto, producto.nombreproducto, producto.codigomarca, marca.descripcion having sum(cantidadproducto) <= 9"
-        consultaVentaMIN = xCnx.objetoDataAdapter(strSQL)
+        strSQL = "select sum(totalventa) as Ganancias from venta where to_char(fechaventa, 'RR') = '" & AnalisisDeVentas.cb_anio.SelectedValue & "' and to_char(fechaventa, 'MM') = '" & AnalisisDeVentas.cb_mes.SelectedValue & "'"
+        consultaVentaGAN = xCnx.objetoDataAdapter(strSQL)
     End Function
 
-    Public Sub PoblarDataGridMAS(ByVal DGVMIN As DataGridView)
+    Public Sub PoblarDataGridVendidos(ByVal DGVVEN As DataGridView)
 
         'Llamamos al método que obtiene los registros de los usuarios
-        DGVMIN.DataSource = consultaVentaMAX()
-        DGVMIN.Refresh()
+        DGVVEN.DataSource = consultaVentaPROD()
+        DGVVEN.Refresh()
         'Establecer ancho de cada columna del DataGridView, el 
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVMIN.Columns.Item(0).Width = 100
-        DGVMIN.Columns.Item(1).Width = 200
-        DGVMIN.Columns.Item(2).Width = 100
-        DGVMIN.Columns.Item(3).Width = 100
+        DGVVEN.Columns.Item(0).Width = 100
+        DGVVEN.Columns.Item(1).Width = 150
+        DGVVEN.Columns.Item(2).Width = 100
+        DGVVEN.Columns.Item(3).Width = 100
+        DGVVEN.Columns.Item(4).Width = 60
     End Sub
 
-    Public Sub PoblarDataGridMENOS(ByVal DGVMAX As DataGridView)
+    Public Sub PoblarDataGridGanancias(ByVal DGVGAN As DataGridView)
 
         'Llamamos al método que obtiene los registros de los usuarios
-        DGVMAX.DataSource = consultaVentaMIN()
-        DGVMAX.Refresh()
+        DGVGAN.DataSource = consultaVentaGAN()
+        DGVGAN.Refresh()
         'Establecer ancho de cada columna del DataGridView, el 
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVMAX.Columns.Item(0).Width = 100
-        DGVMAX.Columns.Item(1).Width = 200
-        DGVMAX.Columns.Item(2).Width = 100
-        DGVMAX.Columns.Item(3).Width = 100
+        DGVGAN.Columns.Item(0).Width = 150
     End Sub
 
 End Class

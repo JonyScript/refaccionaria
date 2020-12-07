@@ -1,9 +1,11 @@
 ﻿Public Class AnalisisDeVentas
     Private Sub AnalisisDeVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim datagridext As New ClaseAnalisisDeVentas()
-        datagridext.PoblarDataGridMAS(masvendidos)
-        datagridext.PoblarDataGridMENOS(menosvendidos)
-        cnx.Close()
+
+        llenarCombo(cb_mes, "Select codigomes, descripcion from mes", "codigomes", "descripcion")
+
+        llenarCombo(cb_anio, "Select codigoanio from anio", "codigoanio", "codigoanio")
+
+
     End Sub
 
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles back.Click
@@ -13,5 +15,12 @@
             menuVendedor.Show()
         End If
         Me.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim datagridext As New ClaseAnalisisDeVentas()
+        datagridext.PoblarDataGridVendidos(Vendidos)
+        datagridext.PoblarDataGridGanancias(Ganancias)
+        cnx.Close()
     End Sub
 End Class
