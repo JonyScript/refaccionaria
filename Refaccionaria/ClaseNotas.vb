@@ -99,7 +99,9 @@
         DGVDNotas.Columns.Item(2).Width = 100
         DGVDNotas.Columns.Item(3).Width = 100
         DGVDNotas.Columns.Item(4).Width = 100
+        DGVDNotas.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDNotas.Columns.Item(5).Width = 100
+        DGVDNotas.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDNotas.Columns.Item(6).Width = 100
         DGVDNotas.Columns.Item(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub

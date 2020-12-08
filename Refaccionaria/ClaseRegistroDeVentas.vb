@@ -30,6 +30,7 @@
         'consultaTodosUsuarios
         DGVDVenta.Columns.Item(0).Width = 100
         DGVDVenta.Columns.Item(1).Width = 200
+        DGVDVenta.Columns.Item(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDVenta.Columns.Item(2).Width = 100
         DGVDVenta.Columns.Item(3).Width = 100
         DGVDVenta.Columns.Item(4).Width = 100
@@ -49,8 +50,11 @@
         DGVDProd.Columns.Item(2).Width = 100
         DGVDProd.Columns.Item(3).Width = 100
         DGVDProd.Columns.Item(4).Width = 100
+        DGVDProd.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDProd.Columns.Item(5).Width = 100
+        DGVDProd.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDProd.Columns.Item(6).Width = 100
+        DGVDProd.Columns.Item(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
 End Class

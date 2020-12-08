@@ -286,6 +286,7 @@
         DGVExist.Columns.Item(4).Width = 100
         DGVExist.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVExist.Columns.Item(5).Width = 100
+        DGVExist.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
     End Sub
 
@@ -305,6 +306,7 @@
         DGVVentas.Columns.Item(4).Width = 100
         DGVVentas.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVVentas.Columns.Item(5).Width = 100
+        DGVVentas.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVVentas.Columns.Item(6).Width = 100
         DGVVentas.Columns.Item(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub

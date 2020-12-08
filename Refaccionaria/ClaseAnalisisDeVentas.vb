@@ -30,7 +30,9 @@
         DGVVEN.Columns.Item(1).Width = 150
         DGVVEN.Columns.Item(2).Width = 100
         DGVVEN.Columns.Item(3).Width = 100
+        DGVVEN.Columns.Item(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVVEN.Columns.Item(4).Width = 60
+        DGVVEN.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
     Public Sub PoblarDataGridGanancias(ByVal DGVGAN As DataGridView)
@@ -43,6 +45,7 @@
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
         DGVGAN.Columns.Item(0).Width = 150
+        DGVGAN.Columns.Item(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
 End Class

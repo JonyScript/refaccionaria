@@ -13,8 +13,8 @@
         'botones y controles inicialmente escondidos / desactivados
         btnagregar.Enabled = False
         btnremover.Enabled = False
-        btnnota.Enabled = False
-        btnfactura.Enabled = False
+        ' btnnota.Enabled = False
+        ' btnfactura.Enabled = False
         btnconfirmar.Enabled = False
         dgvcompra.Hide()
 
@@ -99,7 +99,7 @@
         Me.Close()
     End Sub
 
-    Private Sub btnfactura_Click(sender As Object, e As EventArgs) Handles btnfactura.Click
+    Private Sub btnfactura_Click(sender As Object, e As EventArgs)
         'boton para generar facturas abre navegador en pagina de factureya, pendiente de añadir credenciales de inicio de sesion de la refaccionaria
         Dim webAddress As String = "https://www.factureya.com/Portal/Presentacion/Home/Index.aspx"
         Process.Start(webAddress)
@@ -109,8 +109,8 @@
         'al confirmar venta se desactiva el boton para agregar y remover productos
         btnagregar.Enabled = False
         btnremover.Enabled = False
-        btnnota.Enabled = True
-        btnfactura.Enabled = True
+        'btnnota.Enabled = True
+        'btnfactura.Enabled = True
         btnconfirmar.Enabled = False
         Dim compra As New ClaseCompras()
         txttotal.Text = compra.getTotal()
@@ -132,7 +132,7 @@
 
     End Sub
 
-    Private Sub btnnota_Click(sender As Object, e As EventArgs) Handles btnnota.Click
+    Private Sub btnnota_Click(sender As Object, e As EventArgs)
         cnx.Close()
         NotasCompra.Show()
         Me.Close()

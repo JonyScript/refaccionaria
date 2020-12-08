@@ -25,8 +25,6 @@ Partial Class CompraDeProductos
         Me.back = New System.Windows.Forms.Button()
         Me.dgvcompra = New System.Windows.Forms.DataGridView()
         Me.dgvexist2 = New System.Windows.Forms.DataGridView()
-        Me.btnfactura = New System.Windows.Forms.Button()
-        Me.btnnota = New System.Windows.Forms.Button()
         Me.btnconfirmar = New System.Windows.Forms.Button()
         Me.btnregistro = New System.Windows.Forms.Button()
         Me.btnremover = New System.Windows.Forms.Button()
@@ -85,27 +83,9 @@ Partial Class CompraDeProductos
         Me.dgvexist2.Size = New System.Drawing.Size(977, 150)
         Me.dgvexist2.TabIndex = 52
         '
-        'btnfactura
-        '
-        Me.btnfactura.Location = New System.Drawing.Point(1068, 608)
-        Me.btnfactura.Name = "btnfactura"
-        Me.btnfactura.Size = New System.Drawing.Size(117, 23)
-        Me.btnfactura.TabIndex = 51
-        Me.btnfactura.Text = "Generar factura"
-        Me.btnfactura.UseVisualStyleBackColor = True
-        '
-        'btnnota
-        '
-        Me.btnnota.Location = New System.Drawing.Point(1068, 579)
-        Me.btnnota.Name = "btnnota"
-        Me.btnnota.Size = New System.Drawing.Size(117, 23)
-        Me.btnnota.TabIndex = 50
-        Me.btnnota.Text = "Generar nota"
-        Me.btnnota.UseVisualStyleBackColor = True
-        '
         'btnconfirmar
         '
-        Me.btnconfirmar.Location = New System.Drawing.Point(1068, 550)
+        Me.btnconfirmar.Location = New System.Drawing.Point(1064, 558)
         Me.btnconfirmar.Name = "btnconfirmar"
         Me.btnconfirmar.Size = New System.Drawing.Size(117, 23)
         Me.btnconfirmar.TabIndex = 49
@@ -362,8 +342,6 @@ Partial Class CompraDeProductos
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.dgvcompra)
         Me.Controls.Add(Me.dgvexist2)
-        Me.Controls.Add(Me.btnfactura)
-        Me.Controls.Add(Me.btnnota)
         Me.Controls.Add(Me.btnconfirmar)
         Me.Controls.Add(Me.btnregistro)
         Me.Controls.Add(Me.btnremover)
@@ -394,8 +372,6 @@ Partial Class CompraDeProductos
     Friend WithEvents back As Button
     Friend WithEvents dgvcompra As DataGridView
     Friend WithEvents dgvexist2 As DataGridView
-    Friend WithEvents btnfactura As Button
-    Friend WithEvents btnnota As Button
     Friend WithEvents btnconfirmar As Button
     Friend WithEvents btnregistro As Button
     Friend WithEvents btnremover As Button

@@ -16,7 +16,7 @@ Public Class NotasCompra
         Try
             Dim doc As New Document(PageSize.A4.Rotate(), 10, 10, 10, 10)
             'Guarda el reporte en el escritorio de windows (Desktop).
-            Dim filename As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\refaccionaria\venta" & txtcdgventa.Text & ".pdf"
+            Dim filename As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\refaccionaria\compra" & txtcdgCompra.Text & ".pdf"
             Dim file As New FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.ReadWrite)
             PdfWriter.GetInstance(doc, file)
             doc.Open()
