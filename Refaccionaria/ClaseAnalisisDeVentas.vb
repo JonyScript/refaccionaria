@@ -3,7 +3,7 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "select ventadetallada.codigoproducto as Codigo, nombreproducto as producto, marca.descripcion as marca, sum(cantidadproducto) as vendidos, sum(cantidadproducto)*precio as Total " &
+        strSQL = "select ventadetallada.codigoproducto as Codigo, nombreproducto as producto, marca.descripcion as marca, sum(cantidadproducto) as vendidos, to_char(sum(cantidadproducto)*precio, 'fm99990.00') as Total " &
                  "From ventadetallada, producto, marca, venta where to_char(fechaventa, 'RR') ='" & AnalisisDeVentas.cb_anio.SelectedValue & "' and to_char(fechaventa, 'MM') = '" & AnalisisDeVentas.cb_mes.SelectedValue & "' and venta.codigoventa = ventadetallada.codigoventa and " &
                  "ventadetallada.codigoproducto = producto.codigoproducto and producto.codigomarca = marca.codigomarca " &
                  "group by ventadetallada.codigoproducto, producto.nombreproducto, producto.codigomarca, marca.descripcion, producto.precio order by sum(cantidadproducto) desc"
@@ -13,7 +13,7 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "select sum(totalventa) as Ganancias from venta where to_char(fechaventa, 'RR') = '" & AnalisisDeVentas.cb_anio.SelectedValue & "' and to_char(fechaventa, 'MM') = '" & AnalisisDeVentas.cb_mes.SelectedValue & "'"
+        strSQL = "select to_char(sum(totalventa), 'fm99990.00') as Ganancias from venta where to_char(fechaventa, 'RR') = '" & AnalisisDeVentas.cb_anio.SelectedValue & "' and to_char(fechaventa, 'MM') = '" & AnalisisDeVentas.cb_mes.SelectedValue & "'"
         consultaVentaGAN = xCnx.objetoDataAdapter(strSQL)
     End Function
 

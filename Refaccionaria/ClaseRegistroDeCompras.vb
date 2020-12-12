@@ -4,7 +4,7 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT compra.codigoCompra as codigo, totalCompra as total, proveedor.nombre as proveedor, " &
+        strSQL = "SELECT compra.codigoCompra as codigo, to_char(totalCompra, 'fm99990.00') as total, proveedor.nombre as proveedor, " &
                  "usuario.nombre || ' ' || usuario.paterno || ' ' || usuario.materno as vendedor, fechaCompra as fecha " &
                  "From compra, usuario, proveedor where compra.codigoProveedor = proveedor.codigoProveedor and " &
                  "compra.codigoUsuario = usuario.codigoUsuario and usuario.eliminado = 0 and proveedor.eliminado = 0 Order By codigo"
@@ -15,7 +15,7 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT compraDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,precioCompra as precio, cantidadProducto as cantidad, precioCompra * cantidadProducto as importe " &
+        strSQL = "SELECT compraDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,to_char(precioCompra, 'fm99990.00') as precio, cantidadProducto as cantidad, to_char(precioCompra * cantidadProducto, 'fm99990.00') as importe " &
                  "From producto, medida, compraDetallada, compra, marca where producto.codigoMarca = marca.codigoMarca and producto.codigoMedida = medida.codigoMedida and producto.codigoProducto = compraDetallada.codigoProducto " &
                  "and compra.codigoCompra = compraDetallada.codigoCompra and eliminado = 0 and compra.codigoCompra = " & cdg & " Order By codigo"
         consultaCompraDetallada = xCnx.objetoDataAdapter(strSQL)

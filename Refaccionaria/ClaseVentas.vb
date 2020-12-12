@@ -207,15 +207,15 @@
         Dim strSQL As String
         Dim xCnx As New Oracle
         If Ventas.txtcodigoprod.Text <> "" Then
-            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,precio as precio, existencia as existencia " &
+            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,to_char(precio, 'fm99990.00') as precio, existencia as existencia " &
                  "From producto, medida, marca where producto.codigoMedida = medida.codigoMedida and producto.codigoMarca = Marca.codigoMarca and eliminado = 0 and codigoProducto = " & Ventas.txtcodigoprod.Text & " Order By codigo"
             consultaProductos = xCnx.objetoDataAdapter(strSQL)
         ElseIf Ventas.txtnombreprod.Text <> "" Then
-            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,precio as precio, existencia as existencia " &
+            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,to_char(precio, 'fm99990.00') as precio, existencia as existencia " &
                  "From producto, medida, marca where producto.codigoMedida = medida.codigoMedida and producto.codigoMarca = Marca.codigoMarca and eliminado = 0 and nombreProducto = '" & Ventas.txtnombreprod.Text & "' Order By codigo"
             consultaProductos = xCnx.objetoDataAdapter(strSQL)
         Else
-            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,precio as precio, existencia as existencia " &
+            strSQL = "SELECT codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca,medida.descripcion as medida,to_char(precio, 'fm99990.00') as precio, existencia as existencia " &
                  "From producto, medida, marca where producto.codigoMedida = medida.codigoMedida and producto.codigoMarca = Marca.codigoMarca and eliminado = 0" & " Order By codigo"
             consultaProductos = xCnx.objetoDataAdapter(strSQL)
         End If
@@ -225,7 +225,7 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "SELECT ventaDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,precio as precio, cantidadProducto as cantidad, precio * cantidadProducto as importe " &
+        strSQL = "SELECT ventaDetallada.codigoProducto as codigo,nombreProducto as producto,marca.descripcion as marca, medida.descripcion as medida,to_char(precio, 'fm99990.00') as precio, cantidadProducto as cantidad, to_char(precio * cantidadProducto, 'fm99990.00') as importe " &
                  "From producto, medida, ventaDetallada, venta, marca where producto.codigoMarca = marca.codigoMarca and producto.codigoMedida = medida.codigoMedida and producto.codigoProducto = ventaDetallada.codigoProducto " &
                  "and venta.codigoVenta = ventaDetallada.codigoVenta and eliminado = 0 and ventaDetallada.codigoVenta = " & codigoVenta & " Order By codigo"
         consultaVenta = xCnx.objetoDataAdapter(strSQL)
@@ -240,7 +240,7 @@
         'Preparamos el query para buscar al usuario, con el dato
         'capturado en la caja de textos txt_usuario de la pantalla
         'FrmUsuarios
-        strSQL = "SELECT sum(cantidadproducto * precio) as total FROM ventadetallada, producto " &
+        strSQL = "SELECT to_char(sum(cantidadproducto * precio), 'fm99990.00') as total FROM ventadetallada, producto " &
             "where ventadetallada.codigoproducto = producto.codigoproducto and codigoventa = " & codigoVenta
         getTotal = False
         xDT = xCnx.objetoDataAdapter(strSQL)
