@@ -157,6 +157,7 @@ Partial Class Ventas
         'txtcodigoprod
         '
         Me.txtcodigoprod.Location = New System.Drawing.Point(288, 88)
+        Me.txtcodigoprod.MaxLength = 6
         Me.txtcodigoprod.Name = "txtcodigoprod"
         Me.txtcodigoprod.Size = New System.Drawing.Size(100, 20)
         Me.txtcodigoprod.TabIndex = 11
@@ -164,6 +165,7 @@ Partial Class Ventas
         'txtnombreprod
         '
         Me.txtnombreprod.Location = New System.Drawing.Point(518, 88)
+        Me.txtnombreprod.MaxLength = 40
         Me.txtnombreprod.Name = "txtnombreprod"
         Me.txtnombreprod.Size = New System.Drawing.Size(242, 20)
         Me.txtnombreprod.TabIndex = 12
@@ -187,6 +189,7 @@ Partial Class Ventas
         'txtcantidad
         '
         Me.txtcantidad.Location = New System.Drawing.Point(684, 311)
+        Me.txtcantidad.MaxLength = 6
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
         Me.txtcantidad.TabIndex = 15

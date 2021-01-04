@@ -102,6 +102,7 @@ Partial Class nuevoProveedor
         'name_txt
         '
         Me.name_txt.Location = New System.Drawing.Point(162, 54)
+        Me.name_txt.MaxLength = 29
         Me.name_txt.Name = "name_txt"
         Me.name_txt.Size = New System.Drawing.Size(186, 20)
         Me.name_txt.TabIndex = 36
@@ -109,6 +110,7 @@ Partial Class nuevoProveedor
         'tel_txt
         '
         Me.tel_txt.Location = New System.Drawing.Point(162, 96)
+        Me.tel_txt.MaxLength = 12
         Me.tel_txt.Name = "tel_txt"
         Me.tel_txt.Size = New System.Drawing.Size(186, 20)
         Me.tel_txt.TabIndex = 34
@@ -116,6 +118,7 @@ Partial Class nuevoProveedor
         'dir_txt
         '
         Me.dir_txt.Location = New System.Drawing.Point(162, 179)
+        Me.dir_txt.MaxLength = 29
         Me.dir_txt.Name = "dir_txt"
         Me.dir_txt.Size = New System.Drawing.Size(186, 20)
         Me.dir_txt.TabIndex = 32
@@ -123,6 +126,7 @@ Partial Class nuevoProveedor
         'mail_txt
         '
         Me.mail_txt.Location = New System.Drawing.Point(162, 136)
+        Me.mail_txt.MaxLength = 29
         Me.mail_txt.Name = "mail_txt"
         Me.mail_txt.Size = New System.Drawing.Size(186, 20)
         Me.mail_txt.TabIndex = 31

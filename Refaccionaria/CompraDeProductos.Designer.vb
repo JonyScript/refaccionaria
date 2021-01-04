@@ -139,6 +139,7 @@ Partial Class CompraDeProductos
         'txtcantidad
         '
         Me.txtcantidad.Location = New System.Drawing.Point(911, 309)
+        Me.txtcantidad.MaxLength = 6
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
         Me.txtcantidad.TabIndex = 42
@@ -162,6 +163,7 @@ Partial Class CompraDeProductos
         'txtnombreprod
         '
         Me.txtnombreprod.Location = New System.Drawing.Point(550, 82)
+        Me.txtnombreprod.MaxLength = 40
         Me.txtnombreprod.Name = "txtnombreprod"
         Me.txtnombreprod.Size = New System.Drawing.Size(242, 20)
         Me.txtnombreprod.TabIndex = 39
@@ -169,6 +171,7 @@ Partial Class CompraDeProductos
         'txtcodigoprod
         '
         Me.txtcodigoprod.Location = New System.Drawing.Point(320, 82)
+        Me.txtcodigoprod.MaxLength = 6
         Me.txtcodigoprod.Name = "txtcodigoprod"
         Me.txtcodigoprod.Size = New System.Drawing.Size(100, 20)
         Me.txtcodigoprod.TabIndex = 38
@@ -294,6 +297,7 @@ Partial Class CompraDeProductos
         'PrecioCompra
         '
         Me.PrecioCompra.Location = New System.Drawing.Point(744, 310)
+        Me.PrecioCompra.MaxLength = 11
         Me.PrecioCompra.Name = "PrecioCompra"
         Me.PrecioCompra.Size = New System.Drawing.Size(100, 20)
         Me.PrecioCompra.TabIndex = 62
@@ -320,6 +324,7 @@ Partial Class CompraDeProductos
         '
         Me.PrecioVenta.Enabled = False
         Me.PrecioVenta.Location = New System.Drawing.Point(744, 282)
+        Me.PrecioVenta.MaxLength = 11
         Me.PrecioVenta.Name = "PrecioVenta"
         Me.PrecioVenta.Size = New System.Drawing.Size(100, 20)
         Me.PrecioVenta.TabIndex = 65

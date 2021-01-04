@@ -67,6 +67,7 @@ Partial Class Autenticación_de_usuarios
         'txtNombreDeUsuario
         '
         Me.txtNombreDeUsuario.Location = New System.Drawing.Point(368, 198)
+        Me.txtNombreDeUsuario.MaxLength = 29
         Me.txtNombreDeUsuario.Name = "txtNombreDeUsuario"
         Me.txtNombreDeUsuario.Size = New System.Drawing.Size(189, 20)
         Me.txtNombreDeUsuario.TabIndex = 3
@@ -74,6 +75,7 @@ Partial Class Autenticación_de_usuarios
         'txtContraseña
         '
         Me.txtContraseña.Location = New System.Drawing.Point(369, 271)
+        Me.txtContraseña.MaxLength = 29
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraseña.Size = New System.Drawing.Size(188, 20)

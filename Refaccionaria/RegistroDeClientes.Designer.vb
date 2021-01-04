@@ -130,6 +130,7 @@ Partial Class RegistroDeClientes
         'name_txt
         '
         Me.name_txt.Location = New System.Drawing.Point(171, 72)
+        Me.name_txt.MaxLength = 29
         Me.name_txt.Name = "name_txt"
         Me.name_txt.Size = New System.Drawing.Size(186, 20)
         Me.name_txt.TabIndex = 8
@@ -137,6 +138,7 @@ Partial Class RegistroDeClientes
         'mail_txt
         '
         Me.mail_txt.Location = New System.Drawing.Point(171, 325)
+        Me.mail_txt.MaxLength = 29
         Me.mail_txt.Name = "mail_txt"
         Me.mail_txt.Size = New System.Drawing.Size(186, 20)
         Me.mail_txt.TabIndex = 9
@@ -144,6 +146,7 @@ Partial Class RegistroDeClientes
         'dir_txt
         '
         Me.dir_txt.Location = New System.Drawing.Point(171, 283)
+        Me.dir_txt.MaxLength = 50
         Me.dir_txt.Name = "dir_txt"
         Me.dir_txt.Size = New System.Drawing.Size(186, 20)
         Me.dir_txt.TabIndex = 10
@@ -151,6 +154,7 @@ Partial Class RegistroDeClientes
         'rfc_txt
         '
         Me.rfc_txt.Location = New System.Drawing.Point(171, 237)
+        Me.rfc_txt.MaxLength = 20
         Me.rfc_txt.Name = "rfc_txt"
         Me.rfc_txt.Size = New System.Drawing.Size(186, 20)
         Me.rfc_txt.TabIndex = 11
@@ -158,6 +162,7 @@ Partial Class RegistroDeClientes
         'tel_txt
         '
         Me.tel_txt.Location = New System.Drawing.Point(171, 197)
+        Me.tel_txt.MaxLength = 12
         Me.tel_txt.Name = "tel_txt"
         Me.tel_txt.Size = New System.Drawing.Size(186, 20)
         Me.tel_txt.TabIndex = 12
@@ -165,6 +170,7 @@ Partial Class RegistroDeClientes
         'mat_txt
         '
         Me.mat_txt.Location = New System.Drawing.Point(171, 155)
+        Me.mat_txt.MaxLength = 29
         Me.mat_txt.Name = "mat_txt"
         Me.mat_txt.Size = New System.Drawing.Size(186, 20)
         Me.mat_txt.TabIndex = 13
@@ -172,6 +178,7 @@ Partial Class RegistroDeClientes
         'pat_txt
         '
         Me.pat_txt.Location = New System.Drawing.Point(171, 113)
+        Me.pat_txt.MaxLength = 29
         Me.pat_txt.Name = "pat_txt"
         Me.pat_txt.Size = New System.Drawing.Size(186, 20)
         Me.pat_txt.TabIndex = 14

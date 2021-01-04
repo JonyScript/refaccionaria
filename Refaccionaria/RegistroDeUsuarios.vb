@@ -8,6 +8,12 @@
         Dim datagrid As New ClaseRegistroDeUsuarios()
         datagrid.PoblarDataGridRegistroDeUsuarios(DGVUsuarios)
         cnx.Close()
+        username_txt.MaxLength = 29
+        nombre_txt.MaxLength = 29
+        ap_txt.MaxLength = 29
+        am_txt.MaxLength = 29
+        pass_txt.MaxLength = 29
+        pass2_txt.MaxLength = 29
     End Sub
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_rol.SelectedIndexChanged
         Dim x, i As Integer

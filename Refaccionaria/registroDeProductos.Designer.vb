@@ -98,10 +98,10 @@ Partial Class registroDeProductos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(415, 28)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(247, 29)
+        Me.Label3.Size = New System.Drawing.Size(280, 31)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Registro de productos"
         '
@@ -156,6 +156,7 @@ Partial Class registroDeProductos
         'NombreDproducto
         '
         Me.NombreDproducto.Location = New System.Drawing.Point(317, 326)
+        Me.NombreDproducto.MaxLength = 40
         Me.NombreDproducto.Name = "NombreDproducto"
         Me.NombreDproducto.Size = New System.Drawing.Size(100, 20)
         Me.NombreDproducto.TabIndex = 17
@@ -163,6 +164,7 @@ Partial Class registroDeProductos
         'PrecioDeVenta
         '
         Me.PrecioDeVenta.Location = New System.Drawing.Point(954, 324)
+        Me.PrecioDeVenta.MaxLength = 11
         Me.PrecioDeVenta.Name = "PrecioDeVenta"
         Me.PrecioDeVenta.Size = New System.Drawing.Size(120, 20)
         Me.PrecioDeVenta.TabIndex = 18
@@ -180,6 +182,7 @@ Partial Class registroDeProductos
         'Codigo
         '
         Me.Codigo.Location = New System.Drawing.Point(74, 326)
+        Me.Codigo.MaxLength = 6
         Me.Codigo.Name = "Codigo"
         Me.Codigo.Size = New System.Drawing.Size(58, 20)
         Me.Codigo.TabIndex = 20
