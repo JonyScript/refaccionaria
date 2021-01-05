@@ -107,4 +107,11 @@
         Me.Close()
 
     End Sub
+
+    Private Sub tel_txt_TextChanged(sender As Object, e As KeyPressEventArgs) Handles tel_txt.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros")
+        End If
+    End Sub
 End Class

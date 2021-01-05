@@ -221,4 +221,18 @@ Public Class registroDeProductos
         Medidas.show()
         Me.Close()
     End Sub
+
+    Private Sub Codigo_TextChanged(sender As Object, e As KeyPressEventArgs) Handles Codigo.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros")
+        End If
+    End Sub
+
+    Private Sub PrecioDeVenta_TextChanged(sender As Object, e As KeyPressEventArgs) Handles PrecioDeVenta.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros")
+        End If
+    End Sub
 End Class

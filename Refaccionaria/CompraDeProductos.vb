@@ -165,4 +165,25 @@
         Me.Close()
 
     End Sub
+
+    Private Sub txtcodigoprod_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtcodigoprod.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros")
+        End If
+    End Sub
+
+    Private Sub PrecioCompra_TextChanged(sender As Object, e As KeyPressEventArgs) Handles PrecioCompra.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros")
+        End If
+    End Sub
+
+    Private Sub txtcantidad_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtcantidad.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Solo puede digitar numeros")
+        End If
+    End Sub
 End Class
