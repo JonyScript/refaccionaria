@@ -117,6 +117,8 @@
     <Compile Include="ClaseAnalisisDeVentas.vb" />
     <Compile Include="ClaseCompras.vb" />
     <Compile Include="ClaseLogin.vb" />
+    <Compile Include="ClaseMarcas.vb" />
+    <Compile Include="ClaseMedidas.vb" />
     <Compile Include="ClaseNotas.vb" />
     <Compile Include="ClaseNotasCompras.vb" />
     <Compile Include="ClaseRegistroDeClientes.vb" />
@@ -133,6 +135,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Globales.vb" />
+    <Compile Include="Marcas.Designer.vb">
+      <DependentUpon>Marcas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Marcas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medidas.Designer.vb">
+      <DependentUpon>Medidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Medidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="menuAdministrador.Designer.vb">
       <DependentUpon>menuAdministrador.vb</DependentUpon>
     </Compile>
@@ -226,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CompraDeProductos.resx">
       <DependentUpon>CompraDeProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcas.resx">
+      <DependentUpon>Marcas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medidas.resx">
+      <DependentUpon>Medidas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuAdministrador.resx">
       <DependentUpon>menuAdministrador.vb</DependentUpon>

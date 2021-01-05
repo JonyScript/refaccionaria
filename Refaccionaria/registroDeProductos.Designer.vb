@@ -44,6 +44,8 @@ Partial Class registroDeProductos
         Me.Marca = New System.Windows.Forms.ComboBox()
         Me.imprimirP = New System.Windows.Forms.Button()
         Me.Labelfecha = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DGVRproductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,7 +60,7 @@ Partial Class registroDeProductos
         'AgregarProductos
         '
         Me.AgregarProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AgregarProductos.Location = New System.Drawing.Point(312, 385)
+        Me.AgregarProductos.Location = New System.Drawing.Point(306, 430)
         Me.AgregarProductos.Name = "AgregarProductos"
         Me.AgregarProductos.Size = New System.Drawing.Size(105, 45)
         Me.AgregarProductos.TabIndex = 6
@@ -68,7 +70,7 @@ Partial Class registroDeProductos
         'EliminarP
         '
         Me.EliminarP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EliminarP.Location = New System.Drawing.Point(454, 385)
+        Me.EliminarP.Location = New System.Drawing.Point(448, 430)
         Me.EliminarP.Name = "EliminarP"
         Me.EliminarP.Size = New System.Drawing.Size(89, 45)
         Me.EliminarP.TabIndex = 7
@@ -78,7 +80,7 @@ Partial Class registroDeProductos
         'ModificarP
         '
         Me.ModificarP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ModificarP.Location = New System.Drawing.Point(705, 385)
+        Me.ModificarP.Location = New System.Drawing.Point(699, 430)
         Me.ModificarP.Name = "ModificarP"
         Me.ModificarP.Size = New System.Drawing.Size(80, 45)
         Me.ModificarP.TabIndex = 9
@@ -190,7 +192,7 @@ Partial Class registroDeProductos
         'limpiarP
         '
         Me.limpiarP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.limpiarP.Location = New System.Drawing.Point(577, 385)
+        Me.limpiarP.Location = New System.Drawing.Point(571, 430)
         Me.limpiarP.Name = "limpiarP"
         Me.limpiarP.Size = New System.Drawing.Size(84, 45)
         Me.limpiarP.TabIndex = 21
@@ -240,11 +242,31 @@ Partial Class registroDeProductos
         Me.Labelfecha.TabIndex = 27
         Me.Labelfecha.Text = "Label7"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(720, 369)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 23)
+        Me.Button1.TabIndex = 28
+        Me.Button1.Text = "Nueva marca"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(505, 369)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(121, 23)
+        Me.Button2.TabIndex = 29
+        Me.Button2.Text = "Nueva medida"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'registroDeProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1086, 573)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Labelfecha)
         Me.Controls.Add(Me.imprimirP)
         Me.Controls.Add(Me.Marca)
@@ -294,4 +316,6 @@ Partial Class registroDeProductos
     Friend WithEvents Marca As ComboBox
     Friend WithEvents imprimirP As Button
     Friend WithEvents Labelfecha As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
