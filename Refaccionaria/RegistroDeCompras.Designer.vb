@@ -66,7 +66,7 @@ Partial Class RegistroDeCompras
         Me.DGVCDetallada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVCDetallada.Location = New System.Drawing.Point(106, 310)
         Me.DGVCDetallada.Name = "DGVCDetallada"
-        Me.DGVCDetallada.Size = New System.Drawing.Size(896, 150)
+        Me.DGVCDetallada.Size = New System.Drawing.Size(834, 150)
         Me.DGVCDetallada.TabIndex = 6
         '
         'DGVCompras
@@ -74,7 +74,7 @@ Partial Class RegistroDeCompras
         Me.DGVCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVCompras.Location = New System.Drawing.Point(106, 90)
         Me.DGVCompras.Name = "DGVCompras"
-        Me.DGVCompras.Size = New System.Drawing.Size(896, 150)
+        Me.DGVCompras.Size = New System.Drawing.Size(834, 150)
         Me.DGVCompras.TabIndex = 5
         '
         'RegistroDeCompras

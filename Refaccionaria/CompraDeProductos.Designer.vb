@@ -72,7 +72,7 @@ Partial Class CompraDeProductos
         Me.dgvcompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvcompra.Location = New System.Drawing.Point(206, 350)
         Me.dgvcompra.Name = "dgvcompra"
-        Me.dgvcompra.Size = New System.Drawing.Size(977, 150)
+        Me.dgvcompra.Size = New System.Drawing.Size(836, 150)
         Me.dgvcompra.TabIndex = 53
         '
         'dgvexist2
@@ -80,12 +80,12 @@ Partial Class CompraDeProductos
         Me.dgvexist2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvexist2.Location = New System.Drawing.Point(206, 118)
         Me.dgvexist2.Name = "dgvexist2"
-        Me.dgvexist2.Size = New System.Drawing.Size(977, 150)
+        Me.dgvexist2.Size = New System.Drawing.Size(836, 150)
         Me.dgvexist2.TabIndex = 52
         '
         'btnconfirmar
         '
-        Me.btnconfirmar.Location = New System.Drawing.Point(1064, 558)
+        Me.btnconfirmar.Location = New System.Drawing.Point(925, 562)
         Me.btnconfirmar.Name = "btnconfirmar"
         Me.btnconfirmar.Size = New System.Drawing.Size(117, 23)
         Me.btnconfirmar.TabIndex = 49
@@ -131,7 +131,7 @@ Partial Class CompraDeProductos
         'txttotal
         '
         Me.txttotal.Enabled = False
-        Me.txttotal.Location = New System.Drawing.Point(868, 556)
+        Me.txttotal.Location = New System.Drawing.Point(729, 560)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(100, 20)
         Me.txttotal.TabIndex = 43
@@ -199,7 +199,7 @@ Partial Class CompraDeProductos
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(831, 563)
+        Me.Label8.Location = New System.Drawing.Point(692, 567)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(31, 13)
         Me.Label8.TabIndex = 34
@@ -226,7 +226,7 @@ Partial Class CompraDeProductos
         'lblfecha
         '
         Me.lblfecha.AutoSize = True
-        Me.lblfecha.Location = New System.Drawing.Point(1125, 72)
+        Me.lblfecha.Location = New System.Drawing.Point(1003, 51)
         Me.lblfecha.Name = "lblfecha"
         Me.lblfecha.Size = New System.Drawing.Size(39, 13)
         Me.lblfecha.TabIndex = 31
@@ -304,7 +304,7 @@ Partial Class CompraDeProductos
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1189, 182)
+        Me.Button1.Location = New System.Drawing.Point(1068, 179)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 23)
         Me.Button1.TabIndex = 63
@@ -333,7 +333,7 @@ Partial Class CompraDeProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1314, 651)
+        Me.ClientSize = New System.Drawing.Size(1208, 651)
         Me.Controls.Add(Me.PrecioVenta)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Button1)
@@ -366,7 +366,7 @@ Partial Class CompraDeProductos
         Me.Controls.Add(Me.lblfecha)
         Me.Controls.Add(Me.Label3)
         Me.Name = "CompraDeProductos"
-        Me.Text = "CompraDeProductos"
+        Me.Text = "Compra de productos"
         CType(Me.dgvcompra, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvexist2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

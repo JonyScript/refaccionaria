@@ -173,4 +173,8 @@
             MsgBox("Solo puede digitar numeros")
         End If
     End Sub
+
+    Private Sub Dgvexist_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvexist.CellContentClick
+
+    End Sub
 End Class

@@ -286,10 +286,10 @@
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
         DGVExist2.Columns.Item(0).Width = 100
-        DGVExist2.Columns.Item(1).Width = 200
+        DGVExist2.Columns.Item(1).Width = 210
         DGVExist2.Columns.Item(2).Width = 100
-        DGVExist2.Columns.Item(3).Width = 200
-        DGVExist2.Columns.Item(4).Width = 200
+        DGVExist2.Columns.Item(3).Width = 135
+        DGVExist2.Columns.Item(4).Width = 130
         DGVExist2.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVExist2.Columns.Item(5).Width = 100
         DGVExist2.Columns.Item(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
@@ -308,7 +308,7 @@
         DGVCompra.Columns.Item(0).Width = 100
         DGVCompra.Columns.Item(1).Width = 200
         DGVCompra.Columns.Item(2).Width = 100
-        DGVCompra.Columns.Item(3).Width = 100
+        DGVCompra.Columns.Item(3).Width = 90
         DGVCompra.Columns.Item(4).Width = 100
         DGVCompra.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVCompra.Columns.Item(5).Width = 100

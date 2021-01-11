@@ -207,7 +207,7 @@
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
         DGVDProductos.Columns.Item(0).Width = 70
-        DGVDProductos.Columns.Item(1).Width = 150
+        DGVDProductos.Columns.Item(1).Width = 170
         DGVDProductos.Columns.Item(2).Width = 150
         DGVDProductos.Columns.Item(3).Width = 150
         DGVDProductos.Columns.Item(4).Width = 150

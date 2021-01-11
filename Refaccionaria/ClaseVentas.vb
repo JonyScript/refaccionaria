@@ -282,7 +282,7 @@
         DGVExist.Columns.Item(0).Width = 100
         DGVExist.Columns.Item(1).Width = 200
         DGVExist.Columns.Item(2).Width = 100
-        DGVExist.Columns.Item(3).Width = 200
+        DGVExist.Columns.Item(3).Width = 165
         DGVExist.Columns.Item(4).Width = 100
         DGVExist.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVExist.Columns.Item(5).Width = 100
@@ -299,10 +299,10 @@
         'número de columnas del DGV debe ser igual al número
         'de atributos recuperados en el query del método
         'consultaTodosUsuarios
-        DGVVentas.Columns.Item(0).Width = 100
+        DGVVentas.Columns.Item(0).Width = 80
         DGVVentas.Columns.Item(1).Width = 200
         DGVVentas.Columns.Item(2).Width = 100
-        DGVVentas.Columns.Item(3).Width = 100
+        DGVVentas.Columns.Item(3).Width = 90
         DGVVentas.Columns.Item(4).Width = 100
         DGVVentas.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVVentas.Columns.Item(5).Width = 100

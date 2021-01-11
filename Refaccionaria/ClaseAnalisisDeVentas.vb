@@ -13,7 +13,7 @@
         'Método para listar a todos los usuarios en el DGV
         Dim strSQL As String
         Dim xCnx As New Oracle
-        strSQL = "select to_char(sum(totalventa), 'fm99990.00') as Ganancias from venta where to_char(fechaventa, 'RR') = '" & AnalisisDeVentas.cb_anio.SelectedValue & "' and to_char(fechaventa, 'MM') = '" & AnalisisDeVentas.cb_mes.SelectedValue & "'"
+        strSQL = "select to_char(sum(totalventa), 'fm99990.00') as Ingresos from venta where to_char(fechaventa, 'RR') = '" & AnalisisDeVentas.cb_anio.SelectedValue & "' and to_char(fechaventa, 'MM') = '" & AnalisisDeVentas.cb_mes.SelectedValue & "'"
         consultaVentaGAN = xCnx.objetoDataAdapter(strSQL)
     End Function
 

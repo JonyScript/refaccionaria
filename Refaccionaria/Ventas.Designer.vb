@@ -84,7 +84,7 @@ Partial Class Ventas
         'lblfecha
         '
         Me.lblfecha.AutoSize = True
-        Me.lblfecha.Location = New System.Drawing.Point(1089, 29)
+        Me.lblfecha.Location = New System.Drawing.Point(935, 32)
         Me.lblfecha.Name = "lblfecha"
         Me.lblfecha.Size = New System.Drawing.Size(39, 13)
         Me.lblfecha.TabIndex = 3
@@ -120,7 +120,7 @@ Partial Class Ventas
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(799, 569)
+        Me.Label8.Location = New System.Drawing.Point(623, 569)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(31, 13)
         Me.Label8.TabIndex = 7
@@ -197,7 +197,7 @@ Partial Class Ventas
         'txttotal
         '
         Me.txttotal.Enabled = False
-        Me.txttotal.Location = New System.Drawing.Point(836, 562)
+        Me.txttotal.Location = New System.Drawing.Point(660, 562)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(100, 20)
         Me.txttotal.TabIndex = 16
@@ -249,7 +249,7 @@ Partial Class Ventas
         '
         'btnconfirmar
         '
-        Me.btnconfirmar.Location = New System.Drawing.Point(1036, 556)
+        Me.btnconfirmar.Location = New System.Drawing.Point(860, 556)
         Me.btnconfirmar.Name = "btnconfirmar"
         Me.btnconfirmar.Size = New System.Drawing.Size(117, 23)
         Me.btnconfirmar.TabIndex = 22
@@ -258,7 +258,7 @@ Partial Class Ventas
         '
         'btnnota
         '
-        Me.btnnota.Location = New System.Drawing.Point(1036, 585)
+        Me.btnnota.Location = New System.Drawing.Point(860, 585)
         Me.btnnota.Name = "btnnota"
         Me.btnnota.Size = New System.Drawing.Size(117, 23)
         Me.btnnota.TabIndex = 23
@@ -267,7 +267,7 @@ Partial Class Ventas
         '
         'btnfactura
         '
-        Me.btnfactura.Location = New System.Drawing.Point(1036, 614)
+        Me.btnfactura.Location = New System.Drawing.Point(860, 614)
         Me.btnfactura.Name = "btnfactura"
         Me.btnfactura.Size = New System.Drawing.Size(117, 23)
         Me.btnfactura.TabIndex = 24
@@ -279,7 +279,7 @@ Partial Class Ventas
         Me.dgvexist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvexist.Location = New System.Drawing.Point(174, 124)
         Me.dgvexist.Name = "dgvexist"
-        Me.dgvexist.Size = New System.Drawing.Size(977, 150)
+        Me.dgvexist.Size = New System.Drawing.Size(809, 150)
         Me.dgvexist.TabIndex = 25
         '
         'dgvventa
@@ -287,7 +287,7 @@ Partial Class Ventas
         Me.dgvventa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvventa.Location = New System.Drawing.Point(174, 356)
         Me.dgvventa.Name = "dgvventa"
-        Me.dgvventa.Size = New System.Drawing.Size(977, 150)
+        Me.dgvventa.Size = New System.Drawing.Size(809, 150)
         Me.dgvventa.TabIndex = 26
         '
         'back
@@ -304,7 +304,7 @@ Partial Class Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1242, 644)
+        Me.ClientSize = New System.Drawing.Size(1043, 644)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.dgvventa)
         Me.Controls.Add(Me.dgvexist)

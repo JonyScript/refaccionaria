@@ -34,7 +34,7 @@
         DGVDCompra.Columns.Item(1).Width = 150
         DGVDCompra.Columns.Item(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDCompra.Columns.Item(2).Width = 150
-        DGVDCompra.Columns.Item(3).Width = 150
+        DGVDCompra.Columns.Item(3).Width = 200
         DGVDCompra.Columns.Item(4).Width = 150
     End Sub
 
@@ -50,7 +50,7 @@
         DGVDProd.Columns.Item(0).Width = 100
         DGVDProd.Columns.Item(1).Width = 200
         DGVDProd.Columns.Item(2).Width = 100
-        DGVDProd.Columns.Item(3).Width = 100
+        DGVDProd.Columns.Item(3).Width = 110
         DGVDProd.Columns.Item(4).Width = 100
         DGVDProd.Columns.Item(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DGVDProd.Columns.Item(5).Width = 100
